@@ -13,6 +13,7 @@
 
 ## 从这里开始
 
+0. 查看[完整技术路线与实现接口](docs/technical-route.md)：本构/工况、Standard或Explicit、材料点历程、pyLife、验证与程序模块。
 1. 阅读[通用分析方法论](docs/research/塑胶件_Abaqus_pyLife疲劳分析方法论.md)。
 2. 浏览[文献索引](literature/README.md)，用[references.bib](literature/references.bib)导入文献管理软件；PDF映射见[pdf-manifest.json](literature/pdf-manifest.json)。
 3. 查看[技能使用说明](docs/skills.md)。在本项目目录打开Codex，新会话可发现`.agents/skills/`；没有修改全局skill或安装启动钩子。
