@@ -17,6 +17,7 @@
    - [图形路线 PNG](docs/assets/technical-route.png) / [可编辑 SVG](docs/assets/technical-route.svg)。
    - [ODB—pyLife 桌面桥接工具 PRD](docs/superpowers/specs/2026-11-15-odb-pylife-bridge-design.md)：Windows、Abaqus 2024、实体与壳单元；当前为需求确认稿。
 1. 阅读[通用分析方法论](docs/research/塑胶件_Abaqus_pyLife疲劳分析方法论.md)。
+   - 系统学习：[项目理论知识与阅读指南](docs/research/项目理论知识与阅读指南.md)，14章，含公式、手算案例、文献DOI与学习计划；[HTML阅读与打印版](docs/research/项目理论知识与阅读指南.html)需下载后用浏览器打开。
 2. 浏览[文献索引](literature/README.md)，用[references.bib](literature/references.bib)导入文献管理软件；PDF映射见[pdf-manifest.json](literature/pdf-manifest.json)。
 3. 查看[技能使用说明](docs/skills.md)。在本项目目录打开Codex，新会话可发现`.agents/skills/`；没有修改全局skill或安装启动钩子。
 4. 后续用真实载荷、材料试验和零件几何建立恒幅基线，再评估变幅与热/黏弹影响。

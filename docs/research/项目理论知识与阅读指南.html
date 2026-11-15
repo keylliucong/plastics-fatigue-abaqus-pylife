@@ -1,0 +1,939 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>塑胶件疲劳仿真 · 项目理论知识与阅读指南</title><style>
+:root{--ink:#1b2f45;--muted:#587084;--accent:#176a70;--line:#d6e2e7;--paper:#fff;--bg:#eef3f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:16px;line-height:1.9}
+a{color:#126770;text-decoration-thickness:1px;text-underline-offset:3px}aside{position:fixed;top:0;left:0;bottom:0;width:270px;padding:30px 22px;background:#122d40;color:#e6eff5;overflow-y:auto}aside .brand{font-size:12px;letter-spacing:2px;color:#a3cece}aside h2{font-size:22px;border:0;margin:8px 0 20px;color:white}aside a{display:block;color:#d9e7ed;text-decoration:none;font-size:13px;line-height:1.65;padding:7px 0;border-bottom:1px solid #ffffff15}aside a:hover{color:#80ddd3}main{max-width:1180px;margin:36px 36px 80px 306px;background:white;border:1px solid var(--line);box-shadow:0 8px 40px #16334409;padding:44px 56px}.kicker{font-size:12px;letter-spacing:2px;color:var(--accent);font-weight:700}h1{font-size:36px;line-height:1.4;margin:12px 0 18px;letter-spacing:-.5px}h2{font-size:26px;line-height:1.5;border-top:3px solid var(--accent);padding-top:20px;margin-top:54px}h3{font-size:20px;margin-top:28px;color:#225366}p{margin:14px 0}strong{font-weight:650}table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14px;line-height:1.7;table-layout:auto}thead{background:#e8f3f3}th,td{padding:11px 12px;border:1px solid var(--line);text-align:left;vertical-align:top;overflow-wrap:anywhere}tbody tr:nth-child(even){background:#f8fafb}pre{background:#f0f5f7;border-left:4px solid #4b8e92;padding:18px 22px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;font:14px/1.9 "SFMono-Regular",Consolas,"Microsoft YaHei",monospace}code{font-family:inherit}li{margin:7px 0}ul,ol{padding-left:26px}.cover-note{border:1px solid #b9d8d7;background:#eef8f6;padding:18px 22px;margin-bottom:28px;font-size:14px}.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.print{float:right;border:1px solid #c5d5dc;padding:6px 12px;border-radius:6px;font-size:12px;color:var(--muted)}
+@media(min-width:1700px){main{margin-left:auto;margin-right:auto;width:1120px}}
+@media(max-width:1000px){aside{position:static;width:auto;max-height:360px}main{margin:18px;padding:26px}h1{font-size:29px}table{font-size:12px}th,td{padding:8px}}
+@media print{@page{size:A4;margin:18mm 14mm}body{background:white;font-size:10pt;line-height:1.7}aside,.print{display:none}main{margin:0;padding:0;border:0;box-shadow:none;max-width:none}h1{font-size:25pt}h2{font-size:17pt;break-before:page;margin-top:0}h3{font-size:12pt;break-after:avoid}p,li{orphans:3;widows:3}table{font-size:8.2pt;line-height:1.5}th,td{padding:5px}tr,pre{break-inside:avoid}thead{display:table-header-group}pre{font-size:9pt}a{color:#174e5c;text-decoration:none}.cover-note{font-size:10pt}.footer{font-size:8pt}}
+</style></head><body><aside><div class="brand">ABAQUS × PYLIFE</div><h2>理论阅读指南</h2><a href="#section-2" class="level-2">如何使用</a><a href="#section-3" class="level-2">目录</a><a href="#section-4" class="level-2">第1章：整个项目到底在预测什么【必读】</a><a href="#section-7" class="level-2">第2章：力学、数学与热学前置知识【必读】</a><a href="#section-12" class="level-2">第3章：塑胶结构与本构模型的选择【必读】</a><a href="#section-16" class="level-2">第4章：黏性、黏弹性与时间—温度理论【必读；非线性部分条件必读】</a><a href="#section-23" class="level-2">第5章：黏塑性、循环演化与热—力耦合【条件必读】</a><a href="#section-28" class="level-2">第6章：疲劳机理、试验与统计【必读】</a><a href="#section-34" class="level-2">第7章：疲劳模型：S–N、应变、能量、裂纹和损伤【必读+分支】</a><a href="#section-43" class="level-2">第8章：Abaqus有限元理论与求解策略【必读】</a><a href="#section-50" class="level-2">第9章：ODB数据、采样与桥接理论【必读】</a><a href="#section-55" class="level-2">第10章：pyLife的数据模型和计算理论【必读】</a><a href="#section-62" class="level-2">第11章：贯穿项目的手算与最小验证案例【必读】</a><a href="#section-68" class="level-2">第12章：材料试验与数据需求清单【必读】</a><a href="#section-69" class="level-2">第13章：可信度、适用范围与研究记录【必读】</a><a href="#section-73" class="level-2">第14章：分阶段阅读计划与自测题</a><a href="#section-75" class="level-2">附录A：必读文献与DOI</a><a href="#section-78" class="level-2">附录B：官方文档阅读导航</a><a href="#section-82" class="level-2">附录C：术语与公式速查</a></aside><main><div class="print">浏览器打印 → 保存为 PDF</div><div class="kicker">PROJECT READING GUIDE · 2026.11.15</div><div class="cover-note">学习顺序：问题定义 → 材料与时间效应 → 试验与疲劳模型 → 有限元响应 → 数据桥接 → pyLife → 独立验证。<br>正文可离线阅读；文献、PDF和官方帮助链接需要相应网络或访问权限。</div><h1 id="section-1">塑胶件疲劳仿真：项目理论知识与阅读指南</h1>
+<p>Abaqus + pyLife｜v1.0｜2026-11-15</p>
+<p>适用项目：Windows / Abaqus 2024；实体和壳单元；先建立材料与局部响应依据，再实现ODB桥接及疲劳计算。主要对象为未增强工程热塑性塑胶，包括PC、ABS、PC/ABS；增强热塑性与弹性体在分支中讨论。</p>
+<p>本指南是一份可逐章学习的项目知识地图和理论讲义，覆盖完成本项目所需的核心理论与扩展入口。它不替代完整教材、试验标准或材料认证。公式除特别说明外采用小变形、单轴、等温的入门表达；迁移到有限应变、多轴或非等温模型时须重新定义变量与适用条件。文中数值算例均为教学构造，不是任何塑胶的材料数据。</p>
+<h2 id="section-2">如何使用</h2>
+<p>建议先通读第1、2、6、8、11章，建立闭环，再学习第3—5章的本构与黏弹理论。每章包含需要回答的问题和工程产物，读完就能形成项目输入，而不是只记住模型名称。</p>
+<p>阅读深度分三级：<strong>必读</strong>是建立可信基线所需；<strong>条件必读</strong>由实际材料响应决定；<strong>进阶</strong>用于基线不适用时的扩展。文献状态区分“有PDF”“仅摘要/元数据”和“官方网页”；有PDF不代表已完成精读。本指南是理论综合，未声称复现任何文献或验证实际零件。</p>
+<p>公式以纯文本和Unicode书写，HTML阅读版无需联网加载数学字体或脚本。附录中有完整来源、DOI、已有PDF入口和分阶段计划。</p>
+<h2 id="section-3">目录</h2>
+<ul>
+<li>第1章：整个项目到底在预测什么</li>
+<li>第2章：力学、数学与热学前置知识</li>
+<li>第3章：塑胶结构与本构模型的选择</li>
+<li>第4章：黏性、黏弹性与时间—温度理论</li>
+<li>第5章：黏塑性、循环演化与热—力耦合</li>
+<li>第6章：疲劳机理、试验与统计</li>
+<li>第7章：疲劳模型：S–N、应变、能量、裂纹和损伤</li>
+<li>第8章：Abaqus有限元理论与求解策略</li>
+<li>第9章：ODB数据、采样与桥接理论</li>
+<li>第10章：pyLife的数据模型和计算理论</li>
+<li>第11章：贯穿项目的手算与最小验证案例</li>
+<li>第12章：材料试验与数据需求清单</li>
+<li>第13章：可信度、适用范围与研究记录</li>
+<li>第14章：分阶段阅读计划与自测题</li>
+<li>附录A：必读文献与DOI</li>
+<li>附录B：官方文档阅读导航</li>
+<li>附录C：术语与公式速查</li>
+</ul>
+<h2 id="section-4">第1章：整个项目到底在预测什么【必读】</h2>
+<h3 id="section-5">1.1 三个问题，三个不同的模型</h3>
+<p><strong>本构问题</strong>：给定材料的应变、温度和历史，材料产生什么应力、残余变形及耗散？例如固定变形时夹紧力是否松弛。</p>
+<p><strong>结构问题</strong>：给定零件几何、装配、接触和外载，哪个材料点经历怎样的应力—应变—温度历程？Abaqus求解这一步。</p>
+<p><strong>疲劳问题</strong>：这样的局部历程持续多少次或多久，会触发约定的失效？pyLife可承担循环统计、曲线及损伤基线；更复杂的聚合物损伤可能需要额外模型。</p>
+<p>三者的关系是：</p>
+<pre><code class="language-text">服役载荷 + 环境 + 制造状态
+              ↓
+试验 → 本构标定 → Abaqus局部响应 → 固定材料点的ODB历程
+  ↓                                      ↓
+疲劳数据 → 疲劳模型标定 → 循环/路径损伤 → 寿命与危险位置
+                                              ↓
+                          独立试验验证，必要时回到模型选择
+</code></pre>
+<p>仅有拉伸模量、屈服强度和一个静态应力云图，无法唯一确定疲劳寿命。建立了黏弹本构也不等于建立了疲劳损伤模型。</p>
+<h3 id="section-6">1.2 先约定“失效”</h3>
+<p>可选终点包括：首个可检测裂纹、裂纹达到规定尺寸、完全断裂、刚度降低到约定比例、永久变形超限、接触/夹持功能丧失。试样S–N数据对应的终点必须与零件预测目标一致。例如“刚度下降10%”和“完全断裂”的循环数不应混为同一寿命标签；10%只是判据示例，须由项目规定。</p>
+<p><strong>本章产物</strong>：一页问题定义表：目标材料/工艺、载荷和环境、失效判据、预测起点、输出寿命单位、验证方式。读完应能解释“算到断裂”与“算到功能失效”为什么可能需要不同试验。</p>
+<h2 id="section-7">第2章：力学、数学与热学前置知识【必读】</h2>
+<h3 id="section-8">2.1 应力、应变与坐标系</h3>
+<p>应力σ是张量，不只是一个数。单轴σ=F/A；多轴状态包含正应力和剪应力。给定单位法向n，面力t=σn；法向应力σn=n·σn，剪切向量为t−σn n。这个投影是临界平面疲劳方法的基础。</p>
+<p>小应变ε=(∇u+∇uᵀ)/2。有限变形要学习变形梯度F、J=det(F)、主伸长，以及Cauchy应力、第一/第二Piola–Kirchhoff应力。应力与应变必须采用功共轭的定义，不能把任意应力与任意应变相乘就解释为能量。</p>
+<p>单轴均匀拉伸、尚未颈缩且近似体积不变时，工程量可近似转换为：σtrue=σeng(1+e)，εlog=ln(1+e)。出现颈缩、空穴化或明显体积变化后，这个简式不再给出局部真实应力，需截面测量或反演。输入某些弹塑性模型时还需从总应变中扣除弹性部分；不能把原始工程拉伸曲线直接当作塑性应变表。</p>
+<p>局部坐标随材料旋转时，必须区分“同一材料方向的分量”与“固定空间方向的分量”。二者回答不同问题。壳的厚度方向和截面点尤其重要。</p>
+<h3 id="section-9">2.2 弹性常数与近不可压缩</h3>
+<p>各向同性小应变弹性满足σ=C:ε，由E和ν确定：</p>
+<pre><code class="language-text">G = E / [2(1+ν)]
+K = E / [3(1−2ν)]
+</code></pre>
+<p>G控制剪切，K控制体积。当ν接近0.5时，K很大，位移型有限元可能体积锁死。不要仅因“塑胶”就一律设置ν=0.499；应依据目标温度、时间尺度和试验，并选择合适单元。</p>
+<h3 id="section-10">2.3 数据处理与参数识别</h3>
+<p>需要掌握对数坐标、最小二乘、加权拟合、残差、相关性、置信区间与参数可识别性。低残差不保证参数唯一：多个Prony谱可能都拟合同一段短时数据，却给出不同长期外推。</p>
+<p>训练/标定数据用于确定参数；独立验证数据检验预测能力。材料拟合、疲劳拟合和整件验证应分别记录，不能用同一批数据完成三者后称为独立验证。</p>
+<h3 id="section-11">2.4 热学与时间尺度</h3>
+<p>热容量ρcp决定升温速度，导热系数κ决定内部热扩散，表面对流和接触导热决定散热。可比较加载周期Tload、松弛时间τ和热扩散时间L²/α（α=κ/(ρcp)）。De=τ/Tload是一个入门时间尺度比：小或大表示不同的松弛参与程度，但真实材料通常有一组τ，不能用单一De解释所有响应。</p>
+<p><strong>本章产物</strong>：统一单位表、应力/应变定义表、坐标约定。完成后应能说明为何MPa与Pa、范围与幅值、工程剪应变与张量剪应变的混淆会改变结果。</p>
+<h2 id="section-12">第3章：塑胶结构与本构模型的选择【必读】</h2>
+<h3 id="section-13">3.1 先理解材料，不从软件菜单开始</h3>
+<p>聚合物链段运动、缠结、晶区、橡胶相、填料及界面共同决定宏观响应。Tg是玻璃化转变相关温区，受测试频率和判定方法影响；它不同于熔融温度Tm。PC/ABS是共混体系，配比、相容性、成型与热历史都会改变响应，不能为所有牌号共用一张“PC/ABS曲线”。</p>
+<p>同一材料在低温/高速时可能更硬，在高温/慢速时更容易松弛与流动。注塑流动方向、熔接线、表层—芯层结构和残余应力会引入空间差异；FFF打印还包含层间结合、孔隙与路径效应。打印数据不能直接替代注塑件数据。</p>
+<h3 id="section-14">3.2 用可观察现象选模型</h3>
+<table>
+<thead>
+<tr>
+  <th>试验观察</th>
+  <th>候选本构</th>
+  <th>必须补充的证据</th>
+  <th>对疲劳路线的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>近线性、卸载基本恢复、时间影响弱</td>
+  <td>线弹性基线</td>
+  <td>多速率/温度检查、循环稳定性</td>
+  <td>可先验证局部应力S–N基线</td>
+</tr>
+<tr>
+  <td>蠕变/松弛明显，小幅响应可叠加</td>
+  <td>线黏弹性、广义Maxwell</td>
+  <td>多时间尺度松弛/蠕变或DMA</td>
+  <td>要保留频率与真实时间</td>
+</tr>
+<tr>
+  <td>大变形可恢复，弹性非线性显著</td>
+  <td>超弹性，必要时黏弹分支</td>
+  <td>多种变形模式与稳定性</td>
+  <td>常需应变/能量指标，尤其弹性体</td>
+</tr>
+<tr>
+  <td>卸载残余变形、屈服、速率强化</td>
+  <td>弹塑性或黏塑性</td>
+  <td>多速率、拉压、卸载和循环试验</td>
+  <td>必须检查应力重分布和循环演化</td>
+</tr>
+<tr>
+  <td>累积软化、刚度持续下降</td>
+  <td>含内部状态的本构/损伤</td>
+  <td>多阶段循环、恢复/停顿试验</td>
+  <td>稳定单循环重复可能失效</td>
+</tr>
+<tr>
+  <td>明显方向相关</td>
+  <td>各向异性本构</td>
+  <td>不同方向数据与制造方向映射</td>
+  <td>方向相关疲劳曲线或指标</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section-15">3.3 常见概念边界</h3>
+<ul>
+<li><strong>弹性非线性</strong>可恢复；<strong>塑性</strong>含不可逆变形；<strong>黏性</strong>引入时间/速率；<strong>损伤</strong>描述承载能力退化。这些概念可组合，但不能互相代替。</li>
+<li>简单J2金属塑性可作为受限基线，却不自动包含玻璃态聚合物的压力敏感、拉压不对称、屈服后软化和取向硬化。</li>
+<li>Drucker–Prager一类压力相关屈服面也不因“压力敏感”就自动成为目标塑胶的完整循环模型。</li>
+<li>橡胶超弹性、Mullins效应和撕裂能理论是弹性体分支，不能整体套到常温PC/ABS。</li>
+</ul>
+<p>不同Abaqus材料行为能否组合取决于模型、求解器和版本；须查官方<a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-matmodels.htm">Combining Material Behaviors</a>，并在2024做单元测试，不能简单把“弹性+Prony+塑性+损伤”全部勾上。</p>
+<p><strong>阅读任务</strong>：A1了解材料试验条件；A9了解玻璃态聚合物速率本构的研究入口。<strong>本章产物</strong>：模型选择记录，写出支持和否定每种候选模型的试验现象；不急于确定复杂模型的所有参数。</p>
+<h2 id="section-16">第4章：黏性、黏弹性与时间—温度理论【必读；非线性部分条件必读】</h2>
+<h3 id="section-17">4.1 黏性与黏弹性不是同义词</h3>
+<p>理想一维黏壶：σ=η·dε/dt，η的单位为Pa·s。它描述速率相关耗散，停止应力后不提供弹簧式恢复。黏弹固体同时储存和耗散能量；卸载后可能逐渐恢复。实际塑胶还可能叠加不可恢复的黏塑性。</p>
+<p><strong>蠕变</strong>：保持应力，观察应变随时间变化，J(t)=ε(t)/σ₀。<strong>松弛</strong>：保持应变，观察应力下降，E(t)=σ(t)/ε₀。一般不能逐时刻用E(t)=1/J(t)转换，两者是不同边界条件下的响应函数。</p>
+<h3 id="section-18">4.2 从两个元件到松弛谱</h3>
+<p>以下为入门一维推导，初始状态取未加载：</p>
+<table>
+<thead>
+<tr>
+  <th>模型</th>
+  <th>连接方式与方程</th>
+  <th>能解释什么</th>
+  <th>主要局限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Maxwell</td>
+  <td>弹簧与黏壶串联；dε/dt=(1/E)dσ/dt+σ/η</td>
+  <td>阶跃应变后σ=Eε₀exp(−t/τ)，τ=η/E</td>
+  <td>恒应力下长期持续流动，不宜独自描述平衡固体</td>
+</tr>
+<tr>
+  <td>Kelvin–Voigt</td>
+  <td>并联；σ=Eε+ηdε/dt</td>
+  <td>阶跃应力后ε=(σ₀/E)[1−exp(−t/τ)]</td>
+  <td>不能表示实际固体常见的瞬时弹性跳变和一般松弛</td>
+</tr>
+<tr>
+  <td>标准线性固体</td>
+  <td>平衡弹簧并联一个Maxwell支路</td>
+  <td>瞬时与长期刚度均可非零</td>
+  <td>一个τ不足以覆盖宽时间范围</td>
+</tr>
+<tr>
+  <td>广义Maxwell</td>
+  <td>平衡弹簧并联多个Maxwell支路</td>
+  <td>宽谱松弛及频率依赖</td>
+  <td>分支过多易出现参数不可识别与外推问题</td>
+</tr>
+</tbody>
+</table>
+<p>对阶跃应变，广义Maxwell的一维模量为：</p>
+<pre><code class="language-text">E(t) = E∞ + Σ Ei exp(−t/τi)
+E0 = E∞ + Σ Ei
+</code></pre>
+<p>这段公式可由并联应力相加、各串联支路的同一应变直接得到。E0是瞬时模量，E∞是长期模量，两者必须与输入数据的定义一致。</p>
+<h3 id="section-19">4.3 线性黏弹的“线性”是什么意思</h3>
+<p>线性意味着小幅范围内可缩放、可叠加，不意味着响应与时间无关。对从静止开始的光滑加载：</p>
+<pre><code class="language-text">σ(t) = ∫₀ᵗ E(t−s) · dε(s)/ds ds
+</code></pre>
+<p>有初始应变跳变时需另计对应项，或使用包含跳跃的积分表示。历史通过卷积进入现在的应力，所以最大应变相同的两条历程可以产生不同应力。</p>
+<p>做幅值扫描：如果归一化松弛曲线随幅值明显改变，或DMA模量强烈依赖幅值，不能继续把线性叠加当成已验证假设。入门推导建议阅读MIT的<a href="https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/d173f95347f59d59dd9b7387ab4303e7_MIT3_11F99_visco.pdf">Engineering Viscoelasticity</a>，重点自己完成元件模型和阶跃响应练习，而不是直接借其例题参数。</p>
+<h3 id="section-20">4.4 DMA、复模量与耗散</h3>
+<p>小幅、稳态、等温正弦应变ε=εa sin(ωt)下，可写σ=εa[E′sin(ωt)+E″cos(ωt)]。E′是储能模量，E″是损耗模量，tanδ=E″/E′。在这一约定下，每周期单位体积耗散：</p>
+<pre><code class="language-text">Wd = ∮σ dε = π E″ εa²
+</code></pre>
+<p>这是由一个正弦周期积分得到的结果；不能直接套到大应变非线性回线、非稳定首循环或非等温循环。DMA测量的模量还与拉伸、弯曲、剪切夹具模式有关，剪切G∗和拉伸E∗不可不经假设直接互换。</p>
+<h3 id="section-21">4.5 Prony级数如何进入Abaqus</h3>
+<p>Abaqus时域黏弹通常用无量纲剪切/体积松弛系数与时间常数表述。剪切示意：</p>
+<pre><code class="language-text">G(t)/G0 = 1 − Σ gi [1−exp(−t/τi)]
+G∞ = G0(1−Σ gi)
+</code></pre>
+<p>它与前述模量和式是同一种指数松弛表达的不同参数化。gi是相对权重，不能把Ei的MPa数值填进gi。体积项ki与剪切项gi含义不同。系数和的约束、瞬时/长期弹性输入选项及有限应变定义须查<a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-timevisco.htm">Time Domain Viscoelasticity</a>，在2024按实际模型核对。</p>
+<p>拟合原则：覆盖服役时间/频率窗口；先少支路再增加；检查非负时间常数与物理约束；用未参与拟合的蠕变/松弛或频率点检验。仅有一个常温拉伸模量不足以辨识完整Prony谱。短时拟合好也不意味着数年预测可信。</p>
+<h3 id="section-22">4.6 时间—温度等效与WLF</h3>
+<p>在热流变简单的适用区间，温度改变可近似通过时间平移表征。采用aT=τ(T)/τ(Tref)约定时，约化时间ξ=∫dt/aT[T(t)]。WLF形式：</p>
+<pre><code class="language-text">log10(aT) = −C1(T−Tref) / [C2+(T−Tref)]
+</code></pre>
+<p>温度差可用K或℃的差值，但绝对温度进入热激活公式时必须用K。C1、C2与参考温度及材料相关，不直接复制所谓通用常数。WLF原始论文见A8，当前核对了题名和DOI，未取得全文。</p>
+<p>主曲线建立要检验相邻温度数据是否可合理重叠，是否需要垂直移位，以及不同机制是否具有不同移位规律。共混、多相、老化、湿度和相变可能破坏简单等效。黏弹主曲线能平移，不代表疲劳寿命也可按相同aT平移。</p>
+<p><strong>本章产物</strong>：松弛/蠕变/DMA原始数据表、时间与温度窗口、Prony参数及约束、独立验证图。<strong>自问</strong>：我的弹性模量属于瞬时还是长期？试验时长是否覆盖了零件周期和保载时间？</p>
+<h2 id="section-23">第5章：黏塑性、循环演化与热—力耦合【条件必读】</h2>
+<h3 id="section-24">5.1 黏塑性需要额外的内部状态</h3>
+<p>小变形下可将总应变示意分为弹性、黏弹、不可逆及热应变，但具体分解必须属于一个自洽模型，不能随意拼接。黏塑性模型常涉及屈服/流动准则、速率函数、软化/硬化、压力敏感与内部变量；有限应变下还要学习乘法分解和客观率。</p>
+<p>Eyring型热激活思想把流动速率与应力、温度联系起来。只作为概念示意，可写ε̇vp=ε̇0 exp[−Q/(RgT)]sinh(V∗σeff/(RgT))，这里Q和V∗采用每摩尔定义；若采用单分子定义，分母需改用kBT，不能混用单位。这不是本项目已经选定的PC/ABS本构方程。</p>
+<p>Boyce–Parks–Argon文献A9是玻璃态聚合物速率依赖大变形本构的研究入口，需精读后再决定是否适合目标牌号；“有经典模型”不等于有可直接使用的材料常数。</p>
+<h3 id="section-25">5.2 循环稳定、棘轮与松弛</h3>
+<p>循环硬化/软化是回线随循环变化；棘轮是平均塑性/不可逆应变不断累积；循环蠕变常与平均应力、时间和温度耦合。载荷控制下软化可能增大应变，位移控制下松弛可能降低应力，因此两种试验不能仅比较名义幅值。</p>
+<p>在Abaqus只计算一个循环再乘以百万次，必须先证明经过初始阶段后响应稳定，且温度、刚度、残余应变和接触状态没有持续演化。稳定应力不代表损伤一定停止，稳定温度也不代表材料不疲劳。</p>
+<h3 id="section-26">5.3 自发热与热失稳</h3>
+<p>单位体积能量平衡可用概念式表示：</p>
+<pre><code class="language-text">ρcp · dT/dt = div(κ grad T) + q̇diss + q̇other
+</code></pre>
+<p>真实稳态循环且耗散转热模型成立时，平均热源量级与f·Wd相关。不是所有数值耗散或外功都能当作材料热源；黏性、塑性、损伤储能和摩擦可能需分开处理。红外测量需考虑发射率、空间分辨率和表面/内部温差。</p>
+<p>频率提高可能同时导致速率强化和自发热软化，二者竞争；因此“循环更快，寿命不变”不是聚合物的默认规律。A2、A3用于阅读自发热和频率影响，具体参数须以原文及目标试验为准。</p>
+<h3 id="section-27">5.4 子程序和加速算法的边界</h3>
+<p>UMAT、VUMAT接口中的应变度量、剪切约定、局部旋转、状态变量、能量和切线要求需分别学习。不能把UMAT改名为VUMAT就认为完成移植。先做单积分点/单元的恒速、卸载、松弛、循环及能量测试，再做零件。</p>
+<p>循环跳跃、多时间尺度、降阶方法可减少计算，但必须检查损伤演化、温升、顺序效应和非稳定阶段是否被保留。A6、A7属于进阶研究，不能用其加速系数直接修正零件寿命。</p>
+<p><strong>本章产物</strong>：循环演化图、温度历程、是否需要热耦合/内部损伤更新的决策；若开发子程序，形成单元验证报告。</p>
+<h2 id="section-28">第6章：疲劳机理、试验与统计【必读】</h2>
+<h3 id="section-29">6.1 聚合物可能怎样失效</h3>
+<p>需要区分裂纹萌生与扩展、银纹/空穴化、剪切屈服、界面脱黏、蠕变断裂与热软化失稳。疲劳试验中的“断裂”不一定来自同一种疲劳机理。A4针对具体聚合物实验讨论不同失效模式；读它的目的是学会辨认机制，不是把其HDPE/PVC参数搬给PC/ABS。</p>
+<h3 id="section-30">6.2 载荷定义必须一致</h3>
+<pre><code class="language-text">Δσ = σmax−σmin          应力范围
+σa = Δσ/2              应力幅值
+σm = (σmax+σmin)/2      平均应力
+R = σmin/σmax          应力比（σmax≠0）
+</code></pre>
+<p>R=−1常表示对称拉压，R=0表示零到拉伸，0&lt;R&lt;1常见于拉—拉。压缩主导及σmax接近零时要同时保存上下限，不能只记录R。完整一周期是cycle，反向次数是reversal；两者可能相差2。</p>
+<p>频率、波形、保载时间、加载控制、环境温度和试样实际温度均应保留。“正弦5Hz”不能替代真实服役中带停顿的谱。</p>
+<h3 id="section-31">6.3 试验体系</h3>
+<table>
+<thead>
+<tr>
+  <th>试验</th>
+  <th>回答的问题</th>
+  <th>阅读入口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>单调拉伸/必要的压缩</td>
+  <td>弹性、屈服、速率与拉压差异</td>
+  <td>ASTM D638及匹配材料的适用标准</td>
+</tr>
+<tr>
+  <td>松弛/蠕变/DMA</td>
+  <td>时间、频率、温度、线性范围</td>
+  <td>ASTM D2990、D4065及适用分项</td>
+</tr>
+<tr>
+  <td>单轴恒幅疲劳</td>
+  <td>固定R、温度、频率下的寿命与散布</td>
+  <td>ASTM D7791</td>
+</tr>
+<tr>
+  <td>弯曲疲劳</td>
+  <td>对应弯曲模式的疲劳行为</td>
+  <td>ASTM D7774</td>
+</tr>
+<tr>
+  <td>两级/变幅/带停顿</td>
+  <td>Miner、顺序和蠕变耦合是否适用</td>
+  <td>专门设计并记录加载序列</td>
+</tr>
+<tr>
+  <td>零件疲劳</td>
+  <td>几何、接触、制造与局部模型迁移性</td>
+  <td>与服役一致的验证方案</td>
+</tr>
+</tbody>
+</table>
+<p>D7791与D7774分别面向单轴和弯曲塑料疲劳，不能不经分析互换。<a href="https://store.astm.org/standards/d7791">D7791官方范围</a>、<a href="https://store.astm.org/standards/d7774">D7774官方范围</a>。这里没有复述标准中的尺寸、样本数或机器要求；实施前须读获授权的标准全文。</p>
+<h3 id="section-32">6.4 最低记录字段</h3>
+<p>每个试样至少记录：牌号/批次/制造方式/方向、几何、调湿与老化、控制方式、σmax/σmin或εmax/εmin、名义应力计算截面、波形、频率、温度、循环终点、断裂位置、是否run-out、温升和异常。机器横梁位移不一定等于试样标距应变，需考虑夹具和机器柔度。</p>
+<p>不同应力水平和重复试验应覆盖目标寿命区域，样本量由统计目标、标准和资源确定，本指南不虚构统一的“至少几件就够”。应设置一组独立验证数据，并随机化/分组控制批次与机器漂移。</p>
+<h3 id="section-33">6.5 Run-out、删失和不确定性</h3>
+<p>达到终止循环数但未失效的试样是右删失：知道Nf大于截止值，而非等于截止值，也不是已证明无限寿命。将run-out当作断裂点会改变拟合；全删掉又丢失信息。含删失的似然方法需写出分布假设、失效概率定义及拟合诊断。</p>
+<p>对数正态或Weibull是候选统计模型，不能因软件支持就认定真实材料服从它。平均曲线、某存活概率曲线、均值置信区间与单件预测区间是不同对象。小样本尾部外推尤其需要独立依据。</p>
+<p>pyLife拟合示例输入包含load、cycles、fracture，可作为软件学习入口；工程数据应保存真实试验状态，不能照搬示例按循环阈值猜断裂。<a href="https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html">官方拟合教程</a>。另外ASTM E739-23在官方目录标为2024撤销，仅作历史统计参考，不能表述为现行要求。<a href="https://store.astm.org/products-services/standards-and-publications/standards/fatigue-standards-and-fracture-standards.html">官方状态</a></p>
+<p><strong>本章产物</strong>：试验矩阵、逐试样原始表、失效图片和状态标签、统计拟合说明。优先阅读A1—A4，再阅读与你材料类型相符的专门论文。</p>
+<h2 id="section-34">第7章：疲劳模型：S–N、应变、能量、裂纹和损伤【必读+分支】</h2>
+<h3 id="section-35">7.1 应力寿命S–N与Basquin</h3>
+<p>在固定材料状态、R、温度、频率、失效定义及有效区间内，可拟合：</p>
+<pre><code class="language-text">σa = A Nf^b，b&lt;0
+或 σa = σ′f (2Nf)^b
+</code></pre>
+<p>这两种写法常数不同，必须保存N/2N约定。S–N是试验关系，不是只由弹性模量推导出的材料定律。拐点、双斜率和低应力段需要数据依据；没有断裂并不证明疲劳极限。</p>
+<p>对于pyLife使用的正斜率参数k，单段幂律可重写为：</p>
+<pre><code class="language-text">N(σa) = ND (σa/SD)^(−k)
+k = −1/b
+SD = A·ND^b                 采用N形式时
+SD = σ′f·(2ND)^b            采用2N形式时
+</code></pre>
+<p>这些式子由同一个幂律代数变换得到。ND/SD在本项目可被标为参考点，不能因接口用语就宣称实验上存在无限寿命平台。</p>
+<h3 id="section-36">7.2 均值、温度、频率与制造条件</h3>
+<p>优先建立与试验R等条件匹配的曲线，或拟合并验证条件相关模型。Goodman、Gerber、FKM等方法可作为比较对象，但金属经验不能未经验证用于塑胶。实测多R曲线优于凭一个抗拉强度自动生成所有均值修正。</p>
+<p>温度/频率修正不只是对最终寿命乘系数：它们也会改变本构、局部应力和自发热。熔接线、缺口、表面、方向、残余应力和尺寸效应同样需要试样—零件迁移证据。</p>
+<h3 id="section-37">7.3 雨流计数</h3>
+<p>雨流把不规则标量历程转换为循环端点、范围、均值及次数。它做的是循环识别，不是材料损伤推导，也不保留所有时间顺序、保载和温度信息。</p>
+<p>需要规定：转折点处理、噪声阈值、首尾残余半循环、谱块是否连续重复、分块时如何传递残余状态。对每个CSV块独立计数后直接相加，可能漏掉跨块闭合循环。滤波可移除真实损伤小循环，必须做敏感性比较；Nyquist条件只约束理想带限重建，不保证少量采样能准确恢复疲劳极值。</p>
+<p><a href="https://store.astm.org/standards/e1049">ASTM E1049</a>提供循环计数方法的标准入口。其角色是规范计数概念，不为聚合物提供材料寿命参数。</p>
+<h3 id="section-38">7.4 Miner线性累积损伤</h3>
+<pre><code class="language-text">D = Σ ni/Ni
+谱块重复次数 Lblock ≈ Dcrit/Dblock
+</code></pre>
+<p>Ni是相应循环条件下的恒幅寿命。Dcrit=1可作基线假设，必须验证。相同循环集合换顺序，Miner计算不变；真实聚合物可能因过载、蠕变、温升与损伤状态不同而寿命不同。</p>
+<p>折算小时还需要谱块的真实持续时间和重复规则。Dblock=0不自动代表实际无限寿命，应检查是否误设耐久平台、漏循环或单位错误。</p>
+<h3 id="section-39">7.5 应变寿命与能量指标【条件必读】</h3>
+<p>若局部塑性/非线性显著，可研究ε–N。金属常见Coffin–Manson–Basquin形式可作为认识弹性与塑性应变幅分解的入口，但不是已标定的塑胶公式。玻璃态聚合物的速率、温度和循环状态可能需要额外项。</p>
+<p>能量法可用每周期耗散Wd=∮σ:dε、弹性能或其他物理指标关联寿命。必须区分可恢复储能与不可逆耗散、首循环与稳定循环、单位体积能量与整件能量。外力—总位移回线含夹具/接触贡献，不能直接当作危险点材料耗散。</p>
+<h3 id="section-40">7.6 多轴疲劳【条件必读】</h3>
+<p>非负Mises序列可能抹去拉压反转；最大主应力随时刻切换方向，也可能不是同一个材料方向上的历程。非比例加载还含相位和主轴旋转信息。可研究临界平面、拉伸/剪切组合指标、应变或能量准则，但需对应多轴试验。</p>
+<p>应先在固定材料点保存完整张量及坐标信息，再决定标量评价方式，而非导出时只剩一个Mises最大值。短纤增强材料还要结合取向分布；A5是这一分支的阅读入口。</p>
+<h3 id="section-41">7.7 裂纹扩展与断裂力学【进阶】</h3>
+<p>若已知初始裂纹a0，目标是扩展到ac，可研究da/dN与ΔK、J或其他驱动力的关系。Paris形式da/dN=C(ΔK)^m仅在其适用区间、机制和条件下使用；聚合物可能有黏弹区、闭合、频率和温度效应。</p>
+<p>裂纹扩展寿命与起裂/总寿命不是同一对象。需要裂纹测量、初始缺陷分布、几何驱动力及有效性检验，不能把裂纹试样参数直接当整件S–N输入。</p>
+<h3 id="section-42">7.8 路径相关损伤与熵方法【进阶】</h3>
+<p>内部损伤变量可随应力、应变、温度和历史演化，并反过来改变刚度/响应。能量/熵方法尝试以耗散或熵产生连接损伤，但临界值、耗散分解、恒温与加速假设仍需标定和验证。A6是在特定材料模型与算例范围内的研究，不是所有塑胶通用的失效理论。</p>
+<p><strong>本章产物</strong>：疲劳路线选择表、公式与条件、参数来源、拟合区间、外推规则、独立变幅验证计划。</p>
+<h2 id="section-43">第8章：Abaqus有限元理论与求解策略【必读】</h2>
+<h3 id="section-44">8.1 有限元在求解什么</h3>
+<p>连续体平衡、运动学、材料本构和边界条件形成边值问题。位移通过形函数插值，单元积分点计算应变/本构响应，装配得到整体方程。静力问题可示意为R(u)=Fext−Fint(u)=0；动力学为Mü+C u̇+Fint=Fext。</p>
+<p>刚度矩阵、积分点与节点插值是数值方法，不是材料真实微观结构。接触、几何非线性与材料非线性分别来自不同机制，应分开诊断。</p>
+<h3 id="section-45">8.2 Standard与Explicit如何选</h3>
+<table>
+<thead>
+<tr>
+  <th>问题特征</th>
+  <th>优先比较的方案</th>
+  <th>关键检查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>缓慢加载、接触稳定</td>
+  <td>Standard静力/适当准静态时变过程</td>
+  <td>收敛、真实材料时间、稳定化影响</td>
+</tr>
+<tr>
+  <td>黏弹松弛/蠕变且惯性可忽略</td>
+  <td>支持该本构的Standard时变准静态过程</td>
+  <td>总时长与增量能解析松弛过程</td>
+</tr>
+<tr>
+  <td>真实振动或惯性显著</td>
+  <td>隐式动力或Explicit</td>
+  <td>动态响应、频率、时间步与阻尼</td>
+</tr>
+<tr>
+  <td>强接触、快速事件、极端非线性</td>
+  <td>Explicit候选</td>
+  <td>稳定步长、惯性、能量及畸变</td>
+</tr>
+</tbody>
+</table>
+<p>疲劳后处理不要求应力场必须来自Explicit。选择求解器是数值与物理决策，不是技术路线的固定前提。</p>
+<p>Standard非线性问题通常迭代求平衡，需学习残差、切线、增量切回和收敛准则。Explicit用显式时间推进，单步便宜但条件稳定；无阻尼线性系统的教学稳定界为Δt≤2/ωmax，实际自动估计与接触/材料等有关。<a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAETHERefMap/simathe-c-expdynamic.htm">官方显式积分理论</a>。数值稳定不等于时间精度足够。</p>
+<h3 id="section-46">8.3 真实时间、质量缩放与能量</h3>
+<p>对于速率相关材料，压缩加载时间会改变应变率与松弛，不能仅靠“动能较小”证明物理一致。质量缩放可提高稳定时间步而保留原加载时长，却改变惯性；应比较缩放量、局部应力、位移、接触和能量，不能只看单一比值。</p>
+<p>用户已登录的官方2021帮助中，<a href="https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEGSARefMap/simagsa-c-qsimasscaling.htm?contextscope=all">Mass scaling</a>明确讨论了速率相关材料不能靠任意提高加载速率提速，以及过度质量缩放带来的惯性误差。本次已在Edge阅读该页。它是理论学习资料，2024具体设置须另核对。</p>
+<p>至少理解ALLKE、ALLIE、人工能量、黏性/阻尼耗散、外功与接触能量的含义；不要把所有数值耗散都当作材料发热。常见经验阈值只能作为筛查，不能单独证明准静态有效。</p>
+<h3 id="section-47">8.4 实体、壳与网格</h3>
+<p>实体适合三维局部接触和厚度应力；壳以中面、厚度和截面积分描述薄壁行为，必须核对法向与上下表面。薄壁外观不意味着壳能描述螺钉孔局部三维承压的一切细节。</p>
+<p>学习完全/减缩积分、剪切/体积锁死、沙漏控制、厚度方向分辨率与子模型。网格收敛应比较目标历程或疲劳指标，而不只比较总位移。尖角、点载荷、刚性约束边缘的应力奇异性可能使最大应力随网格加密不断增大，应改进几何/载荷表达或采用经验证的局部评价方法。</p>
+<h3 id="section-48">8.5 边界、接触和循环输出</h3>
+<p>明确装配预紧、螺钉连接、摩擦、间隙、载荷方向、约束柔度及载荷相位。固定边界可能比真实夹具更硬，导致错误危险位置。</p>
+<p>输出间隔必须保留循环极值和必要过渡。求解增量远小于输出帧间隔时，ODB仍可能漏峰；增加求解精度不会自动提高导出采样精度。先做帧间隔收敛，再做循环计数。</p>
+<h3 id="section-49">8.6 两类重构需要额外条件</h3>
+<p>线性、固定边界/接触和适当动力假设下可用单位载荷响应叠加重构；非线性接触、路径相关黏弹/塑性不能对单帧应力任意缩放。线黏弹虽具有叠加性，通常也需要考虑时域卷积或频率响应，不能简单用静态比例替代。</p>
+<p>从少量稳定循环推算长期疲劳，需要先验证循环与温度稳定、损伤不显著改变响应。局部损伤演化明显时，单向“Abaqus一次→pyLife一次”可能需要升级为迭代/耦合流程。</p>
+<p><strong>本章产物</strong>：求解器选择依据、边界与载荷表、网格/时间/输出收敛结果、能量与响应检查。阅读顺序见附录B。</p>
+<h2 id="section-50">第9章：ODB数据、采样与桥接理论【必读】</h2>
+<h3 id="section-51">9.1 ODB里的一条应力属于谁</h3>
+<p>基本层次为ODB → step → frame → field output → values。字段输出是空间场随帧变化，历史输出是选定区域/量的时间序列，不能假定两者都有相同采样和空间覆盖。</p>
+<p>固定点标识至少包括instance、element label、integration point和shell section point；帧还需分析步和时间。两个实例可有相同单元号，壳上下表面也不能合并。官方<a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAECMDRefMap/simacmd-c-odbintroreadfieldpyc.htm">Reading field output data</a>是字段遍历和位置属性入口。</p>
+<p>积分点值、外推单元节点值与平均节点值是不同数据。每帧取全模型最大应力再拼接，会把不同材料点接成不存在的“虚拟历程”。</p>
+<h3 id="section-52">9.2 桥接必须保留的信息</h3>
+<table>
+<thead>
+<tr>
+  <th>类别</th>
+  <th>最少内容</th>
+  <th>缺失后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>身份</td>
+  <td>实例、单元、积分点、截面点</td>
+  <td>材料点混并或上下表面混并</td>
+</tr>
+<tr>
+  <td>时间</td>
+  <td>step/domain、帧号、步时间、真实/伪时间语义</td>
+  <td>频率、保载与谱块小时数错误</td>
+</tr>
+<tr>
+  <td>张量</td>
+  <td>实际分量标签、输出位置、坐标基底</td>
+  <td>错误等效应力和拉压判定</td>
+</tr>
+<tr>
+  <td>单位</td>
+  <td>源单位、换算系数、标准单位</td>
+  <td>数量级与能量错误</td>
+</tr>
+<tr>
+  <td>有效性</td>
+  <td>缺帧、非有限值、删除/失效、STATUS可用性</td>
+  <td>人工闭合循环或掩盖失效</td>
+</tr>
+<tr>
+  <td>来源</td>
+  <td>文件指纹、版本、选择规则、参数与假设</td>
+  <td>结果无法复查</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section-53">9.3 缺失、删除、坐标与精度</h3>
+<p>不能盲目补零、前向填充或跨断点雨流。删除单元导致的序列结束可能是失效信息，不是普通采样噪声。局部坐标旋转要按目标评价方向处理；首版桥接可保留原始信息并阻止未经验证的标量“就绪”标记。</p>
+<p>CSV要保留足够数值精度与唯一键；大数据应分块，但分块不能丢失同一点的连续性。张量精度、坐标变换与符号约定应通过抽查和已知答案案例验证。</p>
+<h3 id="section-54">9.4 双Python环境</h3>
+<p>Abaqus的odbAccess由其自带运行环境读取ODB；现代Python环境承担pandas/pyLife和界面。版本、进程返回、文件协议和错误状态是桥接知识的一部分。独立环境隔离能够降低二进制兼容问题，但本身不保证数据正确。</p>
+<p>本项目PRD的首版仅实现读取、选择、参数保存和导出，不含雨流和寿命。完整理论流程与首版工具边界应分开理解。</p>
+<p><strong>本章产物</strong>：数据字典、固定点样例、源ODB→交换包→pandas往返核对记录。</p>
+<h2 id="section-55">第10章：pyLife的数据模型和计算理论【必读】</h2>
+<h3 id="section-56">10.1 pyLife的角色</h3>
+<p>pyLife是实现疲劳评估算法和数据操作的库，背后仍需要材料曲线、适用准则和验证证据。它不从ODB自动识别“这是什么塑胶”，也不自动生成目标牌号的有效疲劳参数。FKM相关模块的存在不构成其可直接适用于塑胶的依据。</p>
+<h3 id="section-57">10.2 pandas与材料点对齐</h3>
+<p>学习Series、DataFrame、索引与MultiIndex、长表/宽表、缺失值、连接和广播。推荐先用长表保持材料点与时间键，再形成单点历程和曲线对象。数组长度相同不意味着顺序一致；连接时按唯一键对齐，不凭行号假定应力、材料参数和网格属于同一位置。</p>
+<h3 id="section-58">10.3 WoehlerCurve</h3>
+<p>曲线由k_1、ND、SD等字段表达，低幅段k_2及散布等为其他参数。官方接口在k_2缺省时采用无限斜率的耐久假设，散布缺省也有软件默认值。本项目需要显式记录这些选择，避免把默认值当成试验证据。<a href="https://pylife.readthedocs.io/en/2.3.1/materiallaws/woehlercurve.html">WoehlerCurve API</a></p>
+<p>采用单一直线、无平台的教学Basquin模型时，可显式令k_2=k_1，并限定拟合和外推范围。无散布数据时不能声称已建立可靠概率模型，即使软件能返回某个数值。</p>
+<h3 id="section-59">10.4 雨流检测器与记录器</h3>
+<p>pyLife将循环检测和记录分开：detector识别一维序列中的回线，recorder保存端点或统计。数据可以分块输入，但需保留检测器状态与首尾处理规则。官方还提示NaN处理可能影响索引；桥接层应在计数前检查缺失，不能依赖下游自动丢弃。<a href="https://pylife.readthedocs.io/en/2.3.1/stress/rainflow.html">rainflow模块</a></p>
+<p>读者必须分清“记录循环端点”“生成幅值—均值载荷集”“对载荷集施加材料规则”。直接对原始张量DataFrame调用标量雨流并不完成多轴疲劳方法选择。</p>
+<h3 id="section-60">10.5 从载荷集到损伤</h3>
+<p>完整后续流程：单点标量序列 → 循环范围/幅值/均值/次数 → 条件匹配或验证过的修正 → Wöhler曲线给出Ni → 选定累积规则 → 单点损伤 → 按点键映射回网格。只有在谱块重复假设成立时才折算谱块寿命与小时。</p>
+<p><a href="https://pylife.readthedocs.io/en/2.3.1/demos/lifetime_calc.html">Life time Calculation教程</a>展示曲线、载荷集、损伤与网格环节的组织方法。示例中的均值修正和材料数字仅供学习接口，不能沿用为本项目塑胶的标定结果。</p>
+<h3 id="section-61">10.6 版本与再现</h3>
+<p>本项目阅读基线为pyLife 2.3.1，不宣称它是最新版本。固定软件版本、依赖、公式、输入单位和处理规则；采用其他版本时核对API与数值行为。OdbClient/odbserver是桥接候选，不意味着其默认输出自动满足积分点和壳截面点的数据保真要求。</p>
+<p><strong>本章产物</strong>：一张输入—对象—公式—输出映射表；能在不依赖软件黑箱的情况下用手算解释一个循环的损伤。</p>
+<h2 id="section-62">第11章：贯穿项目的手算与最小验证案例【必读】</h2>
+<p>下面均为构造数据，只用于检查单位、定义和算法。</p>
+<h3 id="section-63">11.1 幅值与应力比</h3>
+<p>设σmin=10MPa，σmax=30MPa，则Δσ=20MPa，σa=10MPa，σm=20MPa，R=1/3。如果把20MPa范围误作幅值，对于k=5的幂律，给定次数下的损伤将放大2⁵=32倍。该结论由N∝σa^(−k)直接得到，与材料牌号无关。</p>
+<h3 id="section-64">11.2 Basquin与pyLife参考点</h3>
+<p>设σa=100·N^(−0.1) MPa，取ND=10⁶，则k=10、SD≈25.1189MPa；无平台单直线时k_2=10。输入N=10⁴应得到约39.8107MPa。若原式是100·(2N)^(−0.1)，则同一ND下SD≈23.4367MPa。用这两组答案检查N/2N转换。</p>
+<h3 id="section-65">11.3 松弛</h3>
+<p>设E(t)=1000+1000exp(−t/10)MPa，施加小阶跃应变0.01。瞬时σ≈20MPa；t=10s时σ≈13.6788MPa；长期趋近10MPa。真实FE施加有限上升时间时，应以同一加载斜坡的理论响应比较，而不是把阶跃答案强行套上。</p>
+<h3 id="section-66">11.4 Miner</h3>
+<p>假设某曲线给出两种循环的寿命N1=10⁵、N2=10⁶，一个谱块含n1=1000、n2=10000，则Dblock=0.02。若教学假设Dcrit=1，得到50个谱块；每块100s时约5000s。这个结果只验证计算，不验证真实变幅服役寿命。</p>
+<h3 id="section-67">11.5 必须逐级完成的验证案例</h3>
+<table>
+<thead>
+<tr>
+  <th>案例</th>
+  <th>要验证的知识</th>
+  <th>通过证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>均匀拉伸单元</td>
+  <td>应力、应变、单位和ODB读取</td>
+  <td>与F/A及设定本构一致</td>
+</tr>
+<tr>
+  <td>黏弹松弛单元</td>
+  <td>Prony、初始/长期模量、真实时间</td>
+  <td>与同加载历史解析/独立积分一致</td>
+</tr>
+<tr>
+  <td>壳纯弯曲</td>
+  <td>法向、截面点与上下表面</td>
+  <td>表面符号和幅值分别正确</td>
+</tr>
+<tr>
+  <td>两实例同号单元</td>
+  <td>唯一点键</td>
+  <td>导出和回读不混并</td>
+</tr>
+<tr>
+  <td>完整重复正弦</td>
+  <td>采样、转折点和首尾规则</td>
+  <td>计数数量、范围和均值可解释</td>
+</tr>
+<tr>
+  <td>分块与连续计数</td>
+  <td>残余循环状态</td>
+  <td>在同样首尾约定下结果一致</td>
+</tr>
+<tr>
+  <td>已知曲线恒幅</td>
+  <td>曲线与损伤实现</td>
+  <td>Ni与手算一致</td>
+</tr>
+<tr>
+  <td>两级载荷</td>
+  <td>累积模型适用性</td>
+  <td>仿真与独立试验比较，而非只验证公式</td>
+</tr>
+<tr>
+  <td>零件验证</td>
+  <td>模型迁移</td>
+  <td>位置、应变、温升、失效形态和寿命共同评估</td>
+</tr>
+</tbody>
+</table>
+<p>比较容差应由源精度、FE离散误差和试验噪声决定并预先记录。不要用“图看起来重合”替代数值核对。</p>
+<h2 id="section-68">第12章：材料试验与数据需求清单【必读】</h2>
+<table>
+<thead>
+<tr>
+  <th>数据包</th>
+  <th>建议字段/内容</th>
+  <th>用于什么</th>
+  <th>缺少时的限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>材料身份</td>
+  <td>牌号、批次、配比、填料、制造、方向、调湿/老化</td>
+  <td>确认参数适用对象</td>
+  <td>不能称为目标材料预测</td>
+</tr>
+<tr>
+  <td>基础力学</td>
+  <td>多条件拉伸；必要时压缩/剪切、卸载</td>
+  <td>E、ν、屈服、速率、非线性</td>
+  <td>单条曲线难以确定多机制本构</td>
+</tr>
+<tr>
+  <td>黏弹数据</td>
+  <td>松弛/蠕变/DMA及线性范围</td>
+  <td>松弛谱、移位与频率响应</td>
+  <td>不能可靠描述长期时间效应</td>
+</tr>
+<tr>
+  <td>循环响应</td>
+  <td>回线、残余应变、刚度随循环变化</td>
+  <td>判断是否稳定和是否需内变量</td>
+  <td>单循环外推依据不足</td>
+</tr>
+<tr>
+  <td>热学</td>
+  <td>密度、cp、κ、散热边界、温升</td>
+  <td>热耦合与热失稳</td>
+  <td>无法区分热软化与纯机械损伤</td>
+</tr>
+<tr>
+  <td>疲劳</td>
+  <td>多幅值、重复、run-out、R/T/f和终点</td>
+  <td>S–N/其他指标与散布</td>
+  <td>不能仅凭静强度建立可靠寿命</td>
+</tr>
+<tr>
+  <td>服役谱</td>
+  <td>力/位移、相位、频率、停顿、温湿度、重复规则</td>
+  <td>重建真实局部历程</td>
+  <td>循环数与小时换算不确定</td>
+</tr>
+<tr>
+  <td>零件验证</td>
+  <td>载荷、应变、温升、裂纹、寿命和制造状态</td>
+  <td>证明试样到零件迁移</td>
+  <td>只能称为方法演示/初步估计</td>
+</tr>
+</tbody>
+</table>
+<p>按机制补数据：不明显黏弹不等于必须先做所有DMA；温升不可忽略就必须补热学证据。先用小规模探索试验判断机制，再确定正式矩阵。公开论文可用于方法练习和对照，作为设计材料输入需核对牌号、工艺、条件和许可。</p>
+<p><strong>本章产物</strong>：已有/缺失/待核查的数据台账，明确谁提供、文件格式、单位、测量条件和用途。</p>
+<h2 id="section-69">第13章：可信度、适用范围与研究记录【必读】</h2>
+<h3 id="section-70">13.1 区分三类误差</h3>
+<p>数值误差：网格、时间步、输出采样、舍入和求解控制；参数不确定性：模量、Prony谱、疲劳散布、摩擦等；模型误差：错误的损伤机制、忽略热/蠕变、试样到零件迁移失效。加密网格不能修复错误的失效机理。</p>
+<h3 id="section-71">13.2 敏感性与验证</h3>
+<p>先检查应力幅、S–N斜率、R、温度、接触/预紧、网格与谱重复对结果的影响。幂律下寿命对应力很敏感，小幅局部误差可能放大为寿命倍数；用对数寿命误差与散布表征通常更易解释，但具体指标应预先选定。</p>
+<p>验证应同时看危险位置、局部应变/位移、循环回线、温升、失效形态和寿命。预测循环数偶然接近而失效位置/机理不同，仍不能视作已验证模型。</p>
+<h3 id="section-72">13.3 文献阅读和记录模板</h3>
+<p>每篇文献填写：材料/工艺；问题与终点；试验载荷和环境；本构/疲劳公式；参数来自哪张表或哪幅图；标定与验证是否分开；原始数据是否可得；适用条件；如何迁移到本项目；无法核实之处。</p>
+<p>摘要、全文、复现是三个证据层级。AI skill是工作流程辅助，不是理论来源，也不提供材料认证。Nature类skill可帮助梳理证据；Abaqus skill帮助组织脚本；任何默认参数都仍需来源和验证。</p>
+<p><strong>本章产物</strong>：验证计划、适用范围声明、参数来源表、版本和文件校验记录。</p>
+<h2 id="section-73">第14章：分阶段阅读计划与自测题</h2>
+<p>下列时长只是学习安排建议，完成以产物为准，可按已有基础跳读。</p>
+<table>
+<thead>
+<tr>
+  <th>阶段</th>
+  <th>建议安排</th>
+  <th>阅读</th>
+  <th>必须交出的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1 建立闭环</td>
+  <td>第1周</td>
+  <td>1、2、6；A1、A4；B1</td>
+  <td>问题定义、单位和疲劳试验记录模板</td>
+</tr>
+<tr>
+  <td>2 本构与黏弹</td>
+  <td>第2—3周</td>
+  <td>3、4；A8、MIT讲义；B2、B3</td>
+  <td>模型选择、Maxwell推导、Prony与数据窗口</td>
+</tr>
+<tr>
+  <td>3 Abaqus局部响应</td>
+  <td>第4周</td>
+  <td>5、8；B4—B7</td>
+  <td>单元验证、求解器依据、网格与输出收敛</td>
+</tr>
+<tr>
+  <td>4 疲劳理论</td>
+  <td>第5周</td>
+  <td>7；A2、A3；B8</td>
+  <td>S–N拟合规范、雨流首尾规则、Miner假设</td>
+</tr>
+<tr>
+  <td>5 软件与接口</td>
+  <td>第6周</td>
+  <td>9、10、11；B9—B13</td>
+  <td>数据字典、手算答案、ODB往返验证方案</td>
+</tr>
+<tr>
+  <td>6 零件可信度</td>
+  <td>第7—8周</td>
+  <td>12、13；按机制选A5—A7、A9</td>
+  <td>数据缺口、独立验证与适用范围</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section-74">自测题与判断要点</h3>
+<ol>
+<li>只有PC/ABS的E、ν和抗拉强度能否计算可信疲劳寿命？——不能，还缺疲劳关系、条件和失效定义等。</li>
+<li>松弛和蠕变是否互为逐点倒数？——一般不是；边界条件和响应函数不同。</li>
+<li>如何判定线黏弹是否合适？——检查幅值线性、叠加、时间窗口及独立加载验证。</li>
+<li>Prony的gi为什么不能填MPa？——它是相对瞬时模量的无量纲权重。</li>
+<li>静态夹紧力不变，塑胶应变为什么仍增加？——可能是蠕变；固定变形时则可能应力松弛。</li>
+<li>能否把显式分析从10s压到0.01s再恢复横坐标？——速率相关材料通常不能，计算出的响应已经改变。</li>
+<li>ALLKE小能否证明疲劳应力正确？——不能，还需局部响应、时间/输出精度和材料验证。</li>
+<li>壳单元每帧取上下表面最大值为何有问题？——会把不同材料点拼接，丢失符号和历史身份。</li>
+<li>Mises曲线为何可能丢失R信息？——非负标量不能完整保留拉压反转和多轴路径。</li>
+<li>Run-out为何不是无限寿命？——它仅表明在该截止循环数前未达到终点。</li>
+<li>雨流为何不能替代蠕变/热模型？——它压缩循环统计，不保留全部真实时间和状态演化。</li>
+<li>k_2不填会怎样？——pyLife曲线有耐久默认行为，需要显式选择并记录，不能当作材料结论。</li>
+<li>半循环怎样处理？——由首尾和重复规则确定，并通过已知信号验证，不能一律删除。</li>
+<li>Miner为何无法描述顺序效应？——损伤只由循环计数和Ni累加，不含顺序状态变量。</li>
+<li>两种曲线N与2N如何统一？——保留表达式，用同一个参考循环数重新计算参考应力。</li>
+<li>什么结果才能称为零件验证？——独立条件下局部响应、温升/机制、位置和寿命共同支持，且声明范围。</li>
+</ol>
+<h2 id="section-75">附录A：必读文献与DOI</h2>
+<h3 id="section-76">核心阅读清单</h3>
+<p>下表“本次使用”说明本指南依据的证据层级；没有标为精读的资料，不宣称已完成全文研究。已有PDF均来自此前项目归档，本次没有新增论文下载。</p>
+<table>
+<thead>
+<tr>
+  <th>编号/深度</th>
+  <th>文献与DOI</th>
+  <th>阅读任务和边界</th>
+  <th>全文与本次使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>A1 必读</td>
+  <td>Mura等，2018，Investigation of Fatigue Behavior of ABS and PC-ABS Polymers at Different Temperatures；<a href="https://doi.org/10.3390/ma11101818">10.3390/ma11101818</a></td>
+  <td>找出材料、温度、频率、失效与曲线构造；不能当作任意牌号的完整设计曲线</td>
+  <td>已有PDF：<a href="https://github.com/keylliucong/plastics-fatigue-abaqus-pylife/blob/main/literature/pdfs/5PUAPLS2.pdf">5PUAPLS2</a>；本次核对出版页，结合既有笔记</td>
+</tr>
+<tr>
+  <td>A2 必读</td>
+  <td>Criticality of the Self-Heating Effect in Polymers and Polymer Matrix Composites during Fatigue, and Their Application in Non-Destructive Testing；<a href="https://doi.org/10.3390/polym11010019">10.3390/polym11010019</a></td>
+  <td>自发热综述；整理温升、损伤与散热关系，不假定全部塑胶通用</td>
+  <td>已有PDF：<a href="https://github.com/keylliucong/plastics-fatigue-abaqus-pylife/blob/main/literature/pdfs/UC3HMX8S.pdf">UC3HMX8S</a>；本次查阅公开网页，建议精读图示与原始引用</td>
+</tr>
+<tr>
+  <td>A3 必读</td>
+  <td>Mortazavian等，2015，Effect of cycling frequency and self-heating on fatigue behavior of reinforced and unreinforced thermoplastic polymers；<a href="https://doi.org/10.1002/pen.24124">10.1002/pen.24124</a></td>
+  <td>区分材料、方向、R和频率影响，设计目标材料的频率检查</td>
+  <td>尚无PDF；当前依据既有摘要/元数据，不引用未核参数</td>
+</tr>
+<tr>
+  <td>A4 必读</td>
+  <td>Naga与El-Sayed，2024，Fatigue Failure in Polymeric Materials: Insights from Experimental Testing；<a href="https://doi.org/10.1007/s11668-024-01874-1">10.1007/s11668-024-01874-1</a></td>
+  <td>比较疲劳、蠕变和热失效；对象HDPE/PVC，不移植其常数</td>
+  <td>已有PDF：<a href="https://github.com/keylliucong/plastics-fatigue-abaqus-pylife/blob/main/literature/pdfs/DMGUTPFB.pdf">DMGUTPFB</a>；本次依据既有笔记/摘要，全文待逐节精读</td>
+</tr>
+<tr>
+  <td>A5 增强材料条件必读</td>
+  <td>Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions；<a href="https://doi.org/10.1016/j.ijfatigue.2020.105574">10.1016/j.ijfatigue.2020.105574</a></td>
+  <td>疲劳指标、方向、R与环境验证；不等同未增强塑胶</td>
+  <td>尚无PDF；摘要/元数据级入口</td>
+</tr>
+<tr>
+  <td>A6 进阶</td>
+  <td>Numerical Simulation for Durability of a Viscoelastic Polymer Material Subjected to Variable Loadings Fatigue Based on Entropy Damage Criterion；<a href="https://doi.org/10.3390/polym16202857">10.3390/polym16202857</a></td>
+  <td>检查熵损伤、恒温、加速和单元级验证假设，作为扩展比较</td>
+  <td>已有PDF：<a href="https://github.com/keylliucong/plastics-fatigue-abaqus-pylife/blob/main/literature/pdfs/2EVJR4M9.pdf">2EVJR4M9</a>；本次查阅公开页及既有笔记</td>
+</tr>
+<tr>
+  <td>A7 进阶</td>
+  <td>Abaqus implementation of a large family of finite viscoelasticity models；<a href="https://doi.org/10.48550/arXiv.2311.13751">10.48550/arXiv.2311.13751</a></td>
+  <td>有限黏弹框架与实现；arXiv版本不自动等同正式期刊版本</td>
+  <td>已有PDF：<a href="https://github.com/keylliucong/plastics-fatigue-abaqus-pylife/blob/main/literature/pdfs/UHMR938Y.pdf">UHMR938Y</a>；本次仅作为既有研究入口</td>
+</tr>
+<tr>
+  <td>A8 黏弹进阶</td>
+  <td>Williams、Landel、Ferry，1955，The Temperature Dependence of Relaxation Mechanisms in Amorphous Polymers and Other Glass-forming Liquids；<a href="https://doi.org/10.1021/ja01619a008">10.1021/ja01619a008</a></td>
+  <td>WLF原始文献；核对参考温度、移位定义与适用范围</td>
+  <td>本次Crossref核对题名/作者/DOI；未取得全文，未新增Zotero条目</td>
+</tr>
+<tr>
+  <td>A9 黏塑进阶</td>
+  <td>Boyce、Parks、Argon，1988，Large inelastic deformation of glassy polymers. Part I: rate dependent constitutive model；<a href="https://doi.org/10.1016/0167-6636(88)90003-8">10.1016/0167-6636(88)90003-8</a></td>
+  <td>玻璃态聚合物大变形速率本构入口；先读假设再决定模型</td>
+  <td>本次Crossref核对题名/作者/DOI；未取得全文，未新增Zotero条目</td>
+</tr>
+<tr>
+  <td>A10 方法贯通</td>
+  <td>Volgers与Shojaei，Fatigue Behavior of Engineering Polymers and Its Numerical Implementation；<a href="https://www.3ds.com/assets/invest/2024-01/2218-saoe-fatigue_behavior_of_engineering_polymers_and_its_numerical_implementation.pdf">官方技术论文</a></td>
+  <td>看试验—本构—数值实现关系；Delrin/POM案例参数不能移植PC/ABS</td>
+  <td>已有PDF：<a href="https://github.com/keylliucong/plastics-fatigue-abaqus-pylife/blob/main/literature/pdfs/RYGCBQQJ.pdf">RYGCBQQJ</a>；年份未确认，不编造DOI</td>
+</tr>
+<tr>
+  <td>A11 进阶</td>
+  <td>Mechanical fatigue of polymers: A new approach to characterize the S N behavior on the basis of macroscopic crack growth mechanism；<a href="https://doi.org/10.1016/j.polymer.2016.03.058">10.1016/j.polymer.2016.03.058</a></td>
+  <td>阅读S–N与裂纹机制的联系；关注热效应边界</td>
+  <td>尚无PDF；当前摘要/元数据级入口</td>
+</tr>
+<tr>
+  <td>A12 进阶</td>
+  <td>A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method；<a href="https://doi.org/10.48550/arXiv.2408.05143">10.48550/arXiv.2408.05143</a></td>
+  <td>时间多尺度加速；检查是否保留慢演化和周期响应</td>
+  <td>已有PDF：<a href="https://github.com/keylliucong/plastics-fatigue-abaqus-pylife/blob/main/literature/pdfs/KYM9FFMX.pdf">KYM9FFMX</a>；本次仅作为既有研究入口</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section-77">标准阅读清单</h3>
+<ul>
+<li><a href="https://store.astm.org/standards/d638">ASTM D638-22</a>，塑料拉伸；DOI：<a href="https://doi.org/10.1520/D0638-22">10.1520/D0638-22</a>。本次核对官方目录与范围。</li>
+<li><a href="https://store.astm.org/standards/d7791">ASTM D7791-22</a>，塑料单轴疲劳；DOI：<a href="https://doi.org/10.1520/D7791-22">10.1520/D7791-22</a>。已在项目归档元数据。</li>
+<li><a href="https://store.astm.org/standards/d7774">ASTM D7774-22</a>，塑料弯曲疲劳；DOI：<a href="https://doi.org/10.1520/D7774-22">10.1520/D7774-22</a>。已在项目归档元数据。</li>
+<li><a href="https://store.astm.org/standards/d2990">ASTM D2990</a>，塑料拉伸/压缩/弯曲蠕变与蠕变断裂；本次官方目录显示D2990-17(2025)。</li>
+<li><a href="https://store.astm.org/products-services/standards-and-publications/standards/plastics-standards.html">ASTM塑料标准目录中的D4065</a>，动态机械性能程序；本次目录显示D4065-20。试验前核对适用模式和分项标准。</li>
+<li><a href="https://store.astm.org/standards/e1049">ASTM E1049-85(2023)</a>，疲劳循环计数；DOI：<a href="https://doi.org/10.1520/E1049-85R23">10.1520/E1049-85R23</a>。本次核对官方目录与范围。</li>
+</ul>
+<p>仅查阅了公开标准目录/范围，不表示已取得或精读收费标准全文。版本状态以实施时实验室采用的官方文本为准。</p>
+<h2 id="section-78">附录B：官方文档阅读导航</h2>
+<h3 id="section-79">用户Edge登录的官方入口</h3>
+<p><a href="https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEGSARefMap/simagsa-c-ov.htm?contextscope=all&amp;redirect_lang=English">B1：Getting Started with Abaqus/CAE（2021）</a>。本次已在用户Edge中确认可读取。</p>
+<p>按目录阅读：Abaqus Basics → Finite Elements and Rigid Bodies → Using Continuum Elements → Using Shell Elements → Nonlinearity → Materials → Contact → Nonlinear Explicit Dynamics → Quasi-Static Analysis with Abaqus/Explicit → Viewing the Output。</p>
+<p>2021入口适合学习基础；不能据此声称Abaqus 2024具体接口或材料组合已验证。不要把旧版Python示例原样用于2024。</p>
+<h3 id="section-80">材料与数值理论</h3>
+<table>
+<thead>
+<tr>
+  <th>编号</th>
+  <th>官方/教学资料</th>
+  <th>需要找的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>B2</td>
+  <td><a href="https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/d173f95347f59d59dd9b7387ab4303e7_MIT3_11F99_visco.pdf">MIT Engineering Viscoelasticity，Roylance，2001</a></td>
+  <td>自己推导元件方程、松弛与蠕变，理解叠加与频域</td>
+</tr>
+<tr>
+  <td>B3</td>
+  <td><a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-timevisco.htm">Abaqus Time Domain Viscoelasticity</a></td>
+  <td>Prony归一化、有限应变与输入数据定义</td>
+</tr>
+<tr>
+  <td>B4</td>
+  <td><a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-matmodels.htm">Combining Material Behaviors</a></td>
+  <td>允许的行为组合及求解器限制</td>
+</tr>
+<tr>
+  <td>B5</td>
+  <td><a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAETHERefMap/simathe-c-expdynamic.htm">Explicit dynamic analysis理论</a></td>
+  <td>显式积分、质量矩阵与条件稳定</td>
+</tr>
+<tr>
+  <td>B6</td>
+  <td><a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAEANLRefMap/simaanl-c-massscaling.htm">Mass Scaling</a>及<a href="https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEGSARefMap/simagsa-c-qsimasscaling.htm?contextscope=all">已读2021官方页</a></td>
+  <td>保留真实时间、惯性与提速边界</td>
+</tr>
+<tr>
+  <td>B7</td>
+  <td><a href="https://docs.software.vt.edu/abaqusv2026/English/SIMACAECMDRefMap/simacmd-c-odbintroreadfieldpyc.htm">Reading field output data</a></td>
+  <td>step/frame/field/value、位置和分量</td>
+</tr>
+<tr>
+  <td>B8</td>
+  <td><a href="https://store.astm.org/standards/e1049">ASTM E1049</a></td>
+  <td>完整/半循环、不同计数概念，需读授权全文</td>
+</tr>
+</tbody>
+</table>
+<p>公开Abaqus网页本次可读取的是2026版本；2024对应公开路径返回访问限制。它们用于理论导航，在本机2024帮助中按同名主题核对：材料兼容组合、瞬时/长期模量、变量可用性、单元支持和Python接口。</p>
+<h3 id="section-81">pyLife 2.3.1</h3>
+<table>
+<thead>
+<tr>
+  <th>编号</th>
+  <th>文档</th>
+  <th>读完要能完成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>B9</td>
+  <td><a href="https://pylife.readthedocs.io/en/2.3.1/materiallaws/woehlercurve.html">WoehlerCurve</a></td>
+  <td>解释k_1/ND/SD/k_2及默认值</td>
+</tr>
+<tr>
+  <td>B10</td>
+  <td><a href="https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html">Wöhler analyzing functions</a></td>
+  <td>输入真实fracture/run-out，识别拟合假设</td>
+</tr>
+<tr>
+  <td>B11</td>
+  <td><a href="https://pylife.readthedocs.io/en/2.3.1/stress/rainflow.html">rainflow</a></td>
+  <td>解释detector/recorder、分块和缺失值风险</td>
+</tr>
+<tr>
+  <td>B12</td>
+  <td><a href="https://pylife.readthedocs.io/en/2.3.1/demos/lifetime_calc.html">Life time Calculation</a></td>
+  <td>解释载荷集、材料关系、损伤及网格映射</td>
+</tr>
+<tr>
+  <td>B13</td>
+  <td><a href="https://pylife.readthedocs.io/en/2.3.1/tools/odbclient/odbclient.html">OdbClient</a></td>
+  <td>解释双环境桥接，核查输出位置与点标识</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-82">附录C：术语与公式速查</h2>
+<table>
+<thead>
+<tr>
+  <th>术语/符号</th>
+  <th>含义</th>
+  <th>容易混淆的对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>本构 / 疲劳准则</td>
+  <td>局部响应规律 / 失效累积关系</td>
+  <td>黏弹本构本身不是疲劳寿命模型</td>
+</tr>
+<tr>
+  <td>E0 / E∞</td>
+  <td>瞬时 / 长期模量</td>
+  <td>慢速拉伸测得模量不一定等于任一极限</td>
+</tr>
+<tr>
+  <td>η / τ</td>
+  <td>黏度 / 时间常数</td>
+  <td>η有应力×时间量纲，τ是时间</td>
+</tr>
+<tr>
+  <td>E′ / E″ / tanδ</td>
+  <td>储能 / 损耗模量 / 损耗因子</td>
+  <td>不直接等于静态拉伸模量</td>
+</tr>
+<tr>
+  <td>gi、ki</td>
+  <td>Prony剪切/体积归一化权重</td>
+  <td>不是以MPa计的分支模量</td>
+</tr>
+<tr>
+  <td>aT / Tref</td>
+  <td>移位因子 / 参考温度</td>
+  <td>必须保存移位正负号和时间约定</td>
+</tr>
+<tr>
+  <td>σa / Δσ / σm</td>
+  <td>幅值 / 范围 / 平均值</td>
+  <td>幅值=范围/2</td>
+</tr>
+<tr>
+  <td>cycle / reversal</td>
+  <td>周期 / 反向</td>
+  <td>N与2N须区分</td>
+</tr>
+<tr>
+  <td>run-out</td>
+  <td>截止时未达到失效</td>
+  <td>不是已知断裂点或无限寿命证明</td>
+</tr>
+<tr>
+  <td>k_1、k_2</td>
+  <td>Wöhler曲线两段正斜率参数</td>
+  <td>Basquin指数b通常为负</td>
+</tr>
+<tr>
+  <td>ND、SD</td>
+  <td>曲线参考/拐点的循环数和幅值</td>
+  <td>接口名称不证明目标塑胶有耐久平台</td>
+</tr>
+<tr>
+  <td>D / Dcrit</td>
+  <td>累积损伤 / 临界值</td>
+  <td>Dcrit=1是需要验证的基线假设</td>
+</tr>
+<tr>
+  <td>材料点</td>
+  <td>固定实例—单元—积分点—截面点</td>
+  <td>每帧最大值的位置可变化</td>
+</tr>
+<tr>
+  <td>验证 / 标定</td>
+  <td>独立检验预测 / 估计参数</td>
+  <td>拟合好不等于独立验证通过</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section-83">在这个项目中形成的最终知识产物</h3>
+<ol>
+<li>材料和失效问题定义。</li>
+<li>本构模型依据、参数和适用时间/温度范围。</li>
+<li>疲劳试验、曲线、散布与删失处理规范。</li>
+<li>Abaqus求解器、边界、网格、时间和输出验证。</li>
+<li>ODB材料点与单位的数据契约。</li>
+<li>pyLife公式、默认行为、计数和损伤假设。</li>
+<li>手算—单元—试样—零件的验证链。</li>
+<li>独立验证结论、误差和外推限制。</li>
+</ol>
+<p>版本记录：v1.0为项目学习文档；补充核对WLF/Boyce论文元数据、ASTM公开范围、pyLife 2.3.1官方文档及用户Edge中2021官方帮助。未新增材料参数，未运行Abaqus/pyLife疲劳计算，未改变桥接PRD的首版范围。</p>
+<div class="footer">项目理论学习资料 · v1.0 · 来源与证据状态见附录。正文为项目综合讲义，不是实际零件验证报告。</div></main></body></html>
