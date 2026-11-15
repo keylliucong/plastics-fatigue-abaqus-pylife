@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "retrieved": "2026-11-15",
+  "sources": [
+    {
+      "repo": "Ohmframe/abaqus-ai-skills",
+      "commit": "4528b4a34126c0218767711414c02287c2e0f579",
+      "paths": [
+        "skills/abaqus-explicit-impact/SKILL.md",
+        "skills/abaqus-forming-fld/SKILL.md",
+        "skills/abaqus-heat-transfer/SKILL.md",
+        "skills/abaqus-mesh-doctor/SKILL.md",
+        "skills/abaqus-model-builder/SKILL.md",
+        "skills/abaqus-odb-extract/SKILL.md",
+        "skills/abaqus-version-compat/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "jasonanewcoder/abaqus_skills",
+      "commit": "4737c0ab8d0548e0aa26345c5f7d5ac1a2e5dbc9",
+      "paths": [
+        "abaqus_scriptcontrol_skills/composite/SKILL.md",
+        "abaqus_scriptcontrol_skills/fatigue/SKILL.md",
+        "abaqus_scriptcontrol_skills/general/SKILL.md",
+        "abaqus_scriptcontrol_skills/static/SKILL.md",
+        "abaqus_scriptcontrol_skills/thermal/SKILL.md",
+        "abaqus_scriptcontrol_skills/xfem/SKILL.md",
+        "abaqus_subroutine_skills/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "Yuan1z0825/nature-skills",
+      "commit": "7bff1d0539c0dfad6c30178bb93ce6dd8a5cebf8",
+      "paths": [
+        "skills/nature-academic-search/SKILL.md",
+        "skills/nature-citation/SKILL.md",
+        "skills/nature-data/SKILL.md",
+        "skills/nature-downloader/SKILL.md",
+        "skills/nature-experiment-log/SKILL.md",
+        "skills/nature-figure/SKILL.md",
+        "skills/nature-image2ppt/SKILL.md",
+        "skills/nature-literature-pipeline/SKILL.md",
+        "skills/nature-paper-card/SKILL.md",
+        "skills/nature-paper-to-patent/SKILL.md",
+        "skills/nature-paper-trans/SKILL.md",
+        "skills/nature-paper-xray/SKILL.md",
+        "skills/nature-paper2ppt/SKILL.md",
+        "skills/nature-paper2word/SKILL.md",
+        "skills/nature-polishing/SKILL.md",
+        "skills/nature-proposal-writer/SKILL.md",
+        "skills/nature-reader/SKILL.md",
+        "skills/nature-ref-verifier/SKILL.md",
+        "skills/nature-response/SKILL.md",
+        "skills/nature-reviewer/SKILL.md",
+        "skills/nature-shared/SKILL.md",
+        "skills/nature-social-science/SKILL.md",
+        "skills/nature-statistics/SKILL.md",
+        "skills/nature-writing/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "K-Dense-AI/science-superpowers",
+      "commit": "0374bdf82c2372bdf1667e3c762146c3a29215f5",
+      "paths": [
+        "skills/designing-the-analysis/SKILL.md",
+        "skills/dispatching-parallel-investigations/SKILL.md",
+        "skills/establishing-feasibility-first/SKILL.md",
+        "skills/executing-analysis/SKILL.md",
+        "skills/framing-research-questions/SKILL.md",
+        "skills/investigating-anomalous-results/SKILL.md",
+        "skills/preregistering-analysis/SKILL.md",
+        "skills/receiving-critical-review/SKILL.md",
+        "skills/reporting-and-archiving-findings/SKILL.md",
+        "skills/requesting-red-team-review/SKILL.md",
+        "skills/setting-up-reproducible-analysis/SKILL.md",
+        "skills/subagent-driven-analysis/SKILL.md",
+        "skills/surveying-prior-work/SKILL.md",
+        "skills/using-science-superpowers/SKILL.md",
+        "skills/verifying-results-before-claiming/SKILL.md",
+        "skills/writing-science-skills/SKILL.md"
+      ],
+      "license_paths": [
+        "LICENSE"
+      ]
+    }
+  ],
+  "supplemental_files": [
+    {
+      "repo": "jasonanewcoder/abaqus_skills",
+      "source": "abaqus_agent_playbook.md",
+      "installed": ".agents/skills/general/abaqus_agent_playbook.md",
+      "reason": "general/SKILL.md引用上游根目录配套文件"
+    }
+  ]
+}

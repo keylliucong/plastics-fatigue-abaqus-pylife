@@ -1,0 +1,2937 @@
+[
+  {
+    "key": "5PUAPLS2",
+    "itemType": "journalArticle",
+    "title": "Investigation of Fatigue Behavior of ABS and PC-ABS Polymers at Different Temperatures",
+    "date": "2018-9-25",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Andrea",
+        "last": "Mura"
+      },
+      {
+        "type": "author",
+        "first": "Alessando",
+        "last": "Ricci"
+      },
+      {
+        "type": "author",
+        "first": "Giancarlo",
+        "last": "Canavese"
+      }
+    ],
+    "doi": "10.3390/ma11101818",
+    "publication": "Materials",
+    "url": "https://doi.org/10.3390/ma11101818",
+    "tags": [
+      "核心必读",
+      "温度效应",
+      "PC-ABS"
+    ],
+    "collections": [
+      "LE7ARH44"
+    ],
+    "abstract": "Plastics are widely used in structural components where cyclic loads may cause fatigue failure. In particular, in some applications such as in vehicles, the working temperature may change and therefore the strength of the polymeric materials. In this work, the fatigue behavior of two thermoplastic materials (ABS and PC-ABS) at different temperatures has been investigated. In particular, three temperatures have been considered representing the working condition at room temperature, at low temperature (winter conditions), and high temperature (summer conditions and/or components close to the engine). Results show that high temperature have big impact on fatigue performance, while low temperatures may also have a slight positive effect.",
+    "raw": {
+      "key": "5PUAPLS2",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:47:56Z",
+      "dateModified": "2026-11-15T02:47:56Z",
+      "tags": [
+        {
+          "tag": "核心必读"
+        },
+        {
+          "tag": "温度效应"
+        },
+        {
+          "tag": "PC-ABS"
+        }
+      ],
+      "collections": [
+        "LE7ARH44"
+      ],
+      "relations": {},
+      "title": "Investigation of Fatigue Behavior of ABS and PC-ABS Polymers at Different Temperatures",
+      "abstractNote": "Plastics are widely used in structural components where cyclic loads may cause fatigue failure. In particular, in some applications such as in vehicles, the working temperature may change and therefore the strength of the polymeric materials. In this work, the fatigue behavior of two thermoplastic materials (ABS and PC-ABS) at different temperatures has been investigated. In particular, three temperatures have been considered representing the working condition at room temperature, at low temperature (winter conditions), and high temperature (summer conditions and/or components close to the engine). Results show that high temperature have big impact on fatigue performance, while low temperatures may also have a slight positive effect.",
+      "date": "2018-9-25",
+      "DOI": "10.3390/ma11101818",
+      "url": "https://doi.org/10.3390/ma11101818",
+      "volume": "11",
+      "publisher": "MDPI AG",
+      "pages": "1818",
+      "publicationTitle": "Materials",
+      "ISSN": "1996-1944",
+      "issue": "10",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Andrea",
+          "lastName": "Mura"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Alessando",
+          "lastName": "Ricci"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Giancarlo",
+          "lastName": "Canavese"
+        }
+      ]
+    },
+    "project_collections": [
+      "01 PC-ABS疲劳试验与S-N数据"
+    ]
+  },
+  {
+    "key": "3V3WWBZN",
+    "itemType": "journalArticle",
+    "title": "Interaction between strain-rate strengthening and thermal softening in fatigue behavior of PC/ABS blends",
+    "date": "2026-9",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Jeong-Moo",
+        "last": "Lee"
+      },
+      {
+        "type": "author",
+        "first": "Hyungkwon",
+        "last": "Park"
+      },
+      {
+        "type": "author",
+        "first": "Boyoung",
+        "last": "Yoon"
+      },
+      {
+        "type": "author",
+        "first": "Ji-Ung",
+        "last": "Moon"
+      },
+      {
+        "type": "author",
+        "first": "Junghwan",
+        "last": "Lee"
+      },
+      {
+        "type": "author",
+        "first": "Jung-Wook",
+        "last": "Wee"
+      }
+    ],
+    "doi": "10.1016/j.ijfatigue.2026.109678",
+    "publication": "International Journal of Fatigue",
+    "url": "https://doi.org/10.1016/j.ijfatigue.2026.109678",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "疲劳试验"
+    ],
+    "collections": [
+      "LE7ARH44"
+    ],
+    "raw": {
+      "key": "3V3WWBZN",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:55:15Z",
+      "dateModified": "2026-11-15T02:55:15Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "疲劳试验"
+        }
+      ],
+      "collections": [
+        "LE7ARH44"
+      ],
+      "relations": {},
+      "title": "Interaction between strain-rate strengthening and thermal softening in fatigue behavior of PC/ABS blends",
+      "date": "2026-9",
+      "DOI": "10.1016/j.ijfatigue.2026.109678",
+      "url": "https://doi.org/10.1016/j.ijfatigue.2026.109678",
+      "volume": "210",
+      "publisher": "Elsevier BV",
+      "pages": "109678",
+      "publicationTitle": "International Journal of Fatigue",
+      "ISSN": "0142-1123",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jeong-Moo",
+          "lastName": "Lee"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Hyungkwon",
+          "lastName": "Park"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Boyoung",
+          "lastName": "Yoon"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ji-Ung",
+          "lastName": "Moon"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Junghwan",
+          "lastName": "Lee"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jung-Wook",
+          "lastName": "Wee"
+        }
+      ]
+    },
+    "project_collections": [
+      "01 PC-ABS疲劳试验与S-N数据"
+    ]
+  },
+  {
+    "key": "SUCTX3GJ",
+    "itemType": "journalArticle",
+    "title": "Research on the Low Cycle Fatigue Properties of PC/ABS Blend",
+    "date": "2015-3-20",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Ming Hsiung",
+        "last": "Ho"
+      },
+      {
+        "type": "author",
+        "first": "Pin Ning",
+        "last": "Wang"
+      },
+      {
+        "type": "author",
+        "first": "Shun Chi",
+        "last": "Kuo"
+      }
+    ],
+    "doi": "10.4028/www.scientific.net/amr.1095.938",
+    "publication": "Advanced Materials Research",
+    "url": "https://doi.org/10.4028/www.scientific.net/amr.1095.938",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "疲劳试验"
+    ],
+    "collections": [
+      "LE7ARH44"
+    ],
+    "abstract": "PC/ABS is widely used in the vehicle interior, electronic parts and accessories. The study of low cycle fatigue properties have been performed on injection molded samples of PC/ABS blend. The experimental results indicated that the optimum conditions of the fatigue property are melting temperature 200°C, filling time 6 s, and mold temperature 65°C. There has a transition point in the condition of filling time. When the strain amplitude is higher than 0.0118 mm/mm, filling time 6 second has best fatigue properties. By scanning electron microscopy, near the crack initial area, the mechanics of fracture surface are like short and fine fiber. The surface has long fiber ductile fracture, which far away from crack initial area.",
+    "raw": {
+      "key": "SUCTX3GJ",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:55:16Z",
+      "dateModified": "2026-11-15T02:55:16Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "疲劳试验"
+        }
+      ],
+      "collections": [
+        "LE7ARH44"
+      ],
+      "relations": {},
+      "title": "Research on the Low Cycle Fatigue Properties of PC/ABS Blend",
+      "abstractNote": "PC/ABS is widely used in the vehicle interior, electronic parts and accessories. The study of low cycle fatigue properties have been performed on injection molded samples of PC/ABS blend. The experimental results indicated that the optimum conditions of the fatigue property are melting temperature 200°C, filling time 6 s, and mold temperature 65°C. There has a transition point in the condition of filling time. When the strain amplitude is higher than 0.0118 mm/mm, filling time 6 second has best fatigue properties. By scanning electron microscopy, near the crack initial area, the mechanics of fracture surface are like short and fine fiber. The surface has long fiber ductile fracture, which far away from crack initial area.",
+      "date": "2015-3-20",
+      "DOI": "10.4028/www.scientific.net/amr.1095.938",
+      "url": "https://doi.org/10.4028/www.scientific.net/amr.1095.938",
+      "volume": "1095",
+      "publisher": "Trans Tech Publications, Ltd.",
+      "pages": "938-941",
+      "publicationTitle": "Advanced Materials Research",
+      "ISSN": "1662-8985",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ming Hsiung",
+          "lastName": "Ho"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Pin Ning",
+          "lastName": "Wang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Shun Chi",
+          "lastName": "Kuo"
+        }
+      ]
+    },
+    "project_collections": [
+      "01 PC-ABS疲劳试验与S-N数据"
+    ]
+  },
+  {
+    "key": "6BLSHSXK",
+    "itemType": "journalArticle",
+    "title": "Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading",
+    "date": "2022-6-20",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Meng",
+        "last": "Ma"
+      },
+      {
+        "type": "author",
+        "first": "Chencheng",
+        "last": "Yu"
+      },
+      {
+        "type": "author",
+        "first": "Lei",
+        "last": "Bai"
+      },
+      {
+        "type": "author",
+        "first": "Si",
+        "last": "Chen"
+      },
+      {
+        "type": "author",
+        "first": "Yanqin",
+        "last": "Shi"
+      },
+      {
+        "type": "author",
+        "first": "Huiwen",
+        "last": "He"
+      },
+      {
+        "type": "author",
+        "first": "Wang",
+        "last": "Xu"
+      }
+    ],
+    "doi": "10.1007/s10965-022-03137-9",
+    "publication": "Journal of Polymer Research",
+    "url": "https://doi.org/10.1007/s10965-022-03137-9",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "疲劳试验"
+    ],
+    "collections": [
+      "LE7ARH44"
+    ],
+    "raw": {
+      "key": "6BLSHSXK",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:55:16Z",
+      "dateModified": "2026-11-15T02:55:16Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "疲劳试验"
+        }
+      ],
+      "collections": [
+        "LE7ARH44"
+      ],
+      "relations": {},
+      "title": "Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading",
+      "date": "2022-6-20",
+      "DOI": "10.1007/s10965-022-03137-9",
+      "url": "https://doi.org/10.1007/s10965-022-03137-9",
+      "volume": "29",
+      "publisher": "Springer Science and Business Media LLC",
+      "publicationTitle": "Journal of Polymer Research",
+      "ISSN": "1022-9760",
+      "issue": "7",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Meng",
+          "lastName": "Ma"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Chencheng",
+          "lastName": "Yu"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Lei",
+          "lastName": "Bai"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Si",
+          "lastName": "Chen"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Yanqin",
+          "lastName": "Shi"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Huiwen",
+          "lastName": "He"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Wang",
+          "lastName": "Xu"
+        }
+      ]
+    },
+    "project_collections": [
+      "01 PC-ABS疲劳试验与S-N数据"
+    ]
+  },
+  {
+    "key": "FT3BC9TK",
+    "itemType": "journalArticle",
+    "title": "Highly enhanced the toughness and fatigue resistance of PC/ABS blends by constructing a double-comb compatibilizer",
+    "date": "2025-4",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Bangdong",
+        "last": "Ge"
+      },
+      {
+        "type": "author",
+        "first": "Zongsheng",
+        "last": "Liu"
+      },
+      {
+        "type": "author",
+        "first": "Yi",
+        "last": "Zheng"
+      },
+      {
+        "type": "author",
+        "first": "Shiyang",
+        "last": "Zhu"
+      },
+      {
+        "type": "author",
+        "first": "Meng",
+        "last": "Ma"
+      },
+      {
+        "type": "author",
+        "first": "Si",
+        "last": "Chen"
+      },
+      {
+        "type": "author",
+        "first": "Yanqin",
+        "last": "Shi"
+      },
+      {
+        "type": "author",
+        "first": "Huiwen",
+        "last": "He"
+      },
+      {
+        "type": "author",
+        "first": "Yulu",
+        "last": "Zhu"
+      },
+      {
+        "type": "author",
+        "first": "Xu",
+        "last": "Wang"
+      }
+    ],
+    "doi": "10.1016/j.polymer.2025.128170",
+    "publication": "Polymer",
+    "url": "https://doi.org/10.1016/j.polymer.2025.128170",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "疲劳试验"
+    ],
+    "collections": [
+      "LE7ARH44"
+    ],
+    "raw": {
+      "key": "FT3BC9TK",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:55:16Z",
+      "dateModified": "2026-11-15T02:55:16Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "疲劳试验"
+        }
+      ],
+      "collections": [
+        "LE7ARH44"
+      ],
+      "relations": {},
+      "title": "Highly enhanced the toughness and fatigue resistance of PC/ABS blends by constructing a double-comb compatibilizer",
+      "date": "2025-4",
+      "DOI": "10.1016/j.polymer.2025.128170",
+      "url": "https://doi.org/10.1016/j.polymer.2025.128170",
+      "volume": "323",
+      "publisher": "Elsevier BV",
+      "pages": "128170",
+      "publicationTitle": "Polymer",
+      "ISSN": "0032-3861",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Bangdong",
+          "lastName": "Ge"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Zongsheng",
+          "lastName": "Liu"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Yi",
+          "lastName": "Zheng"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Shiyang",
+          "lastName": "Zhu"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Meng",
+          "lastName": "Ma"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Si",
+          "lastName": "Chen"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Yanqin",
+          "lastName": "Shi"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Huiwen",
+          "lastName": "He"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Yulu",
+          "lastName": "Zhu"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Xu",
+          "lastName": "Wang"
+        }
+      ]
+    },
+    "project_collections": [
+      "01 PC-ABS疲劳试验与S-N数据"
+    ]
+  },
+  {
+    "key": "4HT2HPWX",
+    "itemType": "journalArticle",
+    "title": "The Effect of Poly (Methyl Methacrylate) Content on Chemical, Thermomechanical, Mechanical, and Fatigue Life Characteristics of Ternary PC/ABS/PMMA Blends",
+    "date": "2025-7-10",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Hamdi",
+        "last": "Kuleyin"
+      },
+      {
+        "type": "author",
+        "first": "Recep",
+        "last": "Gümrük"
+      }
+    ],
+    "doi": "10.3390/polym17141905",
+    "publication": "Polymers",
+    "url": "https://doi.org/10.3390/polym17141905",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "疲劳试验",
+      "含PC-ABS基线",
+      "PMMA三元改性",
+      "R定义需核对"
+    ],
+    "collections": [
+      "LE7ARH44"
+    ],
+    "abstract": "Polymer blending techniques enable the tailoring of desired properties for diverse applications. This study investigates the effect of PMMA content on the thermomechanical, chemical, mechanical, and fatigue life properties of PC/ABS/PMMA (polycarbonate/acrylonitrile–butadiene–styrene/polymethylmethacrylate) ternary blends. To this end, various characterization analyses, as well as tensile, impact, and fatigue tests, were conducted. The results indicate that the viscoelastic modulus improves with increasing PMMA content in ternary blends. Furthermore, PC/ABS/PMMA blends exhibit an immiscible phase morphology. The elastic modulus, yield strength, and tensile strength increase with higher PMMA content, while the elongation at break and impact strength decrease. Fatigue strength and the fatigue strength exponent were found to vary nonlinearly with PMMA content. Compared to PC/ABS blends, PC/ABS/PMMA blends demonstrated improvements of approximately 12% to 58% and 26% to 117% in hysteresis energy and the dynamic elastic modulus, respectively. Additionally, fatigue life cycles improved by 5% to 11% at low stress amplitudes. This experimental study provides comprehensive insight into the complex interplay among the chemical, thermomechanical, mechanical, and fatigue properties of ternary PC/ABS/PMMA blends, highlighting their potential for applications requiring balanced or tailored structural and material characteristics.",
+    "raw": {
+      "key": "4HT2HPWX",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:55:16Z",
+      "dateModified": "2026-11-15T03:00:07Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "疲劳试验"
+        },
+        {
+          "tag": "含PC-ABS基线"
+        },
+        {
+          "tag": "PMMA三元改性"
+        },
+        {
+          "tag": "R定义需核对"
+        }
+      ],
+      "collections": [
+        "LE7ARH44"
+      ],
+      "relations": {},
+      "title": "The Effect of Poly (Methyl Methacrylate) Content on Chemical, Thermomechanical, Mechanical, and Fatigue Life Characteristics of Ternary PC/ABS/PMMA Blends",
+      "abstractNote": "Polymer blending techniques enable the tailoring of desired properties for diverse applications. This study investigates the effect of PMMA content on the thermomechanical, chemical, mechanical, and fatigue life properties of PC/ABS/PMMA (polycarbonate/acrylonitrile–butadiene–styrene/polymethylmethacrylate) ternary blends. To this end, various characterization analyses, as well as tensile, impact, and fatigue tests, were conducted. The results indicate that the viscoelastic modulus improves with increasing PMMA content in ternary blends. Furthermore, PC/ABS/PMMA blends exhibit an immiscible phase morphology. The elastic modulus, yield strength, and tensile strength increase with higher PMMA content, while the elongation at break and impact strength decrease. Fatigue strength and the fatigue strength exponent were found to vary nonlinearly with PMMA content. Compared to PC/ABS blends, PC/ABS/PMMA blends demonstrated improvements of approximately 12% to 58% and 26% to 117% in hysteresis energy and the dynamic elastic modulus, respectively. Additionally, fatigue life cycles improved by 5% to 11% at low stress amplitudes. This experimental study provides comprehensive insight into the complex interplay among the chemical, thermomechanical, mechanical, and fatigue properties of ternary PC/ABS/PMMA blends, highlighting their potential for applications requiring balanced or tailored structural and material characteristics.",
+      "date": "2025-7-10",
+      "DOI": "10.3390/polym17141905",
+      "url": "https://doi.org/10.3390/polym17141905",
+      "volume": "17",
+      "publisher": "MDPI AG",
+      "pages": "1905",
+      "publicationTitle": "Polymers",
+      "ISSN": "2073-4360",
+      "issue": "14",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Hamdi",
+          "lastName": "Kuleyin"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Recep",
+          "lastName": "Gümrük"
+        }
+      ]
+    },
+    "project_collections": [
+      "01 PC-ABS疲劳试验与S-N数据"
+    ]
+  },
+  {
+    "key": "RF9QV2NH",
+    "itemType": "journalArticle",
+    "title": "Mechanical, Fatigue, and Thermal Characterization of ASA, Nylon 12, PC, and PC-ABS Manufactured by Fused Filament Fabrication (FFF)",
+    "date": "2026-1-22",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Ângela",
+        "last": "Rodrigues"
+      },
+      {
+        "type": "author",
+        "first": "Ricardo",
+        "last": "Branco"
+      },
+      {
+        "type": "author",
+        "first": "Margarida",
+        "last": "Franco"
+      },
+      {
+        "type": "author",
+        "first": "Rui",
+        "last": "Silva"
+      },
+      {
+        "type": "author",
+        "first": "Cândida",
+        "last": "Malça"
+      },
+      {
+        "type": "author",
+        "first": "Rui F.",
+        "last": "Martins"
+      }
+    ],
+    "doi": "10.3390/polym18020302",
+    "publication": "Polymers",
+    "url": "https://doi.org/10.3390/polym18020302",
+    "tags": [
+      "PC-ABS",
+      "不可直接代用注塑参数",
+      "FFF增材制造"
+    ],
+    "collections": [
+      "LE7ARH44"
+    ],
+    "abstract": "Additive manufacturing has been widely adopted in industry as an alternative to traditional manufacturing processes for complex component production. In fact, a diverse range of materials, particularly polymers, can be processed using 3D printing for biomechanical applications (e.g., prosthetics). However, in-depth evaluation of these materials is necessary to determine their suitability for demanding applications, such as those involving cyclic loading. Following previous work that studied Polylactic Acid (PLA) and Polyethylene Terephthalate Glycol-modified (PETG) under experimental fatigue testing, this study examines the fatigue behaviour of other current 3D-printed polymeric materials, namely Acrylonitrile Styrene Acrylate (ASA), Polycarbonate (PC), Polyamide 12 (Nylon 12), and Polycarbonate–Acrylonitrile Butadiene Styrene (blend) (PC-ABS), for which fatigue data remain limited or even non-existent. The findings revealed performance differences on Tensile Strength (σR), Young’s Modulus and Ultimate Strain among tensile specimens made from these materials and characterised S-N curves for both high-cycle (HCF) and low-cycle (LCF) fatigue regimes at room temperature, with a tensile load ratio (R = 0.05). These results establish relationships among fatigue limit and quasi-static mechanical properties, namely 25% × σr for ASA (8 MPa), 7% × σr for PC (3.6 MPa), 17% × σr for Nylon 12 (7.4 MPa), and 15% × σr for PC-ABS (4.7 MPa), as well as between mechanical properties and preliminary potential biomechanical applications. Main conclusions were further supported by micro-computed tomography (micro-CT), which revealed levels of porosity in between 4% and 11%, thermogravimetric analysis (TGA), differential scanning calorimetry (DSC), and Fourier transform infrared spectroscopy (FTIR).",
+    "raw": {
+      "key": "RF9QV2NH",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:56:59Z",
+      "dateModified": "2026-11-15T02:56:59Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "不可直接代用注塑参数"
+        },
+        {
+          "tag": "FFF增材制造"
+        }
+      ],
+      "collections": [
+        "LE7ARH44"
+      ],
+      "relations": {},
+      "title": "Mechanical, Fatigue, and Thermal Characterization of ASA, Nylon 12, PC, and PC-ABS Manufactured by Fused Filament Fabrication (FFF)",
+      "abstractNote": "Additive manufacturing has been widely adopted in industry as an alternative to traditional manufacturing processes for complex component production. In fact, a diverse range of materials, particularly polymers, can be processed using 3D printing for biomechanical applications (e.g., prosthetics). However, in-depth evaluation of these materials is necessary to determine their suitability for demanding applications, such as those involving cyclic loading. Following previous work that studied Polylactic Acid (PLA) and Polyethylene Terephthalate Glycol-modified (PETG) under experimental fatigue testing, this study examines the fatigue behaviour of other current 3D-printed polymeric materials, namely Acrylonitrile Styrene Acrylate (ASA), Polycarbonate (PC), Polyamide 12 (Nylon 12), and Polycarbonate–Acrylonitrile Butadiene Styrene (blend) (PC-ABS), for which fatigue data remain limited or even non-existent. The findings revealed performance differences on Tensile Strength (σR), Young’s Modulus and Ultimate Strain among tensile specimens made from these materials and characterised S-N curves for both high-cycle (HCF) and low-cycle (LCF) fatigue regimes at room temperature, with a tensile load ratio (R = 0.05). These results establish relationships among fatigue limit and quasi-static mechanical properties, namely 25% × σr for ASA (8 MPa), 7% × σr for PC (3.6 MPa), 17% × σr for Nylon 12 (7.4 MPa), and 15% × σr for PC-ABS (4.7 MPa), as well as between mechanical properties and preliminary potential biomechanical applications. Main conclusions were further supported by micro-computed tomography (micro-CT), which revealed levels of porosity in between 4% and 11%, thermogravimetric analysis (TGA), differential scanning calorimetry (DSC), and Fourier transform infrared spectroscopy (FTIR).",
+      "date": "2026-1-22",
+      "DOI": "10.3390/polym18020302",
+      "url": "https://doi.org/10.3390/polym18020302",
+      "volume": "18",
+      "publisher": "MDPI AG",
+      "pages": "302",
+      "publicationTitle": "Polymers",
+      "ISSN": "2073-4360",
+      "issue": "2",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ângela",
+          "lastName": "Rodrigues"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ricardo",
+          "lastName": "Branco"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Margarida",
+          "lastName": "Franco"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Rui",
+          "lastName": "Silva"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Cândida",
+          "lastName": "Malça"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Rui F.",
+          "lastName": "Martins"
+        }
+      ]
+    },
+    "project_collections": [
+      "01 PC-ABS疲劳试验与S-N数据"
+    ]
+  },
+  {
+    "key": "GYNENK27",
+    "itemType": "journalArticle",
+    "title": "Overload effect on the fatigue crack propagation of PC/ABS alloy",
+    "date": "2007-10",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Qin-Zhi",
+        "last": "Fang"
+      },
+      {
+        "type": "author",
+        "first": "T.J.",
+        "last": "Wang"
+      },
+      {
+        "type": "author",
+        "first": "H.M.",
+        "last": "Li"
+      }
+    ],
+    "doi": "10.1016/j.polymer.2007.08.048",
+    "publication": "Polymer",
+    "url": "https://doi.org/10.1016/j.polymer.2007.08.048",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "待全文核查"
+    ],
+    "collections": [
+      "YPT7IFHJ"
+    ],
+    "raw": {
+      "key": "GYNENK27",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:56:33Z",
+      "dateModified": "2026-11-15T02:56:33Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "待全文核查"
+        }
+      ],
+      "collections": [
+        "YPT7IFHJ"
+      ],
+      "relations": {},
+      "title": "Overload effect on the fatigue crack propagation of PC/ABS alloy",
+      "date": "2007-10",
+      "DOI": "10.1016/j.polymer.2007.08.048",
+      "url": "https://doi.org/10.1016/j.polymer.2007.08.048",
+      "volume": "48",
+      "publisher": "Elsevier BV",
+      "pages": "6691-6706",
+      "publicationTitle": "Polymer",
+      "ISSN": "0032-3861",
+      "issue": "22",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Qin-Zhi",
+          "lastName": "Fang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "T.J.",
+          "lastName": "Wang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "H.M.",
+          "lastName": "Li"
+        }
+      ]
+    },
+    "project_collections": [
+      "02 裂纹扩展与黏弹本构"
+    ]
+  },
+  {
+    "key": "ZW78X7PW",
+    "itemType": "journalArticle",
+    "title": "‘Tail’ phenomenon and fatigue crack propagation of PC/ABS alloy",
+    "date": "2008-1",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Qin-Zhi",
+        "last": "Fang"
+      },
+      {
+        "type": "author",
+        "first": "T.J.",
+        "last": "Wang"
+      },
+      {
+        "type": "author",
+        "first": "H.M.",
+        "last": "Li"
+      }
+    ],
+    "doi": "10.1016/j.polymdegradstab.2007.09.002",
+    "publication": "Polymer Degradation and Stability",
+    "url": "https://doi.org/10.1016/j.polymdegradstab.2007.09.002",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "待全文核查"
+    ],
+    "collections": [
+      "YPT7IFHJ"
+    ],
+    "raw": {
+      "key": "ZW78X7PW",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:56:33Z",
+      "dateModified": "2026-11-15T02:56:33Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "待全文核查"
+        }
+      ],
+      "collections": [
+        "YPT7IFHJ"
+      ],
+      "relations": {},
+      "title": "‘Tail’ phenomenon and fatigue crack propagation of PC/ABS alloy",
+      "date": "2008-1",
+      "DOI": "10.1016/j.polymdegradstab.2007.09.002",
+      "url": "https://doi.org/10.1016/j.polymdegradstab.2007.09.002",
+      "volume": "93",
+      "publisher": "Elsevier BV",
+      "pages": "281-290",
+      "publicationTitle": "Polymer Degradation and Stability",
+      "ISSN": "0141-3910",
+      "issue": "1",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Qin-Zhi",
+          "lastName": "Fang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "T.J.",
+          "lastName": "Wang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "H.M.",
+          "lastName": "Li"
+        }
+      ]
+    },
+    "project_collections": [
+      "02 裂纹扩展与黏弹本构"
+    ]
+  },
+  {
+    "key": "LU7DYX7X",
+    "itemType": "journalArticle",
+    "title": "Effect of cyclic loading on tensile properties of PC and PC/ABS",
+    "date": "2008-8",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Qin-Zhi",
+        "last": "Fang"
+      },
+      {
+        "type": "author",
+        "first": "T.J.",
+        "last": "Wang"
+      },
+      {
+        "type": "author",
+        "first": "H.G.",
+        "last": "Beom"
+      },
+      {
+        "type": "author",
+        "first": "H.M.",
+        "last": "Li"
+      }
+    ],
+    "doi": "10.1016/j.polymdegradstab.2008.05.022",
+    "publication": "Polymer Degradation and Stability",
+    "url": "https://doi.org/10.1016/j.polymdegradstab.2008.05.022",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "待全文核查"
+    ],
+    "collections": [
+      "YPT7IFHJ"
+    ],
+    "raw": {
+      "key": "LU7DYX7X",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:56:33Z",
+      "dateModified": "2026-11-15T02:56:33Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "待全文核查"
+        }
+      ],
+      "collections": [
+        "YPT7IFHJ"
+      ],
+      "relations": {},
+      "title": "Effect of cyclic loading on tensile properties of PC and PC/ABS",
+      "date": "2008-8",
+      "DOI": "10.1016/j.polymdegradstab.2008.05.022",
+      "url": "https://doi.org/10.1016/j.polymdegradstab.2008.05.022",
+      "volume": "93",
+      "publisher": "Elsevier BV",
+      "pages": "1422-1432",
+      "publicationTitle": "Polymer Degradation and Stability",
+      "ISSN": "0141-3910",
+      "issue": "8",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Qin-Zhi",
+          "lastName": "Fang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "T.J.",
+          "lastName": "Wang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "H.G.",
+          "lastName": "Beom"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "H.M.",
+          "lastName": "Li"
+        }
+      ]
+    },
+    "project_collections": [
+      "02 裂纹扩展与黏弹本构"
+    ]
+  },
+  {
+    "key": "VT5WRGR4",
+    "itemType": "journalArticle",
+    "title": "FATIGUE CRACK GROWTH BEHAVIOR OF PC AND PC/ABS",
+    "date": "2007-08-20",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Qinzhi",
+        "last": "Fang"
+      },
+      {
+        "type": "author",
+        "first": "Huimin",
+        "last": "Li"
+      },
+      {
+        "type": "author",
+        "first": "Tiejun",
+        "last": "Wang"
+      }
+    ],
+    "doi": "10.3724/sp.j.1105.2007.00713",
+    "publication": "Acta Polymerica Sinica",
+    "url": "https://www.gfzxb.org/cn/article/7031773",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "待全文核查",
+      "元数据年份已按期刊校正",
+      "中文文献"
+    ],
+    "collections": [
+      "YPT7IFHJ"
+    ],
+    "raw": {
+      "key": "VT5WRGR4",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:56:33Z",
+      "dateModified": "2026-11-15T02:57:56Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "待全文核查"
+        },
+        {
+          "tag": "元数据年份已按期刊校正"
+        },
+        {
+          "tag": "中文文献"
+        }
+      ],
+      "collections": [
+        "YPT7IFHJ"
+      ],
+      "relations": {},
+      "title": "FATIGUE CRACK GROWTH BEHAVIOR OF PC AND PC/ABS",
+      "date": "2007-08-20",
+      "DOI": "10.3724/sp.j.1105.2007.00713",
+      "url": "https://www.gfzxb.org/cn/article/7031773",
+      "volume": "007",
+      "publisher": "China Science Publishing & Media Ltd.",
+      "pages": "713-718",
+      "publicationTitle": "Acta Polymerica Sinica",
+      "ISSN": "1000-3304",
+      "issue": "8",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Qinzhi",
+          "lastName": "Fang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Huimin",
+          "lastName": "Li"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Tiejun",
+          "lastName": "Wang"
+        }
+      ]
+    },
+    "project_collections": [
+      "02 裂纹扩展与黏弹本构"
+    ]
+  },
+  {
+    "key": "HSCSTRHV",
+    "itemType": "journalArticle",
+    "title": "Investigation of Viscoelastic Deformation and Constitutive Modeling of PC, ABS and PC/ABS Alloys",
+    "date": "2012-2-27",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Z.N.",
+        "last": "Yin"
+      },
+      {
+        "type": "author",
+        "first": "T.J.",
+        "last": "Wang"
+      }
+    ],
+    "doi": "10.4028/www.scientific.net/amm.157-158.1186",
+    "publication": "Applied Mechanics and Materials",
+    "url": "https://doi.org/10.4028/www.scientific.net/amm.157-158.1186",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "待全文核查"
+    ],
+    "collections": [
+      "YPT7IFHJ"
+    ],
+    "abstract": "Dynamic Mechanical Analysis (DMA) tests are carried out to investigate the viscoelastic deformation of Polycabonate (PC), Acrylonitrile-butadiene-styrene (ABS) and PC/ABS alloys with ratio of PC to ABS being 60/40, 50/50, 40/60, respectively. Storage and loss moduli of PC, ABS and PC/ABS alloys are measured from 0.01Hz to 200Hz at 95oC with DMA tests. The relaxation moduli of PC, ABS and PC/ABS alloys are tested from static tests and compared with those calculated from storage and loss moduli. Effect of ABS fraction on storage and loss moduli and relaxation modulus of PC/ABS alloys is also discussed.",
+    "raw": {
+      "key": "HSCSTRHV",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:56:33Z",
+      "dateModified": "2026-11-15T02:56:33Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "待全文核查"
+        }
+      ],
+      "collections": [
+        "YPT7IFHJ"
+      ],
+      "relations": {},
+      "title": "Investigation of Viscoelastic Deformation and Constitutive Modeling of PC, ABS and PC/ABS Alloys",
+      "abstractNote": "Dynamic Mechanical Analysis (DMA) tests are carried out to investigate the viscoelastic deformation of Polycabonate (PC), Acrylonitrile-butadiene-styrene (ABS) and PC/ABS alloys with ratio of PC to ABS being 60/40, 50/50, 40/60, respectively. Storage and loss moduli of PC, ABS and PC/ABS alloys are measured from 0.01Hz to 200Hz at 95oC with DMA tests. The relaxation moduli of PC, ABS and PC/ABS alloys are tested from static tests and compared with those calculated from storage and loss moduli. Effect of ABS fraction on storage and loss moduli and relaxation modulus of PC/ABS alloys is also discussed.",
+      "date": "2012-2-27",
+      "DOI": "10.4028/www.scientific.net/amm.157-158.1186",
+      "url": "https://doi.org/10.4028/www.scientific.net/amm.157-158.1186",
+      "volume": "157-158",
+      "publisher": "Trans Tech Publications, Ltd.",
+      "pages": "1186-1189",
+      "publicationTitle": "Applied Mechanics and Materials",
+      "ISSN": "1662-7482",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Z.N.",
+          "lastName": "Yin"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "T.J.",
+          "lastName": "Wang"
+        }
+      ]
+    },
+    "project_collections": [
+      "02 裂纹扩展与黏弹本构"
+    ]
+  },
+  {
+    "key": "VMNL7VRT",
+    "itemType": "conferencePaper",
+    "title": "Research on Fatigue Fracture Characterization of PC/ABS Blend",
+    "date": "2015",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Ming-Hsiung",
+        "last": "Ho"
+      },
+      {
+        "type": "author",
+        "first": "Pin-Ning",
+        "last": "Wang"
+      },
+      {
+        "type": "author",
+        "first": "Jung-Peng",
+        "last": "Ye"
+      },
+      {
+        "type": "author",
+        "first": "Sheng-Jie",
+        "last": "Li"
+      }
+    ],
+    "doi": "10.2991/icadme-15.2015.351",
+    "url": "https://doi.org/10.2991/icadme-15.2015.351",
+    "tags": [
+      "PC-ABS",
+      "2026-11-15检索",
+      "待全文核查"
+    ],
+    "collections": [
+      "YPT7IFHJ"
+    ],
+    "raw": {
+      "key": "VMNL7VRT",
+      "version": 0,
+      "itemType": "conferencePaper",
+      "dateAdded": "2026-11-15T02:56:33Z",
+      "dateModified": "2026-11-15T02:56:33Z",
+      "tags": [
+        {
+          "tag": "PC-ABS"
+        },
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "待全文核查"
+        }
+      ],
+      "collections": [
+        "YPT7IFHJ"
+      ],
+      "relations": {},
+      "title": "Research on Fatigue Fracture Characterization of PC/ABS Blend",
+      "date": "2015",
+      "DOI": "10.2991/icadme-15.2015.351",
+      "url": "https://doi.org/10.2991/icadme-15.2015.351",
+      "publisher": "Atlantis Press",
+      "proceedingsTitle": "Proceedings of the 5th International Conference on Advanced Design and Manufacturing Engineering",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ming-Hsiung",
+          "lastName": "Ho"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Pin-Ning",
+          "lastName": "Wang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jung-Peng",
+          "lastName": "Ye"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Sheng-Jie",
+          "lastName": "Li"
+        }
+      ]
+    },
+    "project_collections": [
+      "02 裂纹扩展与黏弹本构"
+    ]
+  },
+  {
+    "key": "UC3HMX8S",
+    "itemType": "journalArticle",
+    "title": "Criticality of the Self-Heating Effect in Polymers and Polymer Matrix Composites during Fatigue, and Their Application in Non-Destructive Testing",
+    "date": "2018-12-23",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Andrzej",
+        "last": "Katunin"
+      }
+    ],
+    "doi": "10.3390/polym11010019",
+    "publication": "Polymers",
+    "url": "https://doi.org/10.3390/polym11010019",
+    "tags": [
+      "聚合物疲劳",
+      "自发热",
+      "综述"
+    ],
+    "collections": [
+      "MG5PIKZY",
+      "JV83TJR5"
+    ],
+    "abstract": "The self-heating effect is a dangerous phenomenon that occurs in polymers and polymer matrix composites during their cyclic loading, and may significantly influence structural degradation and durability as a consequence. Therefore, an analysis of its criticality is highly demanding, due to the wide occurrence of this effect, both in laboratory fatigue tests, as well as in engineering practice. In order to overcome the problem of the accelerated degradation of polymer matrix structures, it is essential to evaluate the characteristic temperature values of self-heating, which are critical from the point of view of the fatigue life of these structures, i.e., the temperature at which damage initiates, and the safe temperature range in which these structures can be safely maintained. The experimental studies performed were focused on the determination of the critical self-heating temperature, using various approaches and measurement techniques. This paper present an overview of the research studies performed in the field of structural degradation, due to self-heating, and summarizes the studies performed on the evaluation of the criticality of the self-heating effect. Moreover, the non-destructive testing method, which uses the self-heating effect as a thermal excitation source, is discussed, and the non-destructivity of this method is confirmed by experimental results.",
+    "raw": {
+      "key": "UC3HMX8S",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T02:57:04Z",
+      "dateModified": "2026-11-15T09:05:56Z",
+      "tags": [
+        {
+          "tag": "聚合物疲劳"
+        },
+        {
+          "tag": "自发热"
+        },
+        {
+          "tag": "综述"
+        }
+      ],
+      "collections": [
+        "MG5PIKZY",
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Criticality of the Self-Heating Effect in Polymers and Polymer Matrix Composites during Fatigue, and Their Application in Non-Destructive Testing",
+      "abstractNote": "The self-heating effect is a dangerous phenomenon that occurs in polymers and polymer matrix composites during their cyclic loading, and may significantly influence structural degradation and durability as a consequence. Therefore, an analysis of its criticality is highly demanding, due to the wide occurrence of this effect, both in laboratory fatigue tests, as well as in engineering practice. In order to overcome the problem of the accelerated degradation of polymer matrix structures, it is essential to evaluate the characteristic temperature values of self-heating, which are critical from the point of view of the fatigue life of these structures, i.e., the temperature at which damage initiates, and the safe temperature range in which these structures can be safely maintained. The experimental studies performed were focused on the determination of the critical self-heating temperature, using various approaches and measurement techniques. This paper present an overview of the research studies performed in the field of structural degradation, due to self-heating, and summarizes the studies performed on the evaluation of the criticality of the self-heating effect. Moreover, the non-destructive testing method, which uses the self-heating effect as a thermal excitation source, is discussed, and the non-destructivity of this method is confirmed by experimental results.",
+      "date": "2018-12-23",
+      "DOI": "10.3390/polym11010019",
+      "url": "https://doi.org/10.3390/polym11010019",
+      "volume": "11",
+      "publisher": "MDPI AG",
+      "pages": "19",
+      "publicationTitle": "Polymers",
+      "ISSN": "2073-4360",
+      "issue": "1",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Andrzej",
+          "lastName": "Katunin"
+        }
+      ]
+    },
+    "project_collections": [
+      "03 聚合物疲劳方法与自发热",
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "RYGCBQQJ",
+    "itemType": "report",
+    "title": "Fatigue Behavior of Engineering Polymers and Its Numerical Implementation",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Pieter",
+        "last": "Volgers"
+      },
+      {
+        "type": "author",
+        "first": "Amir K.",
+        "last": "Shojaei"
+      }
+    ],
+    "url": "https://www.3ds.com/assets/invest/2024-01/2218-saoe-fatigue_behavior_of_engineering_polymers_and_its_numerical_implementation.pdf",
+    "tags": [
+      "聚合物疲劳",
+      "年份待核",
+      "Abaqus",
+      "POM案例"
+    ],
+    "collections": [
+      "MG5PIKZY",
+      "JV83TJR5"
+    ],
+    "raw": {
+      "key": "RYGCBQQJ",
+      "version": 0,
+      "itemType": "report",
+      "dateAdded": "2026-11-15T02:57:50Z",
+      "dateModified": "2026-11-15T09:05:56Z",
+      "tags": [
+        {
+          "tag": "聚合物疲劳"
+        },
+        {
+          "tag": "年份待核"
+        },
+        {
+          "tag": "Abaqus"
+        },
+        {
+          "tag": "POM案例"
+        }
+      ],
+      "collections": [
+        "MG5PIKZY",
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Fatigue Behavior of Engineering Polymers and Its Numerical Implementation",
+      "url": "https://www.3ds.com/assets/invest/2024-01/2218-saoe-fatigue_behavior_of_engineering_polymers_and_its_numerical_implementation.pdf",
+      "institution": "DuPont Transportation and Advanced Polymers",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pieter",
+          "lastName": "Volgers"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Amir K.",
+          "lastName": "Shojaei"
+        }
+      ]
+    },
+    "project_collections": [
+      "03 聚合物疲劳方法与自发热",
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "PNXRWNKE",
+    "itemType": "webpage",
+    "title": "pyLife 2.3.1 — User guide",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "pyLife developers"
+      }
+    ],
+    "url": "https://pylife.readthedocs.io/en/2.3.1/user_guide.html",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K"
+    ],
+    "raw": {
+      "key": "PNXRWNKE",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T02:57:32Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K"
+      ],
+      "relations": {},
+      "title": "pyLife 2.3.1 — User guide",
+      "url": "https://pylife.readthedocs.io/en/2.3.1/user_guide.html",
+      "extra": "accessed: {\"date-parts\": [[2026, 11, 15]]}",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "pyLife developers"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档"
+    ]
+  },
+  {
+    "key": "LER4G59Z",
+    "itemType": "webpage",
+    "title": "pyLife 2.3.1 — The WoehlerCurve data structure",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "pyLife developers"
+      }
+    ],
+    "url": "https://pylife.readthedocs.io/en/2.3.1/tutorials/woehler_curve.html",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K"
+    ],
+    "raw": {
+      "key": "LER4G59Z",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T02:57:32Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K"
+      ],
+      "relations": {},
+      "title": "pyLife 2.3.1 — The WoehlerCurve data structure",
+      "url": "https://pylife.readthedocs.io/en/2.3.1/tutorials/woehler_curve.html",
+      "extra": "accessed: {\"date-parts\": [[2026, 11, 15]]}",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "pyLife developers"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档"
+    ]
+  },
+  {
+    "key": "V2RP94U7",
+    "itemType": "webpage",
+    "title": "pyLife 2.3.1 — The rainflow module",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "pyLife developers"
+      }
+    ],
+    "url": "https://pylife.readthedocs.io/en/2.3.1/stress/rainflow.html",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K",
+      "JV83TJR5"
+    ],
+    "raw": {
+      "key": "V2RP94U7",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T09:05:56Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K",
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "pyLife 2.3.1 — The rainflow module",
+      "url": "https://pylife.readthedocs.io/en/2.3.1/stress/rainflow.html",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "pyLife developers"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档",
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "JKJYC99W",
+    "itemType": "webpage",
+    "title": "pyLife 2.3.1 — Life time Calculation",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "pyLife developers"
+      }
+    ],
+    "url": "https://pylife.readthedocs.io/en/2.3.1/demos/lifetime_calc.html",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K",
+      "JV83TJR5"
+    ],
+    "raw": {
+      "key": "JKJYC99W",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T09:05:56Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K",
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "pyLife 2.3.1 — Life time Calculation",
+      "url": "https://pylife.readthedocs.io/en/2.3.1/demos/lifetime_calc.html",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "pyLife developers"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档",
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "DKYZVGS7",
+    "itemType": "webpage",
+    "title": "pyLife 2.3.1 — The OdbClient class",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "pyLife developers"
+      }
+    ],
+    "url": "https://pylife.readthedocs.io/en/2.3.1/tools/odbclient/odbclient.html",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K",
+      "JV83TJR5"
+    ],
+    "raw": {
+      "key": "DKYZVGS7",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T09:05:56Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K",
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "pyLife 2.3.1 — The OdbClient class",
+      "url": "https://pylife.readthedocs.io/en/2.3.1/tools/odbclient/odbclient.html",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "pyLife developers"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档",
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "T7TDNBQ4",
+    "itemType": "webpage",
+    "title": "pyLife — The pylife-odbserver package",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "pyLife developers"
+      }
+    ],
+    "url": "https://pylife.readthedocs.io/en/stable/tools/odbserver/index.html",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K"
+    ],
+    "raw": {
+      "key": "T7TDNBQ4",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T02:57:32Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K"
+      ],
+      "relations": {},
+      "title": "pyLife — The pylife-odbserver package",
+      "url": "https://pylife.readthedocs.io/en/stable/tools/odbserver/index.html",
+      "extra": "accessed: {\"date-parts\": [[2026, 11, 15]]}",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "pyLife developers"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档"
+    ]
+  },
+  {
+    "key": "ETK2GDHZ",
+    "itemType": "webpage",
+    "title": "Abaqus 2026 — Reading field output data",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "Dassault Systèmes"
+      }
+    ],
+    "url": "https://docs.software.vt.edu/abaqusv2026/English/SIMACAECMDRefMap/simacmd-c-odbintroreadfieldpyc.htm",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K"
+    ],
+    "raw": {
+      "key": "ETK2GDHZ",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T02:57:32Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K"
+      ],
+      "relations": {},
+      "title": "Abaqus 2026 — Reading field output data",
+      "url": "https://docs.software.vt.edu/abaqusv2026/English/SIMACAECMDRefMap/simacmd-c-odbintroreadfieldpyc.htm",
+      "extra": "accessed: {\"date-parts\": [[2026, 11, 15]]}",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Dassault Systèmes"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档"
+    ]
+  },
+  {
+    "key": "43BLRYYC",
+    "itemType": "webpage",
+    "title": "Abaqus 2026 — Time Domain Viscoelasticity",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "Dassault Systèmes"
+      }
+    ],
+    "url": "https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-timevisco.htm",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K"
+    ],
+    "raw": {
+      "key": "43BLRYYC",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T02:57:32Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K"
+      ],
+      "relations": {},
+      "title": "Abaqus 2026 — Time Domain Viscoelasticity",
+      "url": "https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-timevisco.htm",
+      "extra": "accessed: {\"date-parts\": [[2026, 11, 15]]}",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Dassault Systèmes"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档"
+    ]
+  },
+  {
+    "key": "UN6AN88K",
+    "itemType": "webpage",
+    "title": "Abaqus 2026 — Combining Material Behaviors",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "Dassault Systèmes"
+      }
+    ],
+    "url": "https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-matmodels.htm",
+    "tags": [
+      "2026-11-15检索",
+      "官方文档"
+    ],
+    "collections": [
+      "FKEVBK6K"
+    ],
+    "raw": {
+      "key": "UN6AN88K",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T02:57:32Z",
+      "dateModified": "2026-11-15T02:57:32Z",
+      "tags": [
+        {
+          "tag": "2026-11-15检索"
+        },
+        {
+          "tag": "官方文档"
+        }
+      ],
+      "collections": [
+        "FKEVBK6K"
+      ],
+      "relations": {},
+      "title": "Abaqus 2026 — Combining Material Behaviors",
+      "url": "https://docs.software.vt.edu/abaqusv2026/English/SIMACAEMATRefMap/simamat-c-matmodels.htm",
+      "extra": "accessed: {\"date-parts\": [[2026, 11, 15]]}",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Dassault Systèmes"
+        }
+      ]
+    },
+    "project_collections": [
+      "04 Abaqus与pyLife官方技术文档"
+    ]
+  },
+  {
+    "key": "92LYUGXY",
+    "itemType": "standard",
+    "title": "ASTM D7791-22 — Standard Test Method for Uniaxial Fatigue Properties of Plastics",
+    "date": "2022",
+    "creators": [
+      {
+        "type": "author",
+        "name": "ASTM International"
+      }
+    ],
+    "doi": "10.1520/D7791-22",
+    "url": "https://store.astm.org/d7791-22.html",
+    "tags": [
+      "仅官方目录与范围",
+      "全文需授权",
+      "试验标准"
+    ],
+    "collections": [
+      "KL87U9IK"
+    ],
+    "raw": {
+      "key": "92LYUGXY",
+      "version": 0,
+      "itemType": "standard",
+      "dateAdded": "2026-11-15T02:57:50Z",
+      "dateModified": "2026-11-15T02:57:50Z",
+      "tags": [
+        {
+          "tag": "仅官方目录与范围"
+        },
+        {
+          "tag": "全文需授权"
+        },
+        {
+          "tag": "试验标准"
+        }
+      ],
+      "collections": [
+        "KL87U9IK"
+      ],
+      "relations": {},
+      "title": "ASTM D7791-22 — Standard Test Method for Uniaxial Fatigue Properties of Plastics",
+      "date": "2022",
+      "DOI": "10.1520/D7791-22",
+      "url": "https://store.astm.org/d7791-22.html",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "ASTM International"
+        }
+      ]
+    },
+    "project_collections": [
+      "05 疲劳试验标准"
+    ]
+  },
+  {
+    "key": "33B87BBZ",
+    "itemType": "standard",
+    "title": "ASTM D7774-22 — Standard Test Method for Flexural Fatigue Properties of Plastics",
+    "date": "2022",
+    "creators": [
+      {
+        "type": "author",
+        "name": "ASTM International"
+      }
+    ],
+    "doi": "10.1520/D7774-22",
+    "url": "https://store.astm.org/standards/d7774",
+    "tags": [
+      "仅官方目录与范围",
+      "全文需授权",
+      "试验标准"
+    ],
+    "collections": [
+      "KL87U9IK"
+    ],
+    "raw": {
+      "key": "33B87BBZ",
+      "version": 0,
+      "itemType": "standard",
+      "dateAdded": "2026-11-15T02:57:50Z",
+      "dateModified": "2026-11-15T02:57:50Z",
+      "tags": [
+        {
+          "tag": "仅官方目录与范围"
+        },
+        {
+          "tag": "全文需授权"
+        },
+        {
+          "tag": "试验标准"
+        }
+      ],
+      "collections": [
+        "KL87U9IK"
+      ],
+      "relations": {},
+      "title": "ASTM D7774-22 — Standard Test Method for Flexural Fatigue Properties of Plastics",
+      "date": "2022",
+      "DOI": "10.1520/D7774-22",
+      "url": "https://store.astm.org/standards/d7774",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "ASTM International"
+        }
+      ]
+    },
+    "project_collections": [
+      "05 疲劳试验标准"
+    ]
+  },
+  {
+    "key": "8YDGGEBH",
+    "itemType": "preprint",
+    "title": "Modeling the Fatigue Behavior of Amorphous Polymers",
+    "date": "2026-07-16",
+    "creators": [
+      {
+        "type": "author",
+        "name": "Valeriy V. Ginzburg"
+      },
+      {
+        "type": "author",
+        "name": "Oleg V. Gendelman"
+      },
+      {
+        "type": "author",
+        "name": "Alessio Zaccone"
+      }
+    ],
+    "doi": "10.48550/arXiv.2607.14994",
+    "url": "https://arxiv.org/abs/2607.14994",
+    "tags": [
+      "2026-11-15补充检索",
+      "预印本版本",
+      "arXiv"
+    ],
+    "collections": [
+      "RVSRJY3W",
+      "JV83TJR5"
+    ],
+    "abstract": "Prediction of material durability is both very important and very difficult. In many cases, material durability is measured by subjecting a sample to repeating oscillatory cycles (in shear or tension-compression) until it fails in either ductile or brittle fashion. Typically, the stress amplitude is denoted S, and the number of cycles N, so the resulting dependence is known as the SN-curve. For many materials, SN curve has been shown to obey the empirical Basquin's law, N = AS^(-m), where the prefactor A was a function of the temperature, load frequency, and sample history, and the power law m was a real number, usually between 3 and 12. Here, we derive the Basquin's law using a linearized version of the Long's plasticity model and demonstrate that within this framework, m = 3. We also derive the expression for the prefactor A. Finally, we show that our theory successfully describes experimental data for three amorphous polymers, PS, PMMA, and PVC.",
+    "raw": {
+      "key": "8YDGGEBH",
+      "version": 0,
+      "itemType": "preprint",
+      "dateAdded": "2026-11-15T08:55:34Z",
+      "dateModified": "2026-11-15T09:05:56Z",
+      "tags": [
+        {
+          "tag": "2026-11-15补充检索"
+        },
+        {
+          "tag": "预印本版本"
+        },
+        {
+          "tag": "arXiv"
+        }
+      ],
+      "collections": [
+        "RVSRJY3W",
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Modeling the Fatigue Behavior of Amorphous Polymers",
+      "abstractNote": "Prediction of material durability is both very important and very difficult. In many cases, material durability is measured by subjecting a sample to repeating oscillatory cycles (in shear or tension-compression) until it fails in either ductile or brittle fashion. Typically, the stress amplitude is denoted S, and the number of cycles N, so the resulting dependence is known as the SN-curve. For many materials, SN curve has been shown to obey the empirical Basquin's law, N = AS^(-m), where the prefactor A was a function of the temperature, load frequency, and sample history, and the power law m was a real number, usually between 3 and 12. Here, we derive the Basquin's law using a linearized version of the Long's plasticity model and demonstrate that within this framework, m = 3. We also derive the expression for the prefactor A. Finally, we show that our theory successfully describes experimental data for three amorphous polymers, PS, PMMA, and PVC.",
+      "date": "2026-07-16",
+      "DOI": "10.48550/arXiv.2607.14994",
+      "url": "https://arxiv.org/abs/2607.14994",
+      "extra": "arXiv:2607.14994v1；预印本版本；不代表已完成同行评审。",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Valeriy V. Ginzburg"
+        },
+        {
+          "creatorType": "author",
+          "name": "Oleg V. Gendelman"
+        },
+        {
+          "creatorType": "author",
+          "name": "Alessio Zaccone"
+        }
+      ]
+    },
+    "project_collections": [
+      "06 arXiv预印本与方法参考",
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "KYM9FFMX",
+    "itemType": "preprint",
+    "title": "A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method",
+    "date": "2024-08-09",
+    "creators": [
+      {
+        "type": "author",
+        "name": "Sebastian Rodriguez"
+      },
+      {
+        "type": "author",
+        "name": "Angelo Pasquale"
+      },
+      {
+        "type": "author",
+        "name": "Jad Mounayer"
+      },
+      {
+        "type": "author",
+        "name": "Diego Canales"
+      },
+      {
+        "type": "author",
+        "name": "Marianne Beringhier"
+      },
+      {
+        "type": "author",
+        "name": "Chady Ghnatios"
+      },
+      {
+        "type": "author",
+        "name": "Amine Ammar"
+      },
+      {
+        "type": "author",
+        "name": "Francisco Chinesta"
+      }
+    ],
+    "doi": "10.48550/arXiv.2408.05143",
+    "url": "https://arxiv.org/abs/2408.05143",
+    "tags": [
+      "2026-11-15补充检索",
+      "预印本版本",
+      "arXiv"
+    ],
+    "collections": [
+      "RVSRJY3W",
+      "JV83TJR5"
+    ],
+    "abstract": "The simulation of viscoelastic time-evolution problems described by a large number of internal variables and with a large spectrum of relaxation times requires high computational resources for their resolution. Furthermore, the internal variables evolution is described by a set of linear differential equations which involves many time scales. In this context, the use of a space-time PGD approximation is proposed here to boost their resolution, where the temporal functions are constructed following a multi-scale strategy along with the Partition of Unity method, in order to catch each dynamic efficiently. The feasibility and the robustness of the method are discussed in the case of a polymer in a non-equilibrium state under cyclic loading.",
+    "raw": {
+      "key": "KYM9FFMX",
+      "version": 0,
+      "itemType": "preprint",
+      "dateAdded": "2026-11-15T08:55:34Z",
+      "dateModified": "2026-11-15T09:05:56Z",
+      "tags": [
+        {
+          "tag": "2026-11-15补充检索"
+        },
+        {
+          "tag": "预印本版本"
+        },
+        {
+          "tag": "arXiv"
+        }
+      ],
+      "collections": [
+        "RVSRJY3W",
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method",
+      "abstractNote": "The simulation of viscoelastic time-evolution problems described by a large number of internal variables and with a large spectrum of relaxation times requires high computational resources for their resolution. Furthermore, the internal variables evolution is described by a set of linear differential equations which involves many time scales. In this context, the use of a space-time PGD approximation is proposed here to boost their resolution, where the temporal functions are constructed following a multi-scale strategy along with the Partition of Unity method, in order to catch each dynamic efficiently. The feasibility and the robustness of the method are discussed in the case of a polymer in a non-equilibrium state under cyclic loading.",
+      "date": "2024-08-09",
+      "DOI": "10.48550/arXiv.2408.05143",
+      "url": "https://arxiv.org/abs/2408.05143",
+      "extra": "arXiv:2408.05143v1；预印本版本；不代表已完成同行评审。",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Sebastian Rodriguez"
+        },
+        {
+          "creatorType": "author",
+          "name": "Angelo Pasquale"
+        },
+        {
+          "creatorType": "author",
+          "name": "Jad Mounayer"
+        },
+        {
+          "creatorType": "author",
+          "name": "Diego Canales"
+        },
+        {
+          "creatorType": "author",
+          "name": "Marianne Beringhier"
+        },
+        {
+          "creatorType": "author",
+          "name": "Chady Ghnatios"
+        },
+        {
+          "creatorType": "author",
+          "name": "Amine Ammar"
+        },
+        {
+          "creatorType": "author",
+          "name": "Francisco Chinesta"
+        }
+      ]
+    },
+    "project_collections": [
+      "06 arXiv预印本与方法参考",
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "UHMR938Y",
+    "itemType": "preprint",
+    "title": "Abaqus implementation of a large family of finite viscoelasticity models",
+    "date": "2023-11-23",
+    "creators": [
+      {
+        "type": "author",
+        "name": "Victor Lefèvre"
+      },
+      {
+        "type": "author",
+        "name": "Fabio Sozio"
+      },
+      {
+        "type": "author",
+        "name": "Oscar Lopez-Pamies"
+      }
+    ],
+    "doi": "10.48550/arXiv.2311.13751",
+    "url": "https://arxiv.org/abs/2311.13751",
+    "tags": [
+      "2026-11-15补充检索",
+      "预印本版本",
+      "arXiv"
+    ],
+    "collections": [
+      "RVSRJY3W"
+    ],
+    "abstract": "In this paper, we introduce an Abaqus UMAT subroutine for a family of constitutive models for the viscoelastic response of isotropic elastomers of any compressibility -- including fully incompressible elastomers -- undergoing finite deformations. The models can be chosen to account for a wide range of non-Gaussian elasticities, as well as for a wide range of nonlinear viscosities. From a mathematical point of view, the structure of the models is such that the viscous dissipation is characterized by an internal variable $\\textbf{C}^v$, subject to the physically-based constraint $\\det\\textbf{C}^v=1$, that is solution of a nonlinear first-order ODE in time. This ODE is solved by means of an explicit Runge-Kutta scheme of high order capable of preserving the constraint $\\det\\textbf{C}^v=1$ identically. The accuracy and convergence of the code is demonstrated numerically by comparison with an exact solution for several of the Abaqus built-in hybrid finite elements, including the simplicial elements C3D4H and C3D10H and the hexahedral elements C3D8H and C3D20H. The last part of this paper is devoted to showcasing the capabilities of the code by deploying it to compute the homogenized response of a bicontinuous rubber blend.",
+    "raw": {
+      "key": "UHMR938Y",
+      "version": 0,
+      "itemType": "preprint",
+      "dateAdded": "2026-11-15T08:55:34Z",
+      "dateModified": "2026-11-15T08:55:34Z",
+      "tags": [
+        {
+          "tag": "2026-11-15补充检索"
+        },
+        {
+          "tag": "预印本版本"
+        },
+        {
+          "tag": "arXiv"
+        }
+      ],
+      "collections": [
+        "RVSRJY3W"
+      ],
+      "relations": {},
+      "title": "Abaqus implementation of a large family of finite viscoelasticity models",
+      "abstractNote": "In this paper, we introduce an Abaqus UMAT subroutine for a family of constitutive models for the viscoelastic response of isotropic elastomers of any compressibility -- including fully incompressible elastomers -- undergoing finite deformations. The models can be chosen to account for a wide range of non-Gaussian elasticities, as well as for a wide range of nonlinear viscosities. From a mathematical point of view, the structure of the models is such that the viscous dissipation is characterized by an internal variable $\\textbf{C}^v$, subject to the physically-based constraint $\\det\\textbf{C}^v=1$, that is solution of a nonlinear first-order ODE in time. This ODE is solved by means of an explicit Runge-Kutta scheme of high order capable of preserving the constraint $\\det\\textbf{C}^v=1$ identically. The accuracy and convergence of the code is demonstrated numerically by comparison with an exact solution for several of the Abaqus built-in hybrid finite elements, including the simplicial elements C3D4H and C3D10H and the hexahedral elements C3D8H and C3D20H. The last part of this paper is devoted to showcasing the capabilities of the code by deploying it to compute the homogenized response of a bicontinuous rubber blend.",
+      "date": "2023-11-23",
+      "DOI": "10.48550/arXiv.2311.13751",
+      "url": "https://arxiv.org/abs/2311.13751",
+      "extra": "arXiv:2311.13751v1；预印本版本；不代表已完成同行评审。",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Victor Lefèvre"
+        },
+        {
+          "creatorType": "author",
+          "name": "Fabio Sozio"
+        },
+        {
+          "creatorType": "author",
+          "name": "Oscar Lopez-Pamies"
+        }
+      ]
+    },
+    "project_collections": [
+      "06 arXiv预印本与方法参考"
+    ]
+  },
+  {
+    "key": "6N9U5PY8",
+    "itemType": "preprint",
+    "title": "Morphological Characterization of ABS and PC-ABS Surfaces for Automotive Industry",
+    "date": "2022-09-26",
+    "creators": [
+      {
+        "type": "author",
+        "name": "Gianluca Deninno"
+      },
+      {
+        "type": "author",
+        "name": "Ettore Vittone"
+      },
+      {
+        "type": "author",
+        "name": "Nello Li Pira"
+      },
+      {
+        "type": "author",
+        "name": "Luca Belforte"
+      },
+      {
+        "type": "author",
+        "name": "Fabio Scaffidi Muta"
+      },
+      {
+        "type": "author",
+        "name": "Renzo Costa"
+      }
+    ],
+    "doi": "10.48550/arXiv.2209.12533",
+    "url": "https://arxiv.org/abs/2209.12533",
+    "tags": [
+      "2026-11-15补充检索",
+      "预印本版本",
+      "arXiv"
+    ],
+    "collections": [
+      "RVSRJY3W"
+    ],
+    "abstract": "In the automotive industry, the measurement, control and reproducibility of certain morphological characteristics of surfaces are important to characterize, qualify, certify and optimize different physical properties, such as the degree of wear, the degree of adhesion by adhesives, glues or paints and optical properties. In this regard, this work is intended demonstrate how it is possible to characterize different surfaces in ABS (Acrylonitrile Butadiene Styrene) and PC-ABS (PolyCarbonate/Acrylonitrile Butadiene Styrene) through a set of morphological parameters defined according to the ISO 25178 standard. These surfaces have been subjected to different etching treatments performed with different chemicals, which can radically modify the morphology of the surface, making it more or less suitable according to the industrial purposes sought. Furthermore, in this work an analytical relationship between the hybrid parameters Sdq and Sdr defined in the ISO-25718 standard is also proposed, valid for many surfaces of general use. This study is based on the use of a confocal optical microscope and a SEM (Scanning Electron Microscope), which allow surface morphology to be studied at the micro/nano scale and the measurements are analyzed with special imaging and three-dimensional scanning software that allows the precise measurement of morphological parameters of the standard ISO-25178.",
+    "raw": {
+      "key": "6N9U5PY8",
+      "version": 0,
+      "itemType": "preprint",
+      "dateAdded": "2026-11-15T08:55:34Z",
+      "dateModified": "2026-11-15T08:55:34Z",
+      "tags": [
+        {
+          "tag": "2026-11-15补充检索"
+        },
+        {
+          "tag": "预印本版本"
+        },
+        {
+          "tag": "arXiv"
+        }
+      ],
+      "collections": [
+        "RVSRJY3W"
+      ],
+      "relations": {},
+      "title": "Morphological Characterization of ABS and PC-ABS Surfaces for Automotive Industry",
+      "abstractNote": "In the automotive industry, the measurement, control and reproducibility of certain morphological characteristics of surfaces are important to characterize, qualify, certify and optimize different physical properties, such as the degree of wear, the degree of adhesion by adhesives, glues or paints and optical properties. In this regard, this work is intended demonstrate how it is possible to characterize different surfaces in ABS (Acrylonitrile Butadiene Styrene) and PC-ABS (PolyCarbonate/Acrylonitrile Butadiene Styrene) through a set of morphological parameters defined according to the ISO 25178 standard. These surfaces have been subjected to different etching treatments performed with different chemicals, which can radically modify the morphology of the surface, making it more or less suitable according to the industrial purposes sought. Furthermore, in this work an analytical relationship between the hybrid parameters Sdq and Sdr defined in the ISO-25718 standard is also proposed, valid for many surfaces of general use. This study is based on the use of a confocal optical microscope and a SEM (Scanning Electron Microscope), which allow surface morphology to be studied at the micro/nano scale and the measurements are analyzed with special imaging and three-dimensional scanning software that allows the precise measurement of morphological parameters of the standard ISO-25178.",
+      "date": "2022-09-26",
+      "DOI": "10.48550/arXiv.2209.12533",
+      "url": "https://arxiv.org/abs/2209.12533",
+      "extra": "arXiv:2209.12533v1；预印本版本；不代表已完成同行评审。",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Gianluca Deninno"
+        },
+        {
+          "creatorType": "author",
+          "name": "Ettore Vittone"
+        },
+        {
+          "creatorType": "author",
+          "name": "Nello Li Pira"
+        },
+        {
+          "creatorType": "author",
+          "name": "Luca Belforte"
+        },
+        {
+          "creatorType": "author",
+          "name": "Fabio Scaffidi Muta"
+        },
+        {
+          "creatorType": "author",
+          "name": "Renzo Costa"
+        }
+      ]
+    },
+    "project_collections": [
+      "06 arXiv预印本与方法参考"
+    ]
+  },
+  {
+    "key": "E6GJ657D",
+    "itemType": "journalArticle",
+    "title": "Mechanical fatigue of polymers: A new approach to characterize the S N behavior on the basis of macroscopic crack growth mechanism",
+    "date": "2016-5",
+    "creators": [
+      {
+        "type": "author",
+        "first": "K.S. Ravi",
+        "last": "Chandran"
+      }
+    ],
+    "doi": "10.1016/j.polymer.2016.03.058",
+    "publication": "Polymer",
+    "url": "https://doi.org/10.1016/j.polymer.2016.03.058",
+    "tags": [
+      "不限PC-ABS",
+      "塑胶件方法论",
+      "摘要级筛选"
+    ],
+    "collections": [
+      "JV83TJR5"
+    ],
+    "raw": {
+      "key": "E6GJ657D",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T09:05:31Z",
+      "dateModified": "2026-11-15T09:05:31Z",
+      "tags": [
+        {
+          "tag": "不限PC-ABS"
+        },
+        {
+          "tag": "塑胶件方法论"
+        },
+        {
+          "tag": "摘要级筛选"
+        }
+      ],
+      "collections": [
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Mechanical fatigue of polymers: A new approach to characterize the S N behavior on the basis of macroscopic crack growth mechanism",
+      "date": "2016-5",
+      "DOI": "10.1016/j.polymer.2016.03.058",
+      "url": "https://doi.org/10.1016/j.polymer.2016.03.058",
+      "volume": "91",
+      "publisher": "Elsevier BV",
+      "pages": "222-238",
+      "publicationTitle": "Polymer",
+      "ISSN": "0032-3861",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "K.S. Ravi",
+          "lastName": "Chandran"
+        }
+      ]
+    },
+    "project_collections": [
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "2EVJR4M9",
+    "itemType": "journalArticle",
+    "title": "Numerical Simulation for Durability of a Viscoelastic Polymer Material Subjected to Variable Loadings Fatigue Based on Entropy Damage Criterion",
+    "date": "2024-10-10",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Yutong",
+        "last": "Li"
+      },
+      {
+        "type": "author",
+        "first": "M. J. Mohammad",
+        "last": "Fikry"
+      },
+      {
+        "type": "author",
+        "first": "Jun",
+        "last": "Koyanagi"
+      }
+    ],
+    "doi": "10.3390/polym16202857",
+    "publication": "Polymers",
+    "url": "https://doi.org/10.3390/polym16202857",
+    "tags": [
+      "不限PC-ABS",
+      "塑胶件方法论",
+      "摘要级筛选"
+    ],
+    "collections": [
+      "JV83TJR5"
+    ],
+    "abstract": "This study aims to explore the impact of load history on the premature failure of the viscoelastic polymer matrix in carbon-fiber-reinforced plastics (CFRPs) using a method based on the concept of fracture fatigue entropy (FFE). A user-defined subroutine (UMAT) developed by the authors in previous studies was incorporated to apply the FFE damage criterion using ABAQUS software. Several variable-amplitude load modes, including frequent load amplitude changes and intermittent interruptions, were designed based on the conventional linear damage accumulation method (Palmgren–Miner rule), and the fatigue life under these loadings was obtained via numerical simulations. The results show that both frequent amplitude changes and even brief pauses in loading can accelerate damage accumulation, leading to premature failure of the polymer matrix. In these scenarios, the fatigue life ranged from 33.6% to 91.9% of the predictions made using the Palmgren–Miner rule, which shows significant variation and highlights cases in which the predicted fatigue life falls far short of expectations. This study offers a more practical and reliable approach for predicting fatigue life under complex loading conditions. Since the accuracy of the FFE criterion has been comprehensively validated in previous studies, this research focuses on its application to predict failure under variable loading conditions.",
+    "raw": {
+      "key": "2EVJR4M9",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T09:05:31Z",
+      "dateModified": "2026-11-15T09:05:31Z",
+      "tags": [
+        {
+          "tag": "不限PC-ABS"
+        },
+        {
+          "tag": "塑胶件方法论"
+        },
+        {
+          "tag": "摘要级筛选"
+        }
+      ],
+      "collections": [
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Numerical Simulation for Durability of a Viscoelastic Polymer Material Subjected to Variable Loadings Fatigue Based on Entropy Damage Criterion",
+      "abstractNote": "This study aims to explore the impact of load history on the premature failure of the viscoelastic polymer matrix in carbon-fiber-reinforced plastics (CFRPs) using a method based on the concept of fracture fatigue entropy (FFE). A user-defined subroutine (UMAT) developed by the authors in previous studies was incorporated to apply the FFE damage criterion using ABAQUS software. Several variable-amplitude load modes, including frequent load amplitude changes and intermittent interruptions, were designed based on the conventional linear damage accumulation method (Palmgren–Miner rule), and the fatigue life under these loadings was obtained via numerical simulations. The results show that both frequent amplitude changes and even brief pauses in loading can accelerate damage accumulation, leading to premature failure of the polymer matrix. In these scenarios, the fatigue life ranged from 33.6% to 91.9% of the predictions made using the Palmgren–Miner rule, which shows significant variation and highlights cases in which the predicted fatigue life falls far short of expectations. This study offers a more practical and reliable approach for predicting fatigue life under complex loading conditions. Since the accuracy of the FFE criterion has been comprehensively validated in previous studies, this research focuses on its application to predict failure under variable loading conditions.",
+      "date": "2024-10-10",
+      "DOI": "10.3390/polym16202857",
+      "url": "https://doi.org/10.3390/polym16202857",
+      "volume": "16",
+      "publisher": "MDPI AG",
+      "pages": "2857",
+      "publicationTitle": "Polymers",
+      "ISSN": "2073-4360",
+      "issue": "20",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Yutong",
+          "lastName": "Li"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "M. J. Mohammad",
+          "lastName": "Fikry"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jun",
+          "lastName": "Koyanagi"
+        }
+      ]
+    },
+    "project_collections": [
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "8B3V5B4H",
+    "itemType": "journalArticle",
+    "title": "Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions",
+    "date": "2020-6",
+    "creators": [
+      {
+        "type": "author",
+        "first": "P.",
+        "last": "Santharam"
+      },
+      {
+        "type": "author",
+        "first": "Y.",
+        "last": "Marco"
+      },
+      {
+        "type": "author",
+        "first": "V.",
+        "last": "Le Saux"
+      },
+      {
+        "type": "author",
+        "first": "M.",
+        "last": "Le Saux"
+      },
+      {
+        "type": "author",
+        "first": "G.",
+        "last": "Robert"
+      },
+      {
+        "type": "author",
+        "first": "I.",
+        "last": "Raoult"
+      },
+      {
+        "type": "author",
+        "first": "C.",
+        "last": "Guévenoux"
+      },
+      {
+        "type": "author",
+        "first": "D.",
+        "last": "Taveau"
+      },
+      {
+        "type": "author",
+        "first": "P.",
+        "last": "Charrier"
+      }
+    ],
+    "doi": "10.1016/j.ijfatigue.2020.105574",
+    "publication": "International Journal of Fatigue",
+    "url": "https://doi.org/10.1016/j.ijfatigue.2020.105574",
+    "tags": [
+      "不限PC-ABS",
+      "塑胶件方法论",
+      "摘要级筛选"
+    ],
+    "collections": [
+      "JV83TJR5"
+    ],
+    "raw": {
+      "key": "8B3V5B4H",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T09:05:31Z",
+      "dateModified": "2026-11-15T09:05:31Z",
+      "tags": [
+        {
+          "tag": "不限PC-ABS"
+        },
+        {
+          "tag": "塑胶件方法论"
+        },
+        {
+          "tag": "摘要级筛选"
+        }
+      ],
+      "collections": [
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions",
+      "date": "2020-6",
+      "DOI": "10.1016/j.ijfatigue.2020.105574",
+      "url": "https://doi.org/10.1016/j.ijfatigue.2020.105574",
+      "volume": "135",
+      "publisher": "Elsevier BV",
+      "pages": "105574",
+      "publicationTitle": "International Journal of Fatigue",
+      "ISSN": "0142-1123",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "P.",
+          "lastName": "Santharam"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Y.",
+          "lastName": "Marco"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "V.",
+          "lastName": "Le Saux"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "M.",
+          "lastName": "Le Saux"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "G.",
+          "lastName": "Robert"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "I.",
+          "lastName": "Raoult"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "C.",
+          "lastName": "Guévenoux"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "D.",
+          "lastName": "Taveau"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "P.",
+          "lastName": "Charrier"
+        }
+      ]
+    },
+    "project_collections": [
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "DMGUTPFB",
+    "itemType": "journalArticle",
+    "title": "Fatigue Failure in Polymeric Materials: Insights from Experimental Testing",
+    "date": "2024-2-29",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Soheir A. R.",
+        "last": "Naga"
+      },
+      {
+        "type": "author",
+        "first": "T. A.",
+        "last": "El-Sayed"
+      }
+    ],
+    "doi": "10.1007/s11668-024-01874-1",
+    "publication": "Journal of Failure Analysis and Prevention",
+    "url": "https://doi.org/10.1007/s11668-024-01874-1",
+    "tags": [
+      "不限PC-ABS",
+      "塑胶件方法论",
+      "摘要级筛选"
+    ],
+    "collections": [
+      "JV83TJR5"
+    ],
+    "abstract": "AbstractThe investigation of fatigue failure in polymeric materials subjected to cyclic loading holds significant importance across diverse engineering applications. Numerous variables influence material behavior, encompassing material-related factors such as composition, molecular weight, orientation, and additives, as well as external factors like applied stress magnitude (stress amplitude, dynamic stress frequency and mean stress), and operating temperature. This paper presents an experimental exploration into the impact of loading parameters—mean stress, stress amplitude, and dynamic stress frequency—on the failure modes of two thermoplastic materials: high-density polyethylene (HDPE) and polyvinyl chloride (PVC). The study begins with an assessment of the mechanical and physical properties of the materials, followed by the design and manufacturing of a specialized uniaxial fatigue test rig. Tensile–tensile fatigue tests incorporating positive mean stress are conducted, evaluating the influence of altering stress amplitude and frequency on fatigue life and failure mode. The outcomes reveal that HDPE primarily experiences thermal and creep failure modes, with a lack of observed fatigue failure. Conversely, PVC specimens manifest three distinct failure modes: ductile, creep, and fatigue, with the type of failure contingent upon loading parameters. These findings offer significant insights into the various fatigue failure modes and contribute to an enhanced comprehension of the intricate interplay between loading dynamics and failure modes in polymeric materials.",
+    "raw": {
+      "key": "DMGUTPFB",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T09:05:31Z",
+      "dateModified": "2026-11-15T09:05:31Z",
+      "tags": [
+        {
+          "tag": "不限PC-ABS"
+        },
+        {
+          "tag": "塑胶件方法论"
+        },
+        {
+          "tag": "摘要级筛选"
+        }
+      ],
+      "collections": [
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Fatigue Failure in Polymeric Materials: Insights from Experimental Testing",
+      "abstractNote": "AbstractThe investigation of fatigue failure in polymeric materials subjected to cyclic loading holds significant importance across diverse engineering applications. Numerous variables influence material behavior, encompassing material-related factors such as composition, molecular weight, orientation, and additives, as well as external factors like applied stress magnitude (stress amplitude, dynamic stress frequency and mean stress), and operating temperature. This paper presents an experimental exploration into the impact of loading parameters—mean stress, stress amplitude, and dynamic stress frequency—on the failure modes of two thermoplastic materials: high-density polyethylene (HDPE) and polyvinyl chloride (PVC). The study begins with an assessment of the mechanical and physical properties of the materials, followed by the design and manufacturing of a specialized uniaxial fatigue test rig. Tensile–tensile fatigue tests incorporating positive mean stress are conducted, evaluating the influence of altering stress amplitude and frequency on fatigue life and failure mode. The outcomes reveal that HDPE primarily experiences thermal and creep failure modes, with a lack of observed fatigue failure. Conversely, PVC specimens manifest three distinct failure modes: ductile, creep, and fatigue, with the type of failure contingent upon loading parameters. These findings offer significant insights into the various fatigue failure modes and contribute to an enhanced comprehension of the intricate interplay between loading dynamics and failure modes in polymeric materials.",
+      "date": "2024-2-29",
+      "DOI": "10.1007/s11668-024-01874-1",
+      "url": "https://doi.org/10.1007/s11668-024-01874-1",
+      "volume": "24",
+      "publisher": "Springer Science and Business Media LLC",
+      "pages": "922-935",
+      "publicationTitle": "Journal of Failure Analysis and Prevention",
+      "ISSN": "1547-7029",
+      "issue": "2",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Soheir A. R.",
+          "lastName": "Naga"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "T. A.",
+          "lastName": "El-Sayed"
+        }
+      ]
+    },
+    "project_collections": [
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "V66Q4W65",
+    "itemType": "journalArticle",
+    "title": "Effect of cycling frequency and self‐heating on fatigue behavior of reinforced and unreinforced thermoplastic polymers",
+    "date": "2015-6-2",
+    "creators": [
+      {
+        "type": "author",
+        "first": "Seyyedvahid",
+        "last": "Mortazavian"
+      },
+      {
+        "type": "author",
+        "first": "Ali",
+        "last": "Fatemi"
+      },
+      {
+        "type": "author",
+        "first": "Stephen R.",
+        "last": "Mellott"
+      },
+      {
+        "type": "author",
+        "first": "Abolhassan",
+        "last": "Khosrovaneh"
+      }
+    ],
+    "doi": "10.1002/pen.24124",
+    "publication": "Polymer Engineering & Science",
+    "url": "https://doi.org/10.1002/pen.24124",
+    "tags": [
+      "塑胶件方法论",
+      "摘要级筛选",
+      "频率与自发热"
+    ],
+    "collections": [
+      "JV83TJR5"
+    ],
+    "abstract": "An experimental study was conducted to evaluate the effect of frequency and self‐heating on fatigue behavior of two unreinforced and two short glass fiber reinforced thermoplastic polymers. Load‐controlled fatigue tests were conducted under fully reversed (R = −1) and R = 0.1 conditions with specimens loaded in either longitudinal or transverse direction to the mold flow direction. Effect of frequency on fatigue life was evaluated at 23 and 125°C and for a range of frequencies between 0.063 and 20 Hz. Incremental step frequency tests were also performed at different stress ratios and stress levels. Surface temperature rise was found to be material, frequency, and stress level dependent. Three energy‐based models were applied to the incremental step frequency data and relationships were developed for each material to estimate surface temperature rise as a function of test frequency and stress level. Relationships were also developed to assess critical frequency for the unreinforced thermoplastics at a given stress level above which surface temperature does not stabilize. POLYM. COMPOS., 55:2355–2367, 2015. © 2015 Society of Plastics Engineers",
+    "raw": {
+      "key": "V66Q4W65",
+      "version": 0,
+      "itemType": "journalArticle",
+      "dateAdded": "2026-11-15T09:05:51Z",
+      "dateModified": "2026-11-15T09:05:51Z",
+      "tags": [
+        {
+          "tag": "塑胶件方法论"
+        },
+        {
+          "tag": "摘要级筛选"
+        },
+        {
+          "tag": "频率与自发热"
+        }
+      ],
+      "collections": [
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "Effect of cycling frequency and self‐heating on fatigue behavior of reinforced and unreinforced thermoplastic polymers",
+      "abstractNote": "An experimental study was conducted to evaluate the effect of frequency and self‐heating on fatigue behavior of two unreinforced and two short glass fiber reinforced thermoplastic polymers. Load‐controlled fatigue tests were conducted under fully reversed (R = −1) and R = 0.1 conditions with specimens loaded in either longitudinal or transverse direction to the mold flow direction. Effect of frequency on fatigue life was evaluated at 23 and 125°C and for a range of frequencies between 0.063 and 20 Hz. Incremental step frequency tests were also performed at different stress ratios and stress levels. Surface temperature rise was found to be material, frequency, and stress level dependent. Three energy‐based models were applied to the incremental step frequency data and relationships were developed for each material to estimate surface temperature rise as a function of test frequency and stress level. Relationships were also developed to assess critical frequency for the unreinforced thermoplastics at a given stress level above which surface temperature does not stabilize. POLYM. COMPOS., 55:2355–2367, 2015. © 2015 Society of Plastics Engineers",
+      "date": "2015-6-2",
+      "DOI": "10.1002/pen.24124",
+      "url": "https://doi.org/10.1002/pen.24124",
+      "volume": "55",
+      "publisher": "Wiley",
+      "pages": "2355-2367",
+      "publicationTitle": "Polymer Engineering & Science",
+      "ISSN": "0032-3888",
+      "issue": "10",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Seyyedvahid",
+          "lastName": "Mortazavian"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ali",
+          "lastName": "Fatemi"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Stephen R.",
+          "lastName": "Mellott"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Abolhassan",
+          "lastName": "Khosrovaneh"
+        }
+      ]
+    },
+    "project_collections": [
+      "07 塑胶件疲劳通用方法论"
+    ]
+  },
+  {
+    "key": "MU8JHXBL",
+    "itemType": "webpage",
+    "title": "pyLife 2.3.1 — Wöhler analyzing functions",
+    "date": "",
+    "creators": [
+      {
+        "type": "author",
+        "name": "pyLife developers"
+      }
+    ],
+    "url": "https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html",
+    "tags": [
+      "官方文档",
+      "塑胶件方法论",
+      "S-N拟合"
+    ],
+    "collections": [
+      "JV83TJR5"
+    ],
+    "raw": {
+      "key": "MU8JHXBL",
+      "version": 0,
+      "itemType": "webpage",
+      "dateAdded": "2026-11-15T09:05:51Z",
+      "dateModified": "2026-11-15T09:05:51Z",
+      "tags": [
+        {
+          "tag": "官方文档"
+        },
+        {
+          "tag": "塑胶件方法论"
+        },
+        {
+          "tag": "S-N拟合"
+        }
+      ],
+      "collections": [
+        "JV83TJR5"
+      ],
+      "relations": {},
+      "title": "pyLife 2.3.1 — Wöhler analyzing functions",
+      "url": "https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html",
+      "extra": "accessed: {\"date-parts\": [[2026, 11, 15]]}",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "pyLife developers"
+        }
+      ]
+    },
+    "project_collections": [
+      "07 塑胶件疲劳通用方法论"
+    ]
+  }
+]

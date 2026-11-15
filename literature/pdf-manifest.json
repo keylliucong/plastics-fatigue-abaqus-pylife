@@ -1,0 +1,122 @@
+[
+  {
+    "item_key": "RYGCBQQJ",
+    "path": "literature/pdfs/RYGCBQQJ.pdf",
+    "title": "Fatigue Behavior of Engineering Polymers and Its Numerical Implementation",
+    "doi": "",
+    "sha256": "3c88f068ac418abadd4bb9a39ffa85ea485d15c5370cb1d80fe335ce646de870",
+    "bytes": 1497471,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://www.3ds.com/assets/invest/2024-01/2218-saoe-fatigue_behavior_of_engineering_polymers_and_its_numerical_implementation.pdf"
+  },
+  {
+    "item_key": "RF9QV2NH",
+    "path": "literature/pdfs/RF9QV2NH.pdf",
+    "title": "Mechanical, Fatigue, and Thermal Characterization of ASA, Nylon 12, PC, and PC-ABS Manufactured by Fused Filament Fabrication (FFF)",
+    "doi": "10.3390/polym18020302",
+    "sha256": "f99624c1b4c6797d4bc89a78d581f5f0201dc1da547c187045ea7793991a747d",
+    "bytes": 6061679,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://doi.org/10.3390/polym18020302"
+  },
+  {
+    "item_key": "5PUAPLS2",
+    "path": "literature/pdfs/5PUAPLS2.pdf",
+    "title": "Investigation of Fatigue Behavior of ABS and PC-ABS Polymers at Different Temperatures",
+    "doi": "10.3390/ma11101818",
+    "sha256": "89c2adec57bd888df7c2306769a0ce2e9e73f14483a0689f8427c3b51d265807",
+    "bytes": 16069130,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://doi.org/10.3390/ma11101818"
+  },
+  {
+    "item_key": "4HT2HPWX",
+    "path": "literature/pdfs/4HT2HPWX.pdf",
+    "title": "The Effect of Poly (Methyl Methacrylate) Content on Chemical, Thermomechanical, Mechanical, and Fatigue Life Characteristics of Ternary PC/ABS/PMMA Blends",
+    "doi": "10.3390/polym17141905",
+    "sha256": "3980e5f51c0ac2492de525088bd2df1a21777989ca9158b5e67ff1022b07c535",
+    "bytes": 3393799,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://doi.org/10.3390/polym17141905"
+  },
+  {
+    "item_key": "VMNL7VRT",
+    "path": "literature/pdfs/VMNL7VRT.pdf",
+    "title": "Research on Fatigue Fracture Characterization of PC/ABS Blend",
+    "doi": "10.2991/icadme-15.2015.351",
+    "sha256": "277ac0ea28f84f45d62bd0528bef871c8f86e3b5a9c485074c685ba4c1a103b4",
+    "bytes": 1916364,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://download.atlantis-press.com/article/25840429.pdf"
+  },
+  {
+    "item_key": "UC3HMX8S",
+    "path": "literature/pdfs/UC3HMX8S.pdf",
+    "title": "Criticality of the Self-Heating Effect in Polymers and Polymer Matrix Composites during Fatigue, and Their Application in Non-Destructive Testing",
+    "doi": "10.3390/polym11010019",
+    "sha256": "f4356c7957e24e993b1be2e82f2c3534401cdb67b1a77a3944eb0d85ec795566",
+    "bytes": 11689341,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://doi.org/10.3390/polym11010019"
+  },
+  {
+    "item_key": "KYM9FFMX",
+    "path": "literature/pdfs/KYM9FFMX.pdf",
+    "title": "A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method",
+    "doi": "10.48550/arXiv.2408.05143",
+    "sha256": "2ad658dd8211400f7a72ffe4d71237eb505513e3204bd3fbfd0e745ab0fcbbd5",
+    "bytes": 3837153,
+    "version": "arXiv v1",
+    "source_url": "https://arxiv.org/pdf/2408.05143"
+  },
+  {
+    "item_key": "8YDGGEBH",
+    "path": "literature/pdfs/8YDGGEBH.pdf",
+    "title": "Modeling the Fatigue Behavior of Amorphous Polymers",
+    "doi": "10.48550/arXiv.2607.14994",
+    "sha256": "090d6a4a86666cd38d003e5f5c198046869beb25312b0e03af918a85f89bb991",
+    "bytes": 685115,
+    "version": "arXiv v1",
+    "source_url": "https://arxiv.org/pdf/2607.14994"
+  },
+  {
+    "item_key": "UHMR938Y",
+    "path": "literature/pdfs/UHMR938Y.pdf",
+    "title": "Abaqus implementation of a large family of finite viscoelasticity models",
+    "doi": "10.48550/arXiv.2311.13751",
+    "sha256": "c91fe7eaa9c114e7f3f0e4dfeed7ebd3fdd1c4678048ce6958b48f85e4d9196e",
+    "bytes": 1567478,
+    "version": "arXiv v1",
+    "source_url": "https://arxiv.org/pdf/2311.13751"
+  },
+  {
+    "item_key": "6N9U5PY8",
+    "path": "literature/pdfs/6N9U5PY8.pdf",
+    "title": "Morphological Characterization of ABS and PC-ABS Surfaces for Automotive Industry",
+    "doi": "10.48550/arXiv.2209.12533",
+    "sha256": "d627cd8a6210ff5e98dced900cbb3b2cec16e52ad1845f5534da9f7cd1871746",
+    "bytes": 10507889,
+    "version": "arXiv v1",
+    "source_url": "https://arxiv.org/pdf/2209.12533"
+  },
+  {
+    "item_key": "2EVJR4M9",
+    "path": "literature/pdfs/2EVJR4M9.pdf",
+    "title": "Numerical Simulation for Durability of a Viscoelastic Polymer Material Subjected to Variable Loadings Fatigue Based on Entropy Damage Criterion",
+    "doi": "10.3390/polym16202857",
+    "sha256": "cf7c91d89f09ca6f30b7c4abf8d78a65760e1d967f996913d55d8084118623bb",
+    "bytes": 3295846,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://doi.org/10.3390/polym16202857"
+  },
+  {
+    "item_key": "DMGUTPFB",
+    "path": "literature/pdfs/DMGUTPFB.pdf",
+    "title": "Fatigue Failure in Polymeric Materials: Insights from Experimental Testing",
+    "doi": "10.1007/s11668-024-01874-1",
+    "sha256": "9e9f49ee90e344be1f8d98289af6fdddfb67046dd10fc72cd63fb328d4a3a14f",
+    "bytes": 2286909,
+    "version": "publisher PDF / official technical paper",
+    "source_url": "https://doi.org/10.1007/s11668-024-01874-1"
+  }
+]

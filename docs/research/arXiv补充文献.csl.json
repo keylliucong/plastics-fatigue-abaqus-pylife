@@ -1,0 +1,142 @@
+[
+  {
+    "type": "article",
+    "title": "Modeling the Fatigue Behavior of Amorphous Polymers",
+    "author": [
+      {
+        "literal": "Valeriy V. Ginzburg"
+      },
+      {
+        "literal": "Oleg V. Gendelman"
+      },
+      {
+        "literal": "Alessio Zaccone"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          16
+        ]
+      ]
+    },
+    "DOI": "10.48550/arXiv.2607.14994",
+    "URL": "https://arxiv.org/abs/2607.14994",
+    "publisher": "arXiv",
+    "abstract": "Prediction of material durability is both very important and very difficult. In many cases, material durability is measured by subjecting a sample to repeating oscillatory cycles (in shear or tension-compression) until it fails in either ductile or brittle fashion. Typically, the stress amplitude is denoted S, and the number of cycles N, so the resulting dependence is known as the SN-curve. For many materials, SN curve has been shown to obey the empirical Basquin's law, N = AS^(-m), where the prefactor A was a function of the temperature, load frequency, and sample history, and the power law m was a real number, usually between 3 and 12. Here, we derive the Basquin's law using a linearized version of the Long's plasticity model and demonstrate that within this framework, m = 3. We also derive the expression for the prefactor A. Finally, we show that our theory successfully describes experimental data for three amorphous polymers, PS, PMMA, and PVC.",
+    "note": "arXiv:2607.14994v1；预印本版本；不代表已完成同行评审。"
+  },
+  {
+    "type": "article",
+    "title": "A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method",
+    "author": [
+      {
+        "literal": "Sebastian Rodriguez"
+      },
+      {
+        "literal": "Angelo Pasquale"
+      },
+      {
+        "literal": "Jad Mounayer"
+      },
+      {
+        "literal": "Diego Canales"
+      },
+      {
+        "literal": "Marianne Beringhier"
+      },
+      {
+        "literal": "Chady Ghnatios"
+      },
+      {
+        "literal": "Amine Ammar"
+      },
+      {
+        "literal": "Francisco Chinesta"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.48550/arXiv.2408.05143",
+    "URL": "https://arxiv.org/abs/2408.05143",
+    "publisher": "arXiv",
+    "abstract": "The simulation of viscoelastic time-evolution problems described by a large number of internal variables and with a large spectrum of relaxation times requires high computational resources for their resolution. Furthermore, the internal variables evolution is described by a set of linear differential equations which involves many time scales. In this context, the use of a space-time PGD approximation is proposed here to boost their resolution, where the temporal functions are constructed following a multi-scale strategy along with the Partition of Unity method, in order to catch each dynamic efficiently. The feasibility and the robustness of the method are discussed in the case of a polymer in a non-equilibrium state under cyclic loading.",
+    "note": "arXiv:2408.05143v1；预印本版本；不代表已完成同行评审。"
+  },
+  {
+    "type": "article",
+    "title": "Abaqus implementation of a large family of finite viscoelasticity models",
+    "author": [
+      {
+        "literal": "Victor Lefèvre"
+      },
+      {
+        "literal": "Fabio Sozio"
+      },
+      {
+        "literal": "Oscar Lopez-Pamies"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          11,
+          23
+        ]
+      ]
+    },
+    "DOI": "10.48550/arXiv.2311.13751",
+    "URL": "https://arxiv.org/abs/2311.13751",
+    "publisher": "arXiv",
+    "abstract": "In this paper, we introduce an Abaqus UMAT subroutine for a family of constitutive models for the viscoelastic response of isotropic elastomers of any compressibility -- including fully incompressible elastomers -- undergoing finite deformations. The models can be chosen to account for a wide range of non-Gaussian elasticities, as well as for a wide range of nonlinear viscosities. From a mathematical point of view, the structure of the models is such that the viscous dissipation is characterized by an internal variable $\\textbf{C}^v$, subject to the physically-based constraint $\\det\\textbf{C}^v=1$, that is solution of a nonlinear first-order ODE in time. This ODE is solved by means of an explicit Runge-Kutta scheme of high order capable of preserving the constraint $\\det\\textbf{C}^v=1$ identically. The accuracy and convergence of the code is demonstrated numerically by comparison with an exact solution for several of the Abaqus built-in hybrid finite elements, including the simplicial elements C3D4H and C3D10H and the hexahedral elements C3D8H and C3D20H. The last part of this paper is devoted to showcasing the capabilities of the code by deploying it to compute the homogenized response of a bicontinuous rubber blend.",
+    "note": "arXiv:2311.13751v1；预印本版本；不代表已完成同行评审。"
+  },
+  {
+    "type": "article",
+    "title": "Morphological Characterization of ABS and PC-ABS Surfaces for Automotive Industry",
+    "author": [
+      {
+        "literal": "Gianluca Deninno"
+      },
+      {
+        "literal": "Ettore Vittone"
+      },
+      {
+        "literal": "Nello Li Pira"
+      },
+      {
+        "literal": "Luca Belforte"
+      },
+      {
+        "literal": "Fabio Scaffidi Muta"
+      },
+      {
+        "literal": "Renzo Costa"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          26
+        ]
+      ]
+    },
+    "DOI": "10.48550/arXiv.2209.12533",
+    "URL": "https://arxiv.org/abs/2209.12533",
+    "publisher": "arXiv",
+    "abstract": "In the automotive industry, the measurement, control and reproducibility of certain morphological characteristics of surfaces are important to characterize, qualify, certify and optimize different physical properties, such as the degree of wear, the degree of adhesion by adhesives, glues or paints and optical properties. In this regard, this work is intended demonstrate how it is possible to characterize different surfaces in ABS (Acrylonitrile Butadiene Styrene) and PC-ABS (PolyCarbonate/Acrylonitrile Butadiene Styrene) through a set of morphological parameters defined according to the ISO 25178 standard. These surfaces have been subjected to different etching treatments performed with different chemicals, which can radically modify the morphology of the surface, making it more or less suitable according to the industrial purposes sought. Furthermore, in this work an analytical relationship between the hybrid parameters Sdq and Sdr defined in the ISO-25718 standard is also proposed, valid for many surfaces of general use. This study is based on the use of a confocal optical microscope and a SEM (Scanning Electron Microscope), which allow surface morphology to be studied at the micro/nano scale and the measurements are analyzed with special imaging and three-dimensional scanning software that allows the precise measurement of morphological parameters of the standard ISO-25178.",
+    "note": "arXiv:2209.12533v1；预印本版本；不代表已完成同行评审。"
+  }
+]

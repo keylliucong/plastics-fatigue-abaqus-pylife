@@ -1,0 +1,218 @@
+[
+  {
+    "directory": "nature-experiment-log",
+    "name": "nature-experiment-log"
+  },
+  {
+    "directory": "nature-proposal-writer",
+    "name": "researchwrite"
+  },
+  {
+    "directory": "preregistering-analysis",
+    "name": "preregistering-analysis"
+  },
+  {
+    "directory": "abaqus-explicit-impact",
+    "name": "abaqus-explicit-impact"
+  },
+  {
+    "directory": "fatigue",
+    "name": "abaqus-script-control-fatigue"
+  },
+  {
+    "directory": "xfem",
+    "name": "abaqus-script-control-xfem"
+  },
+  {
+    "directory": "nature-paper-to-patent",
+    "name": "nature-paper-to-patent"
+  },
+  {
+    "directory": "executing-analysis",
+    "name": "executing-analysis"
+  },
+  {
+    "directory": "nature-statistics",
+    "name": "nature-statistics"
+  },
+  {
+    "directory": "nature-paper-xray",
+    "name": "nature-paper-xray"
+  },
+  {
+    "directory": "abaqus-forming-fld",
+    "name": "abaqus-forming-fld"
+  },
+  {
+    "directory": "general",
+    "name": "abaqus-script-control-general"
+  },
+  {
+    "directory": "nature-reviewer",
+    "name": "nature-reviewer"
+  },
+  {
+    "directory": "writing-science-skills",
+    "name": "writing-science-skills"
+  },
+  {
+    "directory": "nature-paper2ppt",
+    "name": "nature-paper2ppt"
+  },
+  {
+    "directory": "nature-citation",
+    "name": "nature-citation"
+  },
+  {
+    "directory": "using-science-superpowers",
+    "name": "using-science-superpowers"
+  },
+  {
+    "directory": "designing-the-analysis",
+    "name": "designing-the-analysis"
+  },
+  {
+    "directory": "abaqus-heat-transfer",
+    "name": "abaqus-heat-transfer"
+  },
+  {
+    "directory": "nature-downloader",
+    "name": "nature-downloader"
+  },
+  {
+    "directory": "framing-research-questions",
+    "name": "framing-research-questions"
+  },
+  {
+    "directory": "investigating-anomalous-results",
+    "name": "investigating-anomalous-results"
+  },
+  {
+    "directory": "thermal",
+    "name": "abaqus-script-control-thermal"
+  },
+  {
+    "directory": "nature-data",
+    "name": "nature-data"
+  },
+  {
+    "directory": "nature-response",
+    "name": "nature-response"
+  },
+  {
+    "directory": "composite",
+    "name": "abaqus-script-control-composite"
+  },
+  {
+    "directory": "subagent-driven-analysis",
+    "name": "subagent-driven-analysis"
+  },
+  {
+    "directory": "nature-social-science",
+    "name": "nature-social-science"
+  },
+  {
+    "directory": "abaqus-version-compat",
+    "name": "abaqus-version-compat"
+  },
+  {
+    "directory": "static",
+    "name": "abaqus-script-control-static"
+  },
+  {
+    "directory": "establishing-feasibility-first",
+    "name": "establishing-feasibility-first"
+  },
+  {
+    "directory": "nature-writing",
+    "name": "nature-writing"
+  },
+  {
+    "directory": "nature-image2ppt",
+    "name": "nature-image2ppt"
+  },
+  {
+    "directory": "nature-reader",
+    "name": "nature-reader"
+  },
+  {
+    "directory": "requesting-red-team-review",
+    "name": "requesting-red-team-review"
+  },
+  {
+    "directory": "surveying-prior-work",
+    "name": "surveying-prior-work"
+  },
+  {
+    "directory": "nature-paper2word",
+    "name": "nature-paper2word"
+  },
+  {
+    "directory": "nature-shared",
+    "name": "nature-shared"
+  },
+  {
+    "directory": "abaqus-odb-extract",
+    "name": "abaqus-odb-extract"
+  },
+  {
+    "directory": "nature-paper-trans",
+    "name": "nature-paper-trans"
+  },
+  {
+    "directory": "verifying-results-before-claiming",
+    "name": "verifying-results-before-claiming"
+  },
+  {
+    "directory": "abaqus-mesh-doctor",
+    "name": "abaqus-mesh-doctor"
+  },
+  {
+    "directory": "nature-ref-verifier",
+    "name": "nature-ref-verifier"
+  },
+  {
+    "directory": "reporting-and-archiving-findings",
+    "name": "reporting-and-archiving-findings"
+  },
+  {
+    "directory": "abaqus-model-builder",
+    "name": "abaqus-model-builder"
+  },
+  {
+    "directory": "nature-paper-card",
+    "name": "nature-paper-card"
+  },
+  {
+    "directory": "dispatching-parallel-investigations",
+    "name": "dispatching-parallel-investigations"
+  },
+  {
+    "directory": "nature-literature-pipeline",
+    "name": "nature-literature-pipeline"
+  },
+  {
+    "directory": "receiving-critical-review",
+    "name": "receiving-critical-review"
+  },
+  {
+    "directory": "nature-academic-search",
+    "name": "nature-academic-search"
+  },
+  {
+    "directory": "nature-polishing",
+    "name": "nature-polishing"
+  },
+  {
+    "directory": "setting-up-reproducible-analysis",
+    "name": "setting-up-reproducible-analysis"
+  },
+  {
+    "directory": "abaqus_subroutine_skills",
+    "name": "abaqus-subroutine-development"
+  },
+  {
+    "directory": "nature-figure",
+    "name": "nature-figure"
+  }
+]

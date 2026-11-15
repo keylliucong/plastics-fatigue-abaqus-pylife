@@ -1,0 +1,37 @@
+[
+  {
+    "key": "LE7ARH44",
+    "name": "01 PC-ABS疲劳试验与S-N数据",
+    "parentCollection": "JV64VS9S"
+  },
+  {
+    "key": "YPT7IFHJ",
+    "name": "02 裂纹扩展与黏弹本构",
+    "parentCollection": "JV64VS9S"
+  },
+  {
+    "key": "MG5PIKZY",
+    "name": "03 聚合物疲劳方法与自发热",
+    "parentCollection": "JV64VS9S"
+  },
+  {
+    "key": "FKEVBK6K",
+    "name": "04 Abaqus与pyLife官方技术文档",
+    "parentCollection": "JV64VS9S"
+  },
+  {
+    "key": "KL87U9IK",
+    "name": "05 疲劳试验标准",
+    "parentCollection": "JV64VS9S"
+  },
+  {
+    "key": "RVSRJY3W",
+    "name": "06 arXiv预印本与方法参考",
+    "parentCollection": "JV64VS9S"
+  },
+  {
+    "key": "JV83TJR5",
+    "name": "07 塑胶件疲劳通用方法论",
+    "parentCollection": "JV64VS9S"
+  }
+]
