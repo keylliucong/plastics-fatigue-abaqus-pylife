@@ -18,6 +18,13 @@
 
 ## 2. 路线总图
 
+![塑胶件Abaqus与pyLife疲劳仿真技术路线](assets/technical-route.png)
+
+[查看可编辑SVG矢量版](assets/technical-route.svg)。蓝色部分为输入与机械响应，绿色为S-N疲劳基线，橙色为复杂响应下的扩展路线；虚线表示验证反馈。
+
+<details>
+<summary>Mermaid结构源图</summary>
+
 ```mermaid
 flowchart TD
     A[用途与失效定义\n载荷谱、温度、频率、R、寿命单位] --> B[试验方案与数据冻结\n区分标定集和独立验证集]
@@ -39,6 +46,8 @@ flowchart TD
     N -->|通过| O[报告与适用范围]
     N -->|未通过| B
 ```
+
+</details>
 
 该图是本项目对来源资料的工程综合。Explicit是可选机械响应求解器，并不等同于疲劳寿命模型。
 
