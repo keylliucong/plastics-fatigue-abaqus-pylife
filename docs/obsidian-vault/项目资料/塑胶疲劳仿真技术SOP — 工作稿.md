@@ -130,6 +130,8 @@ flowchart TD
 
 按真实试验记录拟合，断裂与run-out分开；拟合模型、分布、参数、散布和外推范围需记录。[pyLife 2.3.1拟合示例](https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html)可演示接口，但其阈值推断断裂状态不能代替原始记录。
 
+**先审查拟合分区**：pyLife 2.3.1 的 `FatigueData` 默认分区受最高 run-out 载荷影响，同一载荷级的破坏记录可能不进入 `finite_zone` 回归；转折值只是算法初值，不是已经证明的耐久极限。先打印逐件数据及分区，结合试验和所选分析器说明划分依据，必要时做敏感性分析。[[疲劳试验数据与删失 — S-N拟合基础#4.1 自动分区可能改变拟合样本：已运行的例子|查看本地运行例子]]。
+
 pyLife `WoehlerCurve`的$k_2$缺省表示无限寿命段，散布也有默认值；对塑胶必须明确依据，不把软件默认值视作实验证据。[官方API](https://pylife.readthedocs.io/en/2.3.1/materiallaws/woehlercurve.html)
 
 **手算检查**：若 $\sigma_{min}=10$、$\sigma_{max}=30$ MPa，则 $\sigma_a=10$ MPa、$\sigma_m=20$ MPa、$R=1/3$。若误将范围20 MPa当幅值，在 $k=5$ 的单段幂律下损伤被放大 $2^5=32$ 倍；该数字仅为定义检查。

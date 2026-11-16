@@ -37,4 +37,41 @@ $$L(\theta)=\prod_{i:\,\text{破坏}} f_N(N_i\mid S_i,\theta)\;\prod_{j:\,\text{
 
 pyLife 具体分析器对有限寿命区、转折区和 run-out 的筛选与统计假设各不相同；上面的通用右删失似然**不是声称任意 pyLife 函数都使用完全相同的似然**。使用前阅读所选版本和分析器的官方文档、确认其实际分区规则，检查样本量与离散；缺少 run-out、破坏标记、重复试样或混合应力比时，不自动生成可信失效概率。
 
+### 4.1 自动分区可能改变拟合样本：已运行的例子
+
+下面是 pyLife **2.3.1** 中 `FatigueData` 的教学演示，数据完全虚构、载荷统一为应力幅 MPa：
+
+| 载荷幅值 | 循环数 | 结果 |
+|---:|---:|---|
+| 8 | 1,000,000 | run-out |
+| 10 | 1,000,000 | run-out |
+| 10 | 400,000 | 破坏 |
+| 12 | 120,000 | 破坏 |
+| 14 | 45,000 | 破坏 |
+
+复现数据和默认分区：
+
+```python
+import pandas as pd
+import pylife.materialdata.woehler  # 注册 fatigue_data 访问器
+
+df = pd.DataFrame({
+    "load": [8., 10., 10., 12., 14.],
+    "cycles": [1e6, 1e6, 4e5, 1.2e5, 4.5e4],
+    "fracture": [False, False, True, True, True],
+})
+fd = df.fatigue_data
+print(fd.finite_infinite_transition)
+print(fd.finite_zone)
+print(fd.infinite_zone)
+```
+
+在本地 pyLife 2.3.1 中运行该数据后：默认推测的 `finite_infinite_transition` 为 11 MPa；然而默认的 `finite_zone` 含 12、14 MPa 两条破坏记录，而 8 MPa run-out、10 MPa run-out **及 10 MPa 破坏记录**均被放入 `infinite_zone`。该版本源码先用**最高 run-out 载荷**划分，再将它与其上最近的有限区载荷取中点作为报告的初始转折值；因而此例 10 MPa 的破坏点没有进入有限区回归。不能把“自动转折点 11 MPa”理解为试验已证明的塑胶耐久极限。
+
+若调用 `set_finite_infinite_transition(9.0)`，本例有限区会包含 10、12、14 MPa 三条破坏记录。这只是揭示算法对输入分区的敏感性，**不是建议把转折点设为 9 MPa**：人为设置也必须有试验依据、报告敏感性，并检查这个划分是否适合所选择的分析器及其统计假设。
+
+因此运行 `Elementary`、`Probit` 或最大似然分析器前，必须输出并审查原始记录、破坏/run-out 标签、默认转折值、有限区及另一分区的每条记录；将该工作流称作有限/无限区只是 pyLife 的算法术语，不能自动宣称塑胶具有无限寿命。若研究需要直接估计含删失数据的单段 S–N 模型，应选择**确实实现该似然的拟合方法**并验证，而不能把通用删失似然套称为该分析器的实现。
+
+依据：[pyLife 2.3.1 分析器示例](https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html)、[FatigueData 2.3.1 源码](https://pylife.readthedocs.io/en/2.3.1/_modules/pylife/materialdata/woehler/fatigue_data.html)；示例已在本地 pyLife 2.3.1 执行，未使用真实试验数据。
+
 对于 FFF PC-ABS，[[08 FFF工艺与PC-ABS疲劳 — Rodrigues等 2026]] 将一件达到 $10^6$ 次的试样记为 run-out。对于注塑 PC/ABS/PMMA，[[04 PC-ABS-PMMA疲劳试验 — Kuleyin与Gümrük 2025]] 的5 MPa跨配方比较由拟合外推，不应写成该幅值的实测。
