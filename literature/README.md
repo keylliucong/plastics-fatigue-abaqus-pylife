@@ -18,7 +18,10 @@
 
 ## 方法论核心全文状态
 
-最新方法论子文献夹有9篇论文/技术报告：6篇有PDF，3篇未获取。软件网页不计入论文PDF。缺失核心全文：10.1016/j.polymer.2016.03.058、10.1016/j.ijfatigue.2020.105574、10.1002/pen.24124。含Sci-Hub的回退尝试未返回可用文件，不代表没有收录。
+初次检索的9篇论文/技术报告中，现已有7篇可取得全文：Santharam 等 2020 年论文的 [HAL 作者稿](https://hal.science/hal-03270375/file/Santharam_IJF.pdf) 已在本机 Zotero 保存，公开仓库保留原始来源链接。尚未取得全文：10.1016/j.polymer.2016.03.058、10.1002/pen.24124。软件网页不计入论文 PDF。历史回退尝试未返回可用文件，不代表不存在其他开放版本。
+
+新增 Raphael 等 2019 年循环蠕变研究：[DOI](https://doi.org/10.1016/j.ijfatigue.2019.06.003) · [作者存档](https://sam.ensam.eu/handle/10985/16455) · [精读笔记](../docs/obsidian-vault/文献精读/16%20循环蠕变与能量疲劳准则%20—%20Raphael等%202019.md)。本机下载 PDF 未成功，Zotero 已收录书目。
+
 
 ## 全部条目
 
@@ -56,7 +59,7 @@
 | Morphological Characterization of ABS and PC-ABS Surfaces for Automotive Industry | [10.48550/arXiv.2209.12533](https://doi.org/10.48550/arXiv.2209.12533) | [PDF](pdfs/6N9U5PY8.pdf) | [笔记](notes/6N9U5PY8.md) |
 | Mechanical fatigue of polymers: A new approach to characterize the S N behavior on the basis of macroscopic crack growth mechanism | [10.1016/j.polymer.2016.03.058](https://doi.org/10.1016/j.polymer.2016.03.058) | 未保存全文PDF | [笔记](notes/E6GJ657D.md) |
 | Numerical Simulation for Durability of a Viscoelastic Polymer Material Subjected to Variable Loadings Fatigue Based on Entropy Damage Criterion | [10.3390/polym16202857](https://doi.org/10.3390/polym16202857) | [PDF](pdfs/2EVJR4M9.pdf) | [笔记](notes/2EVJR4M9.md) |
-| Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions | [10.1016/j.ijfatigue.2020.105574](https://doi.org/10.1016/j.ijfatigue.2020.105574) | 未保存全文PDF | [笔记](notes/8B3V5B4H.md) |
+| Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions | [10.1016/j.ijfatigue.2020.105574](https://doi.org/10.1016/j.ijfatigue.2020.105574) | [HAL 作者稿](https://hal.science/hal-03270375/file/Santharam_IJF.pdf)，本机 Zotero 已附 | [精读](../docs/obsidian-vault/文献精读/17%20短纤热塑性塑料疲劳准则比较%20—%20Santharam等%202020.md) |
 | Fatigue Failure in Polymeric Materials: Insights from Experimental Testing | [10.1007/s11668-024-01874-1](https://doi.org/10.1007/s11668-024-01874-1) | [PDF](pdfs/DMGUTPFB.pdf) | [笔记](notes/DMGUTPFB.md) |
 | Effect of cycling frequency and self‐heating on fatigue behavior of reinforced and unreinforced thermoplastic polymers | [10.1002/pen.24124](https://doi.org/10.1002/pen.24124) | 未保存全文PDF | [笔记](notes/V66Q4W65.md) |
 | pyLife 2.3.1 — Wöhler analyzing functions | [来源](https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html) | 未保存全文PDF | [笔记](notes/MU8JHXBL.md) |
