@@ -55,7 +55,7 @@ flowchart TD
 
 ### Abaqus 帮助文档的本地参考
 
-用户提供的 Abaqus 2016 帮助已有本地离线副本与检索入口，位于 `~/Documents/Codex/Abaqus-2016离线帮助/`；双击其中的“打开离线检索.command”即可搜索已下载章节。当前离线下载仍在进行中，章节及公式图片需要以下载完成和本地验证为准。来源：[时域黏弹性](http://130.149.89.49:2080/v2016/books/usb/pt05ch22s07abm12.html)、[显式动力学](http://130.149.89.49:2080/v2016/books/usb/pt03ch06s03at08.html)、[质量缩放](http://130.149.89.49:2080/v2016/books/usb/pt04ch11s06aus75.html)、[输出到 ODB](http://130.149.89.49:2080/v2016/books/usb/pt02ch04s01aus41.html)。
+用户提供的 Abaqus 2016 帮助已有本地离线副本与检索入口，位于 `~/Documents/Codex/Abaqus-2016离线帮助/`；双击其中的“打开离线检索.command”即可搜索已下载章节。22 本 PDF 手册已下载并通过首尾页面读取检查；部分页面的文字可能无法自动索引，应直接打开 PDF 查阅。来源：[时域黏弹性](http://130.149.89.49:2080/v2016/books/usb/pt05ch22s07abm12.html)、[显式动力学](http://130.149.89.49:2080/v2016/books/usb/pt03ch06s03at08.html)、[质量缩放](http://130.149.89.49:2080/v2016/books/usb/pt04ch11s06aus75.html)、[输出到 ODB](http://130.149.89.49:2080/v2016/books/usb/pt02ch04s01aus41.html)。
 
 ## 四、SOP-02 材料表征与疲劳试验
 
@@ -135,6 +135,16 @@ pyLife `WoehlerCurve`的$k_2$缺省表示无限寿命段，散布也有默认值
 **接口小例子**：[[pyLife虚拟数据接口核验]] 给出可运行脚本，检查雨流闭合循环、索引与虚拟 Wöhler 曲线。残余循环未计入示例的损伤小计，不作为完整寿命结果。
 
 **检查点**：常幅正弦、残余半循环、数据块拼接和已知曲线的预期值均可复现；记录各环节软件版本与方法。实际实现必须另外测试。
+
+### SOP-06A：先验证标量化能否保留拉压反转
+
+对固定坐标的一维拉压教学例子，设 $\boldsymbol\sigma(t)=\mathrm{diag}(s(t),0,0)$、$s(t)=10\sin(\omega t)$ MPa，则偏应力 $\boldsymbol s=\boldsymbol\sigma-\tfrac13\mathrm{tr}(\boldsymbol\sigma)\mathbf I$。按 [Abaqus 定义的 Mises 不变量](https://docs.software.vt.edu/abaqusv2026/English/SIMACAEOUTRefMap/simaout-c-std-elementintegrationpointvariables.htm)，$q=\sqrt{\tfrac32\boldsymbol s:\boldsymbol s}=|s|$。
+
+这意味着真实应力完成一个 $+10\to-10\to+10$ MPa 周期时，非负 Mises 历程是 $10\to0\to10\to0\to10$ MPa。若只在正负峰值采样，Mises 全为 10 MPa，反转完全消失；若同时采到过零点，Mises 则出现两次 $0\to10\to0$ 变化，频率是原来的两倍。两种情况都不能直接与以有符号单轴 $R=-1$ 标定的 S–N 曲线混用。
+
+**处理步骤：**（1）保存原始张量及坐标基底；（2）确定与试样标定量、失效机制一致的标量或多轴疲劳方法；（3）在单轴拉压、纯剪、不同相位及旋转主方向的合成历程上验证循环结果；（4）在对应材料试样下独立验证，再用于零件。单轴固定方向案例可用有符号轴向应力，但这不是一般多轴载荷的通用解。
+
+Abaqus/Standard 2026 文档还定义了以应力张量迹决定符号的 `S_MISES`；不同载荷状态下迹可能为零或发生符号变化，且压力敏感、非比例加载及材料疲劳机理并未因此自动解决。具体版本、求解器和输出支持须另核，不能把“加一个符号”当成已经验证的塑胶多轴疲劳准则。
 
 ## 九、SOP-07 损伤累计、映射与验证
 
