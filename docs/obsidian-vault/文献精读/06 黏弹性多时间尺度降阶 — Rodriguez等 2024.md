@@ -7,7 +7,7 @@ doi: 10.48550/arXiv.2408.05143
 
 # 多时间尺度降阶：自由度减少并不等于算得更快
 
-Rodriguez等，*A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method*。[arXiv](https://arxiv.org/abs/2408.05143)；[Zotero](zotero://select/library/items/KYM9FFMX)。预印本；本轮阅读PDF第1–21页文字及图题，图像和代码尚未复核，正文第8–10页已补读。
+Rodriguez等，*A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method*。[arXiv](https://arxiv.org/abs/2408.05143)；[Zotero](zotero://select/library/items/KYM9FFMX)。预印本；已阅读 PDF 第1–21页文字及图题，并目视核对第12–18页图6–16；作者声明代码和数据需另行请求，尚未取得或复现。
 
 ## 问题与方法
 
@@ -21,6 +21,16 @@ Rodriguez等，*A reduced simulation applied to viscoelastic fatigue of polymers
 
 **关键反证**：作者明确报告所展示算例中，单尺度PGD比多尺度方案更高效，原因包括构造算子和时间子模态的额外成本；更长时间域可能有利只是待验证的展望。[p.17–18] 因此不能引用本篇证明多尺度方案已经在百万循环三维零件中实现加速。
 
+## 图表核查：误差、自由度和耗时分别代表什么
+
+- **图 7 与正文，第 12–13 页**：单内部变量案例的第一个时间模态，多尺度近似与参考曲线接近；作者给出约 0.52% 的该项近似误差。这个值对应文中说明的特定模态和迭代，不能当作整个模型、疲劳寿命或所有工况的预测误差。
+- **图 9–10 与 13–15，第 14、16–17 页**：单尺度与多尺度方法得到的杆中点位移、所选内部变量时程视觉上接近；示例时间为 100 s。图中的红点表示宏观时间离散节点，不是实验测量点。内部变量曲线包含初期瞬态，不能只比较最后一个循环的峰值。
+- **图 11 和 16，第 15、17 页**：作者绘制迭代次数与停滞指标；图上的下降显示所示案例的迭代收敛过程，不能由此读取单次迭代的墙钟时间或证明多尺度更快。
+- **图 12，第 15 页**：50 个内部变量具有不同松弛时间与权重；这只是文中给定的材料模型，不是 PC/ABS 的已标定松弛谱。
+- 第 17 页文字明确指出该文展示的算例中单尺度 PGD 更高效；第 18 页对更长时间域可能更有优势属于展望。作者没有在所核对图表中给出足以计算速度倍率的墙钟时间表，因此不推算倍数。
+
+作者第 18 页的数据和代码声明为“按请求提供”，目前没有可执行代码或原始数据，以上是对已发表图文的核查，不是独立复现。
+
 ## 适用边界与项目行动
 
 - 初期瞬态不能有效由稳态多尺度近似直接覆盖，作者将初始段和后续段分开；其两宏单元经验选择不是普适保证。[p.10–11]
@@ -29,4 +39,4 @@ Rodriguez等，*A reduced simulation applied to viscoelastic fatigue of polymers
 
 ## 待核对
 
-目视检查图7–16的尺度与误差、单/多尺度耗时定义及源代码；引用时区分初始瞬态、时间节点数、模式数与总CPU时间。
+如果取得原始数据和代码，应独立复现时间误差、模式数及墙钟时间；已有图表不能提供真实零件的加速比。
