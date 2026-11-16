@@ -6,7 +6,7 @@ doi: 10.1016/j.ijfatigue.2020.105574
 ---
 # 短纤增强塑料的疲劳准则：从 480 次试验能得到什么？
 
-Santharam 等，*Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions*。[DOI](https://doi.org/10.1016/j.ijfatigue.2020.105574) · [HAL 作者稿](https://hal.science/hal-03270375/file/Santharam_IJF.pdf) · [Zotero](zotero://select/library/items/8B3V5B4H)。已将 HAL 作者稿附到 Zotero 条目；文件共 44 页（含 HAL 封面）。本次核读 PDF 第 2–12、25、29、34–38 页文字，并目视核对第 10 页试验矩阵和第 11 页图 4；其他图表、公式和数据仍须复核。PDF 页码比稿件正文印刷页码多 1。
+Santharam 等，*Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions*。[DOI](https://doi.org/10.1016/j.ijfatigue.2020.105574) · [HAL 作者稿](https://hal.science/hal-03270375/file/Santharam_IJF.pdf) · [Zotero](zotero://select/library/items/8B3V5B4H)。已将 HAL 作者稿附到 Zotero 条目；文件共 44 页（含 HAL 封面）。现已核读 PDF 第 2–38 页正文文字与第 39–44 页参考文献；已目视核对第 10 页试验矩阵、第 11 页图 4、第 20 页表 2 及第 32–33 页图 21–22 和式 (22)。其余图表、所有公式及逐试样原始数据尚未完整复核。PDF 页码比稿件正文印刷页码多 1。
 
 ## 研究问题与试验对象
 
@@ -32,6 +32,26 @@ $$\dot\varepsilon_m=\frac{d\varepsilon_m}{dN},\qquad W_{cr}=\sigma_m\frac{d\vare
 文章比较应力型、单变量和耦合变量准则，作者报告混合循环蠕变能与循环能的候选模型在所示数据上覆盖较高比例的三倍寿命散布带。[PDF p.5–6, 34–38] **三倍带不是误差为 3%**：预测与实测可能相差约 3 倍；而在已用于拟合或筛选的同一数据库上得到的覆盖率，不能自动当成独立零件的预测成功率。
 
 部分模型使用寿命中点 $N_f/2$ 的应变增长或能量指标。[PDF p.3, 29] 事先不知道失效寿命时，不能直接用实测寿命中点作为模型输入；应事先规定可测早期指标或经过验证的状态推进方案，并用完全独立的试样/零件前瞻检验。
+
+## 准则比较：统一拟合与前瞻预测不是同一问题
+
+作者明确说明该论文侧重考察准则**能否归并现有数据库**，不以比较独立预测能力为目标。[PDF p.18] 表 2 将参数是否随取向、载荷比和环境变化，以及拟合参数数量一起列出；同一行中的三倍带覆盖率定义为 $1/3\le N_{f,cal}/N_{f,exp}\le3$ 的数据占比。已目视核对的几个例子如下：
+
+| 准则与参数方式 | 拟合参数数目 | 数据落在三倍带内 | 解释 |
+|---|---:|---:|---|
+| 归一化应力幅幂律，一套参数 | 2 | 13.1% | 对本文混合工况，单一应力幅关联能力有限 |
+| 循环平均应变增长率，一套参数 | 2 | 75.3% | 改善数据关联，但负载荷比工况仍有局限，且输入使用寿命中点 |
+| IDAFIP：蠕变能+滞回能，一套参数 | 4 | 91.9% | 能同时利用两类循环信息，需完整回线与平均应变演化 |
+| IDAFIP：蠕变能+循环能，一套参数 | 4 | 96.5% | 本文数据集内表现更好；不是独立零件预测准确率 |
+
+来源：[HAL 作者稿](https://hal.science/hal-03270375/file/Santharam_IJF.pdf)，PDF p.18–20、31–33，表 2 和图 21–22。各方法用到的输入、额外条件和参数数量不同，以上数值不能解释成“某准则在任何材料上更好”。作者还说明应力与模量因保密经过任意归一化；不能从图轴直接恢复目标材料的 MPa 参数。[PDF p.13]
+
+两种 IDAFIP 形式分别为
+
+$$\frac1{N_f}=\left(\frac{W_{cr}^*}{A_1}\right)^{b_1}+\left(\frac{W_h^*}{C_1}\right)^{d_1},\qquad
+\frac1{N_f}=\left(\frac{W_{cr}^*}{A_2}\right)^{b_2}+\left(\frac{W_c^*}{C_2}\right)^{d_2}.$$
+
+星号表示文中按寿命中点选取的量；$W_c=\tfrac12\Delta\sigma\Delta\varepsilon$ 是作者定义的循环能密度，**不等于**回线面积 $W_h$。[PDF p.12–13, 31–33] $A_i,C_i$ 是能量密度尺度，$b_i,d_i$ 是拟合指数；在这些量为正且已知、量纲一致时，每一项按作者模型贡献到 $1/N_f$。当输入本身依赖未知 $N_f/2$ 时，这些关系不是不依赖未来信息的直接计算式；必须另外建立获得输入的办法，且通过独立数据验证。本文没有证明用少数初始 Abaqus 循环就能可靠推断这些中寿命指标。
 
 ## 图文不一致与证据边界
 
