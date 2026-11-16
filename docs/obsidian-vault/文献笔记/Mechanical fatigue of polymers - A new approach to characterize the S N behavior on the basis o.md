@@ -1,0 +1,40 @@
+---
+zotero_key: "E6GJ657D"
+aliases:
+  - "E6GJ657D"
+doi: "10.1016/j.polymer.2016.03.058"
+类型: 文献笔记
+来源状态: 项目归档快照
+---
+
+# Mechanical fatigue of polymers: A new approach to characterize the S N behavior on the basis of macroscopic crack growth mechanism
+
+- 条目键：`E6GJ657D`
+- DOI：[10.1016/j.polymer.2016.03.058](https://doi.org/10.1016/j.polymer.2016.03.058)
+- 来源：https://doi.org/10.1016/j.polymer.2016.03.058
+
+> 本笔记为既有归档的快照；PDF及条目以 Zotero 为准，变更不会自动同步。
+
+## 归档笔记
+
+方法论评注｜用途、证据与适用边界
+
+检索日期：2026-11-15。
+
+方法用途：理解聚合物机械疲劳S-N与宏观裂纹增长的联系。关键边界：论文明示不含热效应，不能作为显著自发热工况下的通用寿命公式。当前依据出版商摘要筛选，未取得全文；用于方法框架，不直接移植参数。
+
+---
+
+PDF获取未成功｜2026-11-15
+
+10.1016/j.polymer.2016.03.058
+
+出版社与公开仓储检索、含Sci-Hub的自动回退均未获取PDF。保留元数据与评注，当前不附摘要网页或其他论文冒充全文。
+
+Sci-Hub回退未返回可用文件；不能据此判定Sci-Hub未收录。
+
+## 我的阅读
+
+- 待阅读：
+- 对本项目的启示：
+- 适用边界：

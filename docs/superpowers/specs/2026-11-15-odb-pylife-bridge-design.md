@@ -64,6 +64,8 @@
 
 推荐A，B留作后续可替换后端。推荐原因是本项目已有通用导出skill，但其CSV不含完整积分点/截面点标识；首版需要明确可检查的数据接口。**该选型为编写者建议，等待PRD确认，不将其写成用户已批准的实现。**
 
+2026-11-16补充的源码审查：[S6]中，2.3.1服务端的若干节点、连接关系及集合查询会检查单元类型并拒绝非`C...`类型；字段数据读取走不同路径，不能笼统说所有壳字段读取都会失败。该版本字段数据块索引组装包含节点、单元、积分点或面编号，但未显式纳入壳截面点。默认读取位置还可能将积分点场转成单元节点位置。因此，B不能仅凭默认示例宣称满足首版壳截面点要求，必须扩展并实测数据契约；A也仍需在目标Abaqus版本和真实实体/壳ODB中验证。此结论来自静态源码审查，并非实机测试结果。
+
 Abaqus 2024已经切换到Python 3.10系列，不能继续按2023的Python 2.7假设设计首版。仍将GUI/pyLife和Abaqus运行环境隔离，不往Abaqus自带Python中混装GUI、pandas或pyLife依赖。[S1]
 
 ```mermaid
@@ -301,4 +303,5 @@ PRD批准后再制定实现计划和测试样例。当前没有编写桥接工�
 - **S3** [pyLife 2.3.1 WoehlerCurve](https://pylife.readthedocs.io/en/2.3.1/materiallaws/woehlercurve.html)：曲线参数与低幅段缺省行为。
 - **S4** [pyLife疲劳数据拟合说明](https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html)：曲线与试验数据概念；拟合不纳入首版。
 - **S5** [OdbClient](https://pylife.readthedocs.io/en/2.3.1/tools/odbclient/odbclient.html)、[odbserver](https://pylife.readthedocs.io/en/stable/tools/odbserver/index.html)：双环境桥接与版本配置。
+- **S6** [pyLife 2.3.1 ODB服务端源码](https://github.com/boschresearch/pylife/blob/2.3.1/tools/odbserver/odbserver/interface.py)：数据位置、返回索引及部分网格查询的单元类型检查；所安装服务端版本仍须核对。
 - 项目已安装skill及固定版本见[skills.lock.json](../../../skills.lock.json)；技术路线见[technical-route.md](../../technical-route.md)。

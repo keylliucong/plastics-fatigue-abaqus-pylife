@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1500" viewBox="0 0 1280 1500" role="img" aria-labelledby="title desc">
+<title id="title">塑胶疲劳仿真证据链</title><desc id="desc">从服役问题、材料试验、本构验证、Abaqus 响应、ODB 交换、pyLife 损伤到试验验证；材料历史效应显著时回到补充模型和试验。</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker><style>text{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;fill:#17243b}.title{font-size:36px;font-weight:700}.subtitle{font-size:19px;fill:#52647c}.head{font-size:24px;font-weight:700}.body{font-size:18px;fill:#455871}.tag{font-size:15px;font-weight:700;fill:#4a6790}.line{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#a)}.n{font-size:22px;font-weight:700;fill:white}</style></defs>
+<rect width="1280" height="1500" rx="30" fill="#f5f8fc"/>
+<text class="title" x="65" y="72">塑胶件疲劳仿真｜从试验到可验证的寿命预测</text>
+<text class="subtitle" x="65" y="108">工程路线工作稿 · 箭头表示需要保留证据和进行检查，不表示已有真实材料结果</text>
+<g transform="translate(90 150)"><rect width="800" height="130" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/><circle cx="43" cy="44" r="23" fill="#2563a6"/><text class="n" x="35" y="52">1</text><text class="head" x="84" y="43">定义服役与失效</text><text class="body" x="84" y="77">载荷谱、物理时间、温湿度、接触、失效定义、目标寿命</text><text class="tag" x="84" y="108">输出：工况表与验证标准</text></g>
+<path class="line" d="M490 280 V315"/>
+<g transform="translate(90 320)"><rect width="800" height="150" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/><circle cx="43" cy="44" r="23" fill="#2563a6"/><text class="n" x="35" y="52">2</text><text class="head" x="84" y="43">材料与试验：两类数据并行</text><text class="body" x="84" y="77">本构：多速率拉伸、卸载、松弛／蠕变、必要时 DMA</text><text class="body" x="84" y="105">疲劳：应力上下限、频率、试样温度、断裂或 run-out</text><text class="tag" x="84" y="133">检查：牌号、成型、取向、温度和失效方式匹配</text></g>
+<path class="line" d="M490 470 V505"/>
+<g transform="translate(90 510)"><rect width="800" height="130" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/><circle cx="43" cy="44" r="23" fill="#2563a6"/><text class="n" x="35" y="52">3</text><text class="head" x="84" y="43">选择本构并做单元／试样验证</text><text class="body" x="84" y="77">线弹性、黏弹性或更复杂模型；用独立数据检验加载和保载</text><text class="tag" x="84" y="108">检查：误差、适用频段、温度及模型组合</text></g>
+<path class="line" d="M490 640 V675"/>
+<g transform="translate(90 680)"><rect width="800" height="130" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/><circle cx="43" cy="44" r="23" fill="#2563a6"/><text class="n" x="35" y="52">4</text><text class="head" x="84" y="43">Abaqus 求局部时间历程</text><text class="body" x="84" y="77">按物理问题选 Standard 或 Explicit；验证网格、时间和能量</text><text class="tag" x="84" y="108">输出：固定材料点应力／应变／温度等时序</text></g>
+<path class="line" d="M490 810 V845"/>
+<g transform="translate(90 850)"><rect width="800" height="130" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/><circle cx="43" cy="44" r="23" fill="#2563a6"/><text class="n" x="35" y="52">5</text><text class="head" x="84" y="43">ODB → 交换数据包</text><text class="body" x="84" y="77">保留实例、单元、积分点、壳截面点、坐标、时间和单位</text><text class="tag" x="84" y="108">检查：缺帧、位置混淆、采样收敛；桥接首版到此为止</text></g>
+<path class="line" d="M490 980 V1015"/>
+<g transform="translate(90 1020)"><rect width="800" height="130" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/><circle cx="43" cy="44" r="23" fill="#2563a6"/><text class="n" x="35" y="52">6</text><text class="head" x="84" y="43">pyLife 循环统计与候选损伤</text><text class="body" x="84" y="77">选经验证的疲劳指标 → 雨流 → 匹配的 S–N 曲线 → 损伤</text><text class="tag" x="84" y="108">检查：幅值／范围、R、残余循环、模型假设及散布</text></g>
+<path class="line" d="M490 1150 V1185"/>
+<g transform="translate(90 1190)"><rect width="800" height="130" rx="18" fill="#e9f6f0" stroke="#96c9ad" stroke-width="2"/><circle cx="43" cy="44" r="23" fill="#248056"/><text class="n" x="35" y="52">7</text><text class="head" x="84" y="43">独立试样与零件验证</text><text class="body" x="84" y="77">对比局部响应、温升、失效位置／机理与寿命散布</text><text class="tag" x="84" y="108">输出：适用工况、误差和不确定性；不满足则回到试验或模型</text></g>
+<g transform="translate(930 510)"><rect width="260" height="300" rx="18" fill="#fff7e8" stroke="#e6c184" stroke-width="2"/><text class="head" x="22" y="48">分支检查</text><text class="body" x="22" y="91">自发热、蠕变或</text><text class="body" x="22" y="120">加载历史显著？</text><text class="body" x="22" y="164">补充测温、保载</text><text class="body" x="22" y="193">及热—力／内部</text><text class="body" x="22" y="222">状态模型验证。</text><text class="tag" x="22" y="267">不能只靠 Miner 修正</text></g>
+<path class="line" d="M890 575 H925"/><path class="line" d="M930 745 H895"/>
+<text class="subtitle" x="90" y="1390">注：疲劳曲线和材料参数须来自目标材料及工况；2024 版本和真实 ODB 尚待实机核验。</text>
+<text class="subtitle" x="90" y="1425">资料依据与每步检查见《文献综合精读报告》和《技术 SOP》工作稿。</text>
+</svg>

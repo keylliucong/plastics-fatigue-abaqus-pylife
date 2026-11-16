@@ -1,0 +1,50 @@
+---
+类型: 技术文档精读
+状态: 基于公开源码检查，待真实ODB验证
+主题: Abaqus ODB pyLife 壳单元 积分点
+---
+# ODB 数据位置与 pyLife 接口：实体和壳体必须核查什么
+
+返回 [[塑胶疲劳仿真技术SOP — 工作稿]] · [[塑胶疲劳知识地图]]。目标环境为 Windows/Abaqus 2024，以下公开文档和源码检查**不等于已经在目标版本运行**。
+
+## 1. 位置为什么影响疲劳
+
+Abaqus 场输出按步骤、帧和变量组织，同一应力变量可存储在积分点等不同位置；部分输出位置涉及外推或平均。寿命计算需要固定材料位置的历史，不能把每帧最大云图点拼在一起。实体单元需要实例、单元、积分点；壳单元还需要截面点/层次。还需记录分量对应的局部或全局坐标系以及单位。官方公开说明：[Abaqus 2026 读取场输出](https://docs.software.vt.edu/abaqusv2026/English/SIMACAECMDRefMap/simacmd-c-odbintroreadfieldpyc.htm)；其具体 API 应再以目标 2024 版本和真实 ODB 核对。
+
+例如同一壳单元、同一积分点的上表面和下表面在弯曲时应力可以一正一负。若截面点标签丢失，两条历史可能被混合或重名；非负 von Mises 也不能保留单轴拉压符号。这不是可以通过平均修复的小误差，而是疲劳指标定义问题。
+
+### 输出前必须完成的设置
+
+- 先确认所用壳截面确实支持输出所需应力。某些直接定义等效截面刚度或使用 UGENS 的一般壳截面并不提供截面点应力/应变，不能通过后处理补出缺失数据。[2026 一般壳截面文档](https://docs.software.vt.edu/abaqusv2026/English/SIMACAEELMRefMap/simaelm-c-usingshellgensect.htm)
+- [2026 单元输出文档](https://docs.software.vt.edu/abaqusv2026/English/SIMACAEOUTRefMap/simaout-c-dboutput-elementoutput.htm)说明：CAE 输出请求可指定具体壳截面点；请求所有截面点的输入文件选项为 `*ELEMENT OUTPUT, ALLSECTIONPTS`，文档称 CAE 不支持直接选择该“全部”选项。是否适用用户的 2024 求解器、具体截面和输出类型，必须在目标版本核对和用样例验证；不要先假设默认 ODB 已含所有截面点。
+- 壳厚度方向和积分方案决定截面点的实际位置。例如 Simpson 积分点 1 可以位于底表面，Gauss 点 1 则是靠近底表面的积分点，不一定是表面；层合壳还应保留层号、截面点编号和描述。[2026 壳单元说明](https://docs.software.vt.edu/abaqusv2026/English/SIMACAEELMRefMap/simaelm-c-shelloverview.htm)
+- [2026 Explicit 输出频率文档](https://docs.software.vt.edu/abaqusv2026/English/SIMACAEOUTRefMap/simaout-c-dboutput-frequency.htm)指出，不显式设置时场输出为整步 20 个均分区间，而不是每个载荷周期 20 个采样。例如一个分析步包含100个周期时，默认约 0.2 个区间/周期，显然无法重建每个周期；应按真实最高变化频率和损伤敏感度设置输出，并以更细输出做疲劳结果收敛验证。这里是采样警示，不是通用的最小每周期帧数。
+- Explicit 的场输出既可按近似时间点写出，也可按设置调整增量以命中时间点；后处理必须读取 ODB 实际时间，不能用帧号乘假定间隔。计算增量与写入 ODB 的输出频率是两个不同设置。
+
+## 2. pyLife OdbClient：接口与实际边界
+
+根据 [pyLife 2.3.1 OdbClient 文档](https://pylife.readthedocs.io/en/2.3.1/tools/odbclient/odbclient.html) 和 [2.3.1 服务器源码](https://github.com/boschresearch/pylife/blob/2.3.1/tools/odbserver/odbserver/interface.py)：
+
+| 项目 | 公开源码/文档证据 | 工程后果 |
+|---|---|---|
+| 读取位置 | `variable(..., position=None)` 对原生积分点字段默认请求单元节点位置；显式请求用字符串 `INTEGRATION POINTS` | 需要积分点时不能依赖默认位置；明确记录请求和实际返回位置 |
+| 索引组成 | 源码按数据块依次提取 `node_id`、`element_id`、`ipoint_id`、`face_id`；该索引组装段未加入 `sectionPoint` | 不足以证明壳上下表面可区分。即使返回了数值，不能把其 DataFrame 直接当作带壳截面点的完备结果 |
+| 网格和集合查询 | `_instance_or_rootasm` 拒绝类型名首字符不为 `C` 的单元；`nodes`、`connectivity`、集合等方法调用它 | 某些含壳单元的网格/集合查询会被拒绝；场变量 `variable` 走不同路径，不能据此断言所有壳字段读取必然报错 |
+| 双环境 | 客户端启动 Abaqus Python 中的服务端；服务端环境版本需匹配安装的 Abaqus Python | 需要版本、路径和依赖预检；不要将普通 Python 环境假设为直接有 `odbAccess` |
+| 历史输出时间 | 源码的历史输出将该步起始 `totalTime` 加到历史步内时间 | 与字段帧时间合并前需核对语义；重启、非时间域步骤与重复边界要单独验证，不能盲目相加 |
+
+以上属于对 **2.3.1 标签源码**的静态检查；安装的 `pylife-odbclient`、`pylife-odbserver` 是独立包，实际安装版本与标签是否对应需要核实。没有 Windows/Abaqus 2024 真 ODB，因此还没有运行结果。
+
+## 3. 面向本项目的可行路线与验收
+
+**优先保证数据完整性。** 在 Abaqus 自带 Python 侧用经目标版本验证的 `odbAccess` 读取可选字段/历史和 `sectionPoint` 等元信息，输出版本化中间数据包，再交给独立 Python/pyLife；也可以评估扩展或替换 OdbClient 服务端，但必须先证明其返回键完整。上述是设计路线，不声称桥接程序已经实现。
+
+最小验收 ODB 应包含：两个实体实例（允许单元标签重复）、有多个积分点的实体单元、至少一个多截面点壳单元、连续两个时间步、已知可手算的拉压与弯曲载荷。分别核对：
+
+1. 每个点的复合键 `(instance, element, integration_point, section_point)` 唯一；各帧键集合稳定或明确记录单元失效/缺失。
+2. 在 Abaqus 中抽查原始场数据，与导出值按位置、分量、坐标、单位和上下表面逐项对照；不得拿节点平均图的值冒充积分点数据。
+3. 用已知反向弯曲确认上、下表面的带符号分量方向和历程；记录每帧局部坐标是否变化。
+4. 核对步内/累计时间、重复帧、单调性和输出频率；失配、缺帧、重复键、缺少截面点或位置不可辨识时停止导出并给出说明。
+5. 分别验证 ODB 已写完、只读打开、未覆盖原文件；对版本、失效帧、数据单位和选择条件留日志。
+
+不要把此清单理解为已有软件功能或验证通过。接口约束与需求需反馈到桥接 PRD 和实现方案；用户真实单元类型、载荷、坐标及 ODB 版本仍需通过其样例确定。

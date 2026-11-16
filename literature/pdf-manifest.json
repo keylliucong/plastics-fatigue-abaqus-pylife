@@ -118,5 +118,15 @@
     "bytes": 2286909,
     "version": "publisher PDF / official technical paper",
     "source_url": "https://doi.org/10.1007/s11668-024-01874-1"
+  },
+  {
+    "item_key": "QT7KQ34U",
+    "path": "literature/pdfs/QT7KQ34U.pdf",
+    "title": "Micro-Scale Numerical Simulation of Fatigue Failure for CFRP Subjected to Multiple-Amplitude Cyclic Loadings Based on Entropy Damage Criterion",
+    "doi": "10.3390/ma16186120",
+    "sha256": "591fb58fbe639bbd71825fde29cfb93f7c88cfa185d43af942454ff826cf23c9",
+    "bytes": 9303294,
+    "version": "publisher version; CC BY 4.0",
+    "source_url": "https://pdfs.semanticscholar.org/7eec/3797118979a7bb27605ccefb1f47f7569fc6.pdf"
   }
 ]
