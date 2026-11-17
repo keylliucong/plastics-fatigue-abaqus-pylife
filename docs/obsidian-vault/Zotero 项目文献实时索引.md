@@ -6,7 +6,7 @@
 
 返回 [[项目主页]]。
 
-共 43 条。
+共 44 条。
 
 - [[文献精读/16 循环蠕变与能量疲劳准则 — Raphael等 2019|A mixed strain rate and energy based fatigue criterion for short fiber reinforced thermoplastics]] — [DOI](https://doi.org/10.1016/j.ijfatigue.2019.06.003)
 - [[文献精读/28 PC循环黏弹黏塑本构 — Zhu等 2016正文核查|A rate‐type nonlinear viscoelastic–viscoplastic cyclic constitutive model for polymers: Theory and application]] — [DOI](https://doi.org/10.1002/pen.24371)
@@ -51,3 +51,4 @@
 - [[文献精读/22 PC-ABS动态拉伸与本构反演 — Zhou等 2024|Study of Dynamic Failure Behavior of a Type of PC/ABS Composite]] — [DOI](https://doi.org/10.3390/ma17081728)
 - [[文献精读/04 PC-ABS-PMMA疲劳试验 — Kuleyin与Gümrük 2025|The Effect of Poly (Methyl Methacrylate) Content on Chemical, Thermomechanical, Mechanical, and Fatigue Life Characteristics of Ternary PC/ABS/PMMA Blends]] — [DOI](https://doi.org/10.3390/polym17141905)
 - [[文献精读/24 PC-ABS裂纹扩展初期尾部 — Fang等 2008公开片段|‘Tail’ phenomenon and fatigue crack propagation of PC/ABS alloy]] — [DOI](https://doi.org/10.1016/j.polymdegradstab.2007.09.002)
+- [[文献精读/29 PC单轴棘轮原始试验 — 黄婧依等 2015|聚碳酸酯的单轴棘轮行为研究]] — [DOI](https://doi.org/10.6052/j.issn.1000-4750.2013.05.0458)
