@@ -514,7 +514,7 @@ z
     <text style="font-size: 26px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #255aa8" x="128.88" y="877.68" transform="rotate(-0 128.88 877.68)">05  ODB 材料点历程提取</text>
    </g>
    <g id="text_23">
-    <text style="font-size: 19px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172b46" x="116.64" y="918.36" transform="rotate(-0 116.64 918.36)">原生 odbAccess 或 OdbClient</text>
+    <text style="font-size: 19px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172b46" x="116.64" y="918.36" transform="rotate(-0 116.64 918.36)">原生 odbAccess（首版方案）</text>
    </g>
    <g id="text_24">
     <text style="font-size: 19px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172b46" x="116.64" y="949.32" transform="rotate(-0 116.64 949.32)">保留单元、积分点、截面点与时间</text>
