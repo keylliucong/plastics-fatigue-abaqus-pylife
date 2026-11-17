@@ -17,7 +17,7 @@
 - [[文献笔记/ASTM D7774-22 — Standard Test Method for Flexural Fatigue Properties of Plastics|ASTM D7774-22 — Standard Test Method for Flexural Fatigue Properties of Plastics]] — [DOI](https://doi.org/10.1520/D7774-22)
 - [[文献笔记/ASTM D7791-22 — Standard Test Method for Uniaxial Fatigue Properties of Plastics|ASTM D7791-22 — Standard Test Method for Uniaxial Fatigue Properties of Plastics]] — [DOI](https://doi.org/10.1520/D7791-22)
 - [[文献精读/07 聚合物自发热与损伤判据 — Katunin 2019|Criticality of the Self-Heating Effect in Polymers and Polymer Matrix Composites during Fatigue, and Their Application in Non-Destructive Testing]] — [DOI](https://doi.org/10.3390/polym11010019)
-- [[文献笔记/Effect of cyclic loading on tensile properties of PC and PC - ABS|Effect of cyclic loading on tensile properties of PC and PC/ABS]] — [DOI](https://doi.org/10.1016/j.polymdegradstab.2008.05.022)
+- [[文献精读/23 循环加载后的PC-ABS拉伸与局部变形 — Fang等 2008|Effect of cyclic loading on tensile properties of PC and PC/ABS]] — [DOI](https://doi.org/10.1016/j.polymdegradstab.2008.05.022)
 - [[文献精读/13 热塑性塑料频率与自发热 — Mortazavian等 2015|Effect of cycling frequency and self‐heating on fatigue behavior of reinforced and unreinforced thermoplastic polymers]] — [DOI](https://doi.org/10.1002/pen.24124)
 - [[文献精读/18 频率与自发热实验 — Mortazavian 2015博士论文|Fatigue Behavior and Modeling of Short Fiber Reinforced Polymer Composites]]
 - [[文献精读/02 工程聚合物疲劳实现 — Volgers与Shojaei|Fatigue Behavior of Engineering Polymers and Its Numerical Implementation]]
