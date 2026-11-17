@@ -1,12 +1,12 @@
 ---
 类型: 文献精读
-状态: 作者存档正文重点已读，原图待核
+状态: 作者稿正文已读，关键图表和公式已核
 zotero_key: DLNVAAE9
 doi: 10.1016/j.ijfatigue.2019.06.003
 ---
 # 循环蠕变与耗散能：Raphael 等，2019
 
-原文：Raphael 等，*A mixed strain rate and energy based fatigue criterion for short fiber reinforced thermoplastics*，[DOI](https://doi.org/10.1016/j.ijfatigue.2019.06.003)，[作者机构存档页面](https://sam.ensam.eu/handle/10985/16455)，[作者存档 PDF](https://sam.ensam.eu/bitstream/handle/10985/16455/I2M_IJF_2019_SAINTIER?isAllowed=y&sequence=7)，[Zotero](zotero://select/library/items/DLNVAAE9)。通过公开索引阅读了作者存档的材料与方法、结果、模型和结论文字；图表原始图像、逐试样数据和全部参考文献尚未完整复核。本机直接下载机构 PDF 返回 403，Zotero 条目目前没有 PDF 附件；不能声称已下载或逐图精读。
+原文：Raphael 等，*A mixed strain rate and energy based fatigue criterion for short fiber reinforced thermoplastics*，[DOI](https://doi.org/10.1016/j.ijfatigue.2019.06.003)，[作者机构存档页面](https://sam.ensam.eu/handle/10985/16455)，[作者存档 PDF](https://sam.ensam.eu/bitstream/handle/10985/16455/I2M_IJF_2019_SAINTIER?isAllowed=y&sequence=7)，[Zotero](zotero://select/library/items/DLNVAAE9)。已从 [HAL 作者稿](https://hal.science/hal-03484536/file/S014211231930235X.pdf)取得 25 页 PDF 并附 Zotero；PDF 正文及参考文献文字已读，PDF 第 5–6、16–22 页的图 2、12–19 和主要公式已看原图，其余图表与逐试样数据仍待核。
 
 ## 问题与材料
 
@@ -32,6 +32,13 @@ N_f^{II}=B\left(\frac{W_{an}}{W_0}\right)^m.$$
 $\dot\varepsilon_{cycl}$ 的“点”在论文语境中是**每循环平均应变增长率**，不能不经频率转换就当作每秒应变率；$W_{an}$ 是论文规定的循环非弹性能密度。$\dot\varepsilon_0,W_0$ 为归一化参考量；具体数值、能量计算区域及单位应按原文公式排版和原始数据再核查。文中拟合参数是该材料和试验条件的经验参数，不应移植到目标 PC/ABS。
 
 作者报告混合准则对所示数据的关联效果较好，也比较了不同规模的参数识别数据集。**关键限制**：图 13 标注循环应变增长率取自 $N_f/2$，即需要知道或估计失效寿命中点。用整段已失效试验提取该指标后再估计同一试样的寿命，属于事后关联；若用于事先未知寿命的设计，必须说明如何从早期测量或经验证的材料演化模型获得该量，并用真正独立的试样/零件前瞻验证。论文也指出数值获取这一指标可能耗费计算，缺口和多轴情况留待进一步研究。
+
+## 作者稿原图复核：两个需要澄清的单位和符号
+
+1. **每循环增长率与每秒应变率。** PDF 第 16 页把 $\dot\varepsilon_{cycl}$ 明确写成 $d\varepsilon_{moy}/dN$，表示平均应变随循环数的斜率；第 17 页式 (4) 又给参考值 $\dot\varepsilon_0=1\,\mathrm{s}^{-1}$。按字面前者是每循环变化，后者是每秒变化，量纲约定需要作者或原始处理流程进一步澄清。若频率 $f$ 恒定且将该斜率解释为每完整循环平均增长，则由 $dN/dt=f$ 得 $d\varepsilon/dt=f\,d\varepsilon/dN$；这只是明确时间定义的链式法则，不是对作者代码的确认。虚构例子：$10^{-6}$/cycle 在 3 Hz 下约为 $3\times10^{-6}$/s，在 0.5 Hz 下约为 $5\times10^{-7}$/s。论文数据涉及这两种频率，因此未查明前不能将式 (4) 的系数和参数直接用于新计算。
+2. **能量符号不一致。** PDF 第 5 页图 2(b) 标示输入能 $W_g$，图 2(c) 将回线面积标为非弹性能 $W_{an}$；第 6 页式 (3) 也以 $W_{an}=\oint\sigma d\varepsilon$ 表示回线项，但该段最后一句又将回线面积写成 $W_g$。这很可能是符号笔误，但原始意图未获作者确认；应按图和公式分别记录，不能把输入能、回线面积和全部转化为热的能量混为一项。
+
+PDF 第 17–22 页图 13–19 显示中寿命斜率、基于单指标与混合指标的比较、以及不同建模样本数的分析。图 16 的虚线表示两倍带，含义是预测与实测可相差约两倍，不是误差 2%；部分分析先用同一数据库标定或筛选再作对比。图 19 的小样本标定对照有助于研究参数敏感性，但仍使用中寿命信息，不足以证明在试验开始前对未知失效寿命的前瞻准确度。项目的候选早期窗口验证步骤见 [[材料试验与疲劳标定 — 可执行方案#4.4 探索能量型模型时，如何避免提前使用失效信息|试验方案]]。
 
 ## 对项目的行动
 
