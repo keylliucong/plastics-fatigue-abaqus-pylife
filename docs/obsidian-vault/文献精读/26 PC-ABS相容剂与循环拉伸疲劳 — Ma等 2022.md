@@ -5,7 +5,7 @@ doi: 10.1007/s10965-022-03137-9
 ---
 # PC/ABS 相容剂与循环拉伸疲劳：Ma 等 2022
 
-Ma 等，*Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading*, Journal of Polymer Research (2022)。[DOI](https://doi.org/10.1007/s10965-022-03137-9)。Zotero 条目 `6BLSHSXK`，本机已有 PDF 附件。已读 PDF 第 1–8 页正文文字，图 3–9 页面原图已目视核对；出版社两份补充材料已获取，表 S1–S3 和图 S1 已核；正文图 1–2、10 尚未逐项核对。
+Ma 等，*Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading*, Journal of Polymer Research (2022)。[DOI](https://doi.org/10.1007/s10965-022-03137-9)。Zotero 条目 `6BLSHSXK`，本机已有 PDF 附件。已读 PDF 第 1–8 页正文文字，图 1–10 页面原图已目视核对；出版社两份补充材料已获取，表 S1–S3 和图 S1 已核；原始谱图和逐试样疲劳数据未取得。
 
 ## 作者要解决什么，采用什么证据链？
 
@@ -34,6 +34,10 @@ Ma 等，*Fatigue resistance and failure behavior of reaction compatibilized PC/
 ## 对项目的启示
 
 先记录牌号、配方与成型方向，再同时保存应力–应变历程、每循环峰谷应变、试样温度、失效循环数和断口。比较材料时，应明确采用相同绝对应力还是相同屈服比例；要建立 S–N 曲线，还需多个应力水平、重复试样和未断裂记录。本文的循环现象说明材料响应可能随循环改变，但并未为目标零件提供 Abaqus 本构参数或 pyLife 疲劳曲线。
+
+## 核查图 1–2 与图 10：示意、光谱和机制推断
+
+图 1 是作者提出的反应与界面结构**示意图**，不是直接观察到的分子排列。图 2 是经选择性溶解处理的红外谱与原组分谱对照，作者结合特征峰出现或消失解释可能的接枝反应；图中曲线有纵向错位，且未提供本次可核验的原始光谱和定量反应率，因此不能把谱线上下位置直接当成各物质含量或界面强度的定量证据。图 10 也是基于断口观察提出的阶段性失效**示意模型**，不是在同一微区连续原位拍摄的脱粘过程。研究设计对形成机制假说有价值，但其他微结构或材料性能变化的影响仍不能由这两张示意图单独排除。
 
 ## 图 6–9 怎样读：从曲线到机制
 
