@@ -36,7 +36,7 @@
 - [[文献精读/05 非晶聚合物疲劳幂律 — Ginzburg等 2026|Modeling the Fatigue Behavior of Amorphous Polymers]] — [DOI](https://doi.org/10.48550/arXiv.2607.14994)
 - [[文献精读/12 ABS表面形貌与处理 — Deninno等 2022|Morphological Characterization of ABS and PC-ABS Surfaces for Automotive Industry]] — [DOI](https://doi.org/10.48550/arXiv.2209.12533)
 - [[文献精读/03 熵损伤与变幅载荷 — Li等 2024|Numerical Simulation for Durability of a Viscoelastic Polymer Material Subjected to Variable Loadings Fatigue Based on Entropy Damage Criterion]] — [DOI](https://doi.org/10.3390/polym16202857)
-- [[文献笔记/Overload effect on the fatigue crack propagation of PC - ABS alloy|Overload effect on the fatigue crack propagation of PC/ABS alloy]] — [DOI](https://doi.org/10.1016/j.polymer.2007.08.048)
+- [[文献精读/25 PC-ABS过载与裂纹扩展滞后 — Fang等 2007摘要核查|Overload effect on the fatigue crack propagation of PC/ABS alloy]] — [DOI](https://doi.org/10.1016/j.polymer.2007.08.048)
 - [[文献笔记/pyLife 2.3.1 — Life time Calculation|pyLife 2.3.1 — Life time Calculation]]
 - [[文献笔记/pyLife 2.3.1 — The OdbClient class|pyLife 2.3.1 — The OdbClient class]]
 - [[文献笔记/pyLife 2.3.1 — The rainflow module|pyLife 2.3.1 — The rainflow module]]
