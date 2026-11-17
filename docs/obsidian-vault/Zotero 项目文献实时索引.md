@@ -21,7 +21,7 @@
 - [[文献精读/13 热塑性塑料频率与自发热 — Mortazavian等 2015|Effect of cycling frequency and self‐heating on fatigue behavior of reinforced and unreinforced thermoplastic polymers]] — [DOI](https://doi.org/10.1002/pen.24124)
 - [[文献精读/18 频率与自发热实验 — Mortazavian 2015博士论文|Fatigue Behavior and Modeling of Short Fiber Reinforced Polymer Composites]]
 - [[文献精读/02 工程聚合物疲劳实现 — Volgers与Shojaei|Fatigue Behavior of Engineering Polymers and Its Numerical Implementation]]
-- [[文献笔记/FATIGUE CRACK GROWTH BEHAVIOR OF PC AND PC - ABS|FATIGUE CRACK GROWTH BEHAVIOR OF PC AND PC/ABS]] — [DOI](https://doi.org/10.3724/sp.j.1105.2007.00713)
+- [[文献精读/27 PC及PC-ABS裂纹扩展 — Fang等 2007摘要核查|FATIGUE CRACK GROWTH BEHAVIOR OF PC AND PC/ABS]] — [DOI](https://doi.org/10.3724/sp.j.1105.2007.00713)
 - [[文献精读/17 短纤热塑性塑料疲劳准则比较 — Santharam等 2020|Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions]] — [DOI](https://doi.org/10.1016/j.ijfatigue.2020.105574)
 - [[文献精读/11 聚合物失效模式与频率 — Naga和El-Sayed 2024|Fatigue Failure in Polymeric Materials: Insights from Experimental Testing]] — [DOI](https://doi.org/10.1007/s11668-024-01874-1)
 - [[文献精读/19 自发热与疲劳寿命原始实验 — Katunin 2018|Fatigue of polymeric composites during stationary and non-stationary self-heating]]
