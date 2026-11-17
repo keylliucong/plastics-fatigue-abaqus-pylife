@@ -35,6 +35,20 @@ def main():
     print("Whole vs stateful chunks closed loops:", len(loops),
           len(streamed.recorder.collective), "; independent chunks:", separate_counts)
 
+    # 对比缺省低幅分支：无限寿命是软件假设，不是材料试验结果。
+    default_curve = WoehlerCurve(pd.Series({"k_1": 5., "ND": 1e6, "SD": 10.}))
+    extended_curve = WoehlerCurve(pd.Series({"k_1": 5., "ND": 1e6, "SD": 10., "k_2": 5.}))
+    assert np.isinf(default_curve.basquin_cycles(8.))
+    assert np.isclose(extended_curve.basquin_cycles(8.), 3051757.8125)
+    assert default_curve.TN == default_curve.TS == 1.0
+    lower = default_curve.transform_to_failure_probability(0.05)
+    median = default_curve.transform_to_failure_probability(0.5)
+    assert np.isclose(lower.basquin_cycles(12.), median.basquin_cycles(12.))
+    print("Default vs extended cycles at 8 MPa:",
+          default_curve.basquin_cycles(8.), extended_curve.basquin_cycles(8.))
+    print("Default scatter factors:", default_curve.TN, default_curve.TS,
+          "; 5% and 50% curves coincide with no scatter.")
+
     # 完全虚构的单段幂律，不代表 PC/ABS；显式指定拐点后斜率。
     curve = WoehlerCurve(pd.Series({"k_1": 5., "ND": 1e6, "SD": 10., "k_2": 5.}))
     loops["Nf_synthetic"] = curve.basquin_cycles(loops["amplitude_MPa"])
