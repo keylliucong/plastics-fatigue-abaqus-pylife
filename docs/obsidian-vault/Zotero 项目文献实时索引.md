@@ -49,4 +49,4 @@
 - [[文献精读/15 聚酰亚胺黏弹损伤与保载 — Sato等 2021|Residual strength prediction for unidirectional CFRP using a nonlinear viscoelastic constitutive equation considering entropy damage]] — [DOI](https://doi.org/10.1016/j.compositesa.2020.106178)
 - [[文献精读/22 PC-ABS动态拉伸与本构反演 — Zhou等 2024|Study of Dynamic Failure Behavior of a Type of PC/ABS Composite]] — [DOI](https://doi.org/10.3390/ma17081728)
 - [[文献精读/04 PC-ABS-PMMA疲劳试验 — Kuleyin与Gümrük 2025|The Effect of Poly (Methyl Methacrylate) Content on Chemical, Thermomechanical, Mechanical, and Fatigue Life Characteristics of Ternary PC/ABS/PMMA Blends]] — [DOI](https://doi.org/10.3390/polym17141905)
-- [[文献笔记/‘Tail’ phenomenon and fatigue crack propagation of PC - ABS alloy|‘Tail’ phenomenon and fatigue crack propagation of PC/ABS alloy]] — [DOI](https://doi.org/10.1016/j.polymdegradstab.2007.09.002)
+- [[文献精读/24 PC-ABS裂纹扩展初期尾部 — Fang等 2008公开片段|‘Tail’ phenomenon and fatigue crack propagation of PC/ABS alloy]] — [DOI](https://doi.org/10.1016/j.polymdegradstab.2007.09.002)
