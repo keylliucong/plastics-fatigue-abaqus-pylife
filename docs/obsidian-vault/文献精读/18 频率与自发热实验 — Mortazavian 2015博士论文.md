@@ -1,6 +1,6 @@
 ---
 类型: 文献精读
-阅读范围: 第7章正文，PDF第289–298页；图注第299–310页
+阅读范围: 第7章正文PDF第289–298页，图注第299–310页；图7-1和7-7已目视核对
 zotero_key: RCK3VNCX
 ---
 # 频率与自发热实验：Mortazavian 2015 博士论文
@@ -9,7 +9,7 @@ zotero_key: RCK3VNCX
 
 ## 来源与阅读范围
 
-Seyyedvahid Mortazavian, *Fatigue Behavior and Modeling of Short Fiber Reinforced Polymer Composites*, University of Toledo 博士论文，2015。[OhioLINK 条目及全文](https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?p10_accession_num=toledo1437787779)。Zotero 条目 `RCK3VNCX`，已附全文。本笔记阅读了第7章正文（PDF第289–298页，印刷页249–258）与图注（PDF第299–310页）；未逐一核对图像或原始数据，不代表全篇精读。
+Seyyedvahid Mortazavian, *Fatigue Behavior and Modeling of Short Fiber Reinforced Polymer Composites*, University of Toledo 博士论文，2015。[OhioLINK 条目及全文](https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?p10_accession_num=toledo1437787779)。Zotero 条目 `RCK3VNCX`，已附全文。本笔记阅读了第7章正文（PDF第289–298页，印刷页249–258）与图注（PDF第299–310页）；已目视核对图7-1和图7-7，其余图像和原始数据未逐一核对，不代表全篇精读。
 
 ## 研究问题与方法
 
@@ -19,7 +19,12 @@ Seyyedvahid Mortazavian, *Fatigue Behavior and Modeling of Short Fiber Reinforce
 
 - 室温、纵向 PBT、$R=-1$：各寿命等级选用不同基准频率，频率加倍或减半时作者报告寿命变化小或不明显，所测表面温升低于 10 ℃。同材料 $R=0.1$ 的另一对条件下，20 Hz 相对 6 Hz 出现超过 10 ℃ 的温升和超过 5 倍的寿命降低（PDF第290–291页）。
 - 室温、纵向 PA6、$R=-1$：各寿命等级的基准频率不同，加倍时作者报告温升增加、寿命明显下降；4 Hz、应力幅 50 MPa 的例子表面温升达到 87 ℃（PDF第291–292页）。这些是特定试样和工况的观察；不构成所有塑料通用的 10 ℃ 阈值，也不能只凭频率变化证明温升是寿命变化的唯一原因。
-- 逐级试验的稳定温升与恒频试验所显示的对应数据接近；这仅支持所比较试验条件下的近似一致，不能证明先前循环对所有材料和寿命均无影响。
+- 图7-7将逐级试验结果与恒频试样接近中寿命的温升作比较：空心符号为恒频试验，实心符号为阶梯试验。部分点接近，但也有明显差异；不能笼统描述为所有点均吻合，更不能证明先前循环对所有材料和寿命均无影响。
+
+## 图表复核：怎样避免误读
+
+- **图7-1（PDF第299页）**按材料、方向、应力比与应力幅分组，纵轴为对数寿命；柱上括号中的温度是温升。PBT 的 $R=0.1$ 对照中，6 Hz 和20 Hz 分别标注约2 ℃和10.7 ℃温升。图中部分组合只有很少柱条，且不是所有柱都标温升；不能据此推断群体寿命分布或全部样本热状态。
+- **图7-7（PDF第305页）**分别展示 PBT/PA6、纵向/横向和不同应力幅下的稳定表面温升随频率变化，空心点是接近中寿命时的恒频数据。不同应力幅对应不同趋势；作者给出的近似线性关系适用于各自试验数据，不能把一条线跨材料、应力水平及散热条件外推。
 
 ## 数学模型：耗散功率与稳态温升
 
