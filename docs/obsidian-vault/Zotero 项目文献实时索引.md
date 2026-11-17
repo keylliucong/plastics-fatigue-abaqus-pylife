@@ -6,9 +6,10 @@
 
 返回 [[项目主页]]。
 
-共 42 条。
+共 43 条。
 
 - [[文献精读/16 循环蠕变与能量疲劳准则 — Raphael等 2019|A mixed strain rate and energy based fatigue criterion for short fiber reinforced thermoplastics]] — [DOI](https://doi.org/10.1016/j.ijfatigue.2019.06.003)
+- [[文献精读/28 PC循环黏弹黏塑本构 — Zhu等 2016正文核查|A rate‐type nonlinear viscoelastic–viscoplastic cyclic constitutive model for polymers: Theory and application]] — [DOI](https://doi.org/10.1002/pen.24371)
 - [[文献精读/06 黏弹性多时间尺度降阶 — Rodriguez等 2024|A reduced simulation applied to viscoelastic fatigue of polymers using a time multi-scale approach based on Partition of Unity method]] — [DOI](https://doi.org/10.48550/arXiv.2408.05143)
 - [[文献笔记/Abaqus 2026 — Combining Material Behaviors|Abaqus 2026 — Combining Material Behaviors]]
 - [[文献笔记/Abaqus 2026 — Reading field output data|Abaqus 2026 — Reading field output data]]
