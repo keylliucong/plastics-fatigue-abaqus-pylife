@@ -114,7 +114,7 @@ flowchart TD
 
 **输入**：已稳定写完、版本兼容的ODB；选定的时间域步骤、实例、区域、帧及实体积分点/壳截面点。
 
-**操作**：字段 $S$、必要时应变、温度和状态变量按实际输出位置读取。保留实例名、单元号、积分点、截面点、坐标基底、步/帧/时间、分量标签、源单位与数据有效性。不要把每帧不同位置最大值拼成一条假历程。记录场输出频率，处理缺帧/NaN/单元删除而不是补零。[Abaqus字段文档，2026公开版](https://docs.software.vt.edu/abaqusv2026/English/SIMACAECMDRefMap/simacmd-c-odbintroreadfieldpyc.htm)
+**操作**：字段 $S$、必要时应变、温度和状态变量按实际输出位置读取。保留实例名、单元号、积分点、截面点、坐标基底、步/帧/时间、分量标签、源单位与数据有效性。不要把每帧不同位置最大值拼成一条假历程。 [[ODB数据位置与pyLife接口 — 实体壳体核查#1.1 手算：逐帧最大值为什么可能消掉循环|两点示例与软件核验]]说明这样做可能消掉全部反转。记录场输出频率，处理缺帧/NaN/单元删除而不是补零。[Abaqus字段文档，2026公开版](https://docs.software.vt.edu/abaqusv2026/English/SIMACAECMDRefMap/simacmd-c-odbintroreadfieldpyc.htm)
 
 **位置警示**：[OdbClient 2.3.1](https://pylife.readthedocs.io/en/2.3.1/tools/odbclient/odbclient.html)示例输出包含node_id/element_id；不等于已经保留积分点和壳截面点。桥接实现须明确其后端、输出位置及完整性，再与Abaqus抽查数值。
 
