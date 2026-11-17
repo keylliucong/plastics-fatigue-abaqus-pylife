@@ -17,7 +17,7 @@ def render_index(rows,notes):
  for item in rows:
   key=item.get('key','')
   if item.get('itemType') not in ('note','attachment','annotation') and key: unique[key]=item
- lines=['# Zotero 项目文献实时索引','','> 由工具生成；手动修改会在下次更新时被替换。阅读笔记不会被覆盖。','','来源：Zotero 项目分类及所有子分类；按条目键去重。预览时新条目显示为普通文字；执行更新后会创建缺失的阅读笔记。','','返回 [[项目主页]]。','',f'共 {len(unique)} 条。','']
+ lines=['# Zotero 项目文献实时索引','','> 由工具生成；手动修改会在下次更新时被替换。阅读笔记不会被覆盖。','','来源：Zotero 项目分类及所有子分类；按条目键去重，优先链接已有精读。预览时新条目显示为普通文字；执行更新后会创建缺失的阅读笔记。','','返回 [[项目主页]]。','',f'共 {len(unique)} 条。','']
  for key,item in sorted(unique.items(),key=lambda kv:(kv[1].get('title') or '').casefold()):
   title=(item.get('title') or '未命名').replace('\n',' ').replace('|','｜').replace(']','）').replace('[','（')
   target=notes.get(key,key) if isinstance(notes,dict) else key
@@ -27,12 +27,14 @@ def render_index(rows,notes):
  return '\n'.join(lines)+'\n'
 
 def note_map(folder):
+ # 索引优先指向现有精读，避免为同一个 Zotero 条目创建空白副本。
  keys={}
- for p in folder.glob('*.md'):
-  text=p.read_text(encoding='utf-8')
-  match=re.search(r'^zotero_key:\s*["\']?([A-Z0-9]{8})["\']?\s*$',text,re.M)
-  if match: keys[match.group(1)]='文献笔记/'+p.stem
-  elif re.fullmatch(r'[A-Z0-9]{8}',p.stem):keys[p.stem]='文献笔记/'+p.stem
+ for source in (folder, VAULT/'文献精读'):
+  for p in sorted(source.glob('*.md')):
+   text=p.read_text(encoding='utf-8')
+   match=re.search(r'^zotero_key:\s*["\']?([A-Z0-9]{8})["\']?\s*$',text,re.M)
+   key=match.group(1) if match else (p.stem if re.fullmatch(r'[A-Z0-9]{8}',p.stem) else None)
+   if key: keys[key]=p.relative_to(VAULT).with_suffix('').as_posix()
  return keys
 
 def readable_filename(title,key,folder):
