@@ -1,13 +1,13 @@
 ---
 类型: 文献精读
-状态: 初稿待图表和原始试验文献核对
+状态: 正文及图1–4已核，原始试验点位与能量约定待核
 zotero_key: 8YDGGEBH
 doi: 10.48550/arXiv.2607.14994
 ---
 
 # 从黏性耗散到 S–N 幂律：指数 3 能普遍使用吗？
 
-Ginzburg、Gendelman、Zaccone, *Modeling the Fatigue Behavior of Amorphous Polymers*。[arXiv预印本](https://arxiv.org/abs/2607.14994)；[Zotero](zotero://select/library/items/8YDGGEBH)。本次阅读PDF 1–17页正文、图表标题和参考文献；表1图像已目视核对，其他图像待核。预印本状态不等同于经过同行评议的正式版本。
+Ginzburg、Gendelman、Zaccone, *Modeling the Fatigue Behavior of Amorphous Polymers*。[arXiv预印本](https://arxiv.org/abs/2607.14994)；[Zotero](zotero://select/library/items/8YDGGEBH)。本次阅读PDF 1–17页正文、图表标题和参考文献；图1–4及表1已目视核对，原始试验数据逐点对应仍待核。预印本状态不等同于经过同行评议的正式版本。
 
 ## 论点与模型假设
 
@@ -44,3 +44,16 @@ Ginzburg 等的图 2 将其模型和 [Okeke 等 2018](https://doi.org/10.1016/j.
 ## 对项目
 
 将其用作“黏弹损耗—温升—循环响应”的假说和敏感性分析入口；材料曲线、散热条件和实际工况仍须由试验标定与独立验证，不能用 $m=3$ 代替目标塑胶S–N数据。
+
+
+## 原图与半周期耗散的系数核查
+
+图 1(a–c) 画出对称正弦应力、弹性应变和两个半周均为正的耗散示意；图 1(d) 的橙色曲线示意作者人为设定半周温度改变时产生的应变差，不是对某一真实材料的直接测量。图 2、3 的蓝线延伸到部分实验点之外；特别是 PS 图中的线延伸至所示最后一个点之后，不能把这段外推画线当作已被试验验证。图 4 有较多 PVC 实验点，但模型仍使用与材料相应数据调整的损耗因子，不能从曲线重合独立推定机制成立。
+
+**式 (5) 的系数待作者澄清。** 论文定义单 Maxwell 黏壶满足 $\eta\dot\varepsilon_v=\sigma$，其中 $\eta=E\tau$；式 (5) 使用 $P=\eta\dot\varepsilon_v^2/2$。若采用一维连续介质中黏壶的通常瞬时应力功率 $P=\sigma\dot\varepsilon_v=\eta\dot\varepsilon_v^2$，对 $\sigma=\sigma_0\sin\omega t$ 的首个半周直接积分：
+
+$$W_{\rm half}=\int_0^{\pi/\omega}\frac{\sigma_0^2}{\eta}\sin^2(\omega t)\,dt=\frac{\pi\sigma_0^2}{2\omega\eta}.$$
+
+该结果是论文式 (5) 所写 $\pi\sigma_0^2/(4\omega\eta)$ 的两倍。在**虚构**的 $E=1000$ MPa、$\tau=1$ s、$\sigma_0=10$ MPa、$\omega=2\pi$ rad/s 例子中，两种表达式分别给出每单位体积 0.025 和 0.0125 MPa，即 25 和 12.5 kJ/m³。如果均假设全部耗散立即均匀转热，取 $C=1.3\times10^6$ J/(m³·K)，对应温升约 0.0192 和 0.00962 K。该对照只指出给定定义下的系数差异；论文可能采用尚未说明的能量约定，我们没有作者原始代码，不能擅自判断或修正其结果。
+
+若其他假设全部保持，温升前因子会影响所推导寿命曲线的前因子，不会仅因这个常数因子改变 $S^3$ 的形式；但实际疲劳预测还依赖温度演化、临界应变和材料标定。不要直接把式 (5) 作为 Abaqus 热源，也不要把此手算当作材料热—力耦合验证。[原文 PDF 第 3–10 页](https://arxiv.org/pdf/2607.14994)。
