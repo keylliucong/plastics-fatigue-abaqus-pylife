@@ -6,7 +6,7 @@
 
 返回 [[项目主页]]。
 
-共 44 条。
+共 45 条。
 
 - [[文献精读/16 循环蠕变与能量疲劳准则 — Raphael等 2019|A mixed strain rate and energy based fatigue criterion for short fiber reinforced thermoplastics]] — [DOI](https://doi.org/10.1016/j.ijfatigue.2019.06.003)
 - [[文献精读/28 PC循环黏弹黏塑本构 — Zhu等 2016正文核查|A rate‐type nonlinear viscoelastic–viscoplastic cyclic constitutive model for polymers: Theory and application]] — [DOI](https://doi.org/10.1002/pen.24371)
@@ -20,6 +20,7 @@
 - [[文献精读/07 聚合物自发热与损伤判据 — Katunin 2019|Criticality of the Self-Heating Effect in Polymers and Polymer Matrix Composites during Fatigue, and Their Application in Non-Destructive Testing]] — [DOI](https://doi.org/10.3390/polym11010019)
 - [[文献精读/23 循环加载后的PC-ABS拉伸与局部变形 — Fang等 2008|Effect of cyclic loading on tensile properties of PC and PC/ABS]] — [DOI](https://doi.org/10.1016/j.polymdegradstab.2008.05.022)
 - [[文献精读/13 热塑性塑料频率与自发热 — Mortazavian等 2015|Effect of cycling frequency and self‐heating on fatigue behavior of reinforced and unreinforced thermoplastic polymers]] — [DOI](https://doi.org/10.1002/pen.24124)
+- [[文献精读/30 PC纯扭转棘轮与恢复 — Lu等 2020|Experimental Observation on the Pure Torsional Ratchetting of Polycarbonate Polymer at Room Temperature]] — [DOI](https://doi.org/10.1155/2020/7181069)
 - [[文献精读/18 频率与自发热实验 — Mortazavian 2015博士论文|Fatigue Behavior and Modeling of Short Fiber Reinforced Polymer Composites]]
 - [[文献精读/02 工程聚合物疲劳实现 — Volgers与Shojaei|Fatigue Behavior of Engineering Polymers and Its Numerical Implementation]]
 - [[文献精读/27 PC及PC-ABS裂纹扩展 — Fang等 2007摘要核查|FATIGUE CRACK GROWTH BEHAVIOR OF PC AND PC/ABS]] — [DOI](https://doi.org/10.3724/sp.j.1105.2007.00713)
