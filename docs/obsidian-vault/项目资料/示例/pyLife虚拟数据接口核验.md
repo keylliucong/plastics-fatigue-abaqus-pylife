@@ -1,6 +1,6 @@
 # pyLife 虚拟数据接口核验
 
-返回 [[塑胶疲劳仿真技术SOP — 工作稿]]。本例只演示 pyLife 2.3.1 接口与手算一致性；不读取 ODB、不建立 PC/ABS 材料卡、不输出完整寿命。数据、参数和单位均为教学假设。
+返回 [[塑胶疲劳仿真技术SOP]]。本例只演示 pyLife 2.3.1 接口与手算一致性；不读取 ODB、不建立 PC/ABS 材料卡、不输出完整寿命。数据、参数和单位均为教学假设。
 
 文件：[pylife_synthetic_check.py](pylife_synthetic_check.py)。在 Python 虚拟环境安装 `pylife==2.3.1` 后运行：
 
