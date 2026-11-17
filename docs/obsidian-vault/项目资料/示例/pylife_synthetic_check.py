@@ -35,6 +35,22 @@ def main():
     print("Whole vs stateful chunks closed loops:", len(loops),
           len(streamed.recorder.collective), "; independent chunks:", separate_counts)
 
+    # 重复物理谱块：跨边界闭合可能使单块闭合数 × 块数失效。
+    block = np.array([0., 10., -10., 0.])
+    repeated_counts = []
+    for n_blocks in (1, 2, 10, 100):
+        # 相邻块共用零端点，仅保留一次；真实多通道时需同时核对物理时间。
+        history = np.concatenate([block] + [block[1:]] * (n_blocks - 1))
+        rec = rainflow.ThreePointDetector(rainflow.FullRecorder())
+        rec.process(history, flush=True)
+        repeated_counts.append(len(rec.recorder.collective))
+        if n_blocks == 100:
+            assert np.allclose(np.abs(rec.recorder.collective['to'] -
+                                      rec.recorder.collective['from']) / 2., 10.)
+    assert repeated_counts == [0, 1, 9, 99]
+    print('Repeated blocks [1, 2, 10, 100] closed loops:', repeated_counts,
+          '(residuals excluded)')
+
     # 对比缺省低幅分支：无限寿命是软件假设，不是材料试验结果。
     default_curve = WoehlerCurve(pd.Series({"k_1": 5., "ND": 1e6, "SD": 10.}))
     extended_curve = WoehlerCurve(pd.Series({"k_1": 5., "ND": 1e6, "SD": 10., "k_2": 5.}))
