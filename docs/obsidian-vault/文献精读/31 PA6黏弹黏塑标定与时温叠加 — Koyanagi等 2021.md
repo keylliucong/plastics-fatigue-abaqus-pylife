@@ -1,12 +1,12 @@
 ---
 类型: 文献精读
-状态: 正文与公式已读，原图及PDF待核
+状态: 正文、公式和图1–8已核，PDF及单位疑点待核
 zotero_key: 22AKZTT5
 doi: 10.1016/j.heliyon.2021.e06335
 ---
 # PA6 黏弹与黏塑如何从蠕变和松弛试验分离？
 
-Koyanagi 等，*Formulation of non-linear viscoelastic–viscoplastic constitutive equation for polyamide 6 resin*, 2021。[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC7921817/)；[DOI](https://doi.org/10.1016/j.heliyon.2021.e06335)；[Zotero](zotero://select/library/items/22AKZTT5)。已阅读开放全文正文、公式及表格文字；PDF 和图像尚未取得，不能声称曲线细节已核。对象是注塑 PA6，非 PC/ABS；论文未建立疲劳损伤寿命模型。
+Koyanagi 等，*Formulation of non-linear viscoelastic–viscoplastic constitutive equation for polyamide 6 resin*, 2021。[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC7921817/)；[DOI](https://doi.org/10.1016/j.heliyon.2021.e06335)；[Zotero](zotero://select/library/items/22AKZTT5)。已阅读开放全文正文、公式及表格文字；图1–8已从 Europe PMC 公开图像包目视核对并附于 Zotero，排版版 PDF 尚未取得。对象是注塑 PA6，非 PC/ABS；论文未建立疲劳损伤寿命模型。
 
 ## 试验怎样对应模型？
 
@@ -32,3 +32,12 @@ $$\log_{10}a_{T_R}(T)=\frac{\Delta H}{2.303R}\left(\frac1T-\frac1{T_R}\right),$$
 ## 对项目的应用边界
 
 应分别留存实际加载斜坡、完整卸载恢复、温度、湿度和试样历史；先检验本构是否能够重现未参与拟合的试验，再用该响应进入疲劳分析。若目标零件的保载与恢复显著且出现不可恢复应变，不应把线性 Prony 松弛单独等同于完整材料行为；也不能由本论文推断 Abaqus 内建模型可直接组合出该研究模型。疲劳寿命仍需独立试样与零件验证。
+
+
+## 原图复核：时温主曲线的时间单位疑点
+
+[Europe PMC 原图包](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7921817/supplementaryFiles)中的图 4 横轴标时间 `[s]`；图 5 横轴标 reduced creep time `[s]`。在近似 27 ℃参考温度，原文保载时间分别为 0.5、1、2 **小时**。图 4 对应保载末端位于约 $10^3$–$10^4$ s；而图 5 的 27 ℃数据点横坐标大致是 0.5、1、2。若把图 5 的数值按小时理解，可与试验时间的量级对上；按其标注的秒理解则相差约 3600 倍。
+
+用论文的式 (1) 和精确绝对温度作辅助核算：27 ℃ 为 300.15 K，$a_T≈0.942$；若采用 $t_r=t/a_T$ 的约定，0.5–2 h 约对应 $1.91\times10^3$–$7.65\times10^3$ s，换算为小时约 0.53–2.12 h，与上述视觉量级相符。**“图 5 实际使用小时”只是可能解释，不是作者确认的更正**；图上读数、温度取整和原始计算都可能影响判断，仍需原始数据或作者说明。图 7 也标 reduced creep time `[s]`，其点位需一并复核。上述疑点与原表黏度单位记法一起，意味着不能直接复制参数或据此声称已复现模型。
+
+**图 1、3、6–8 能支持什么？** 图 1 显示黏塑黏壶与并联 Maxwell 组串联；图 6 是对恢复段外推至饱和值的示意。图 3(a) 的红色模型曲线只画出所示 20 和 40 MPa 的加载段，不能当作不同温度、60 MPa 及卸载恢复都被模型完整验证；图 7 的模型线与部分实验点有可见偏差，图 8 展示有限窗口及平移后的松弛模量，远端模型曲线不等于真实多年实测。图像没有给出可用于独立评价误差的逐点数据或验证集。
