@@ -25,7 +25,7 @@
 - [[文献精读/17 短纤热塑性塑料疲劳准则比较 — Santharam等 2020|Fatigue criteria for short fiber-reinforced thermoplastic validated over various fiber orientations, load ratios and environmental conditions]] — [DOI](https://doi.org/10.1016/j.ijfatigue.2020.105574)
 - [[文献精读/11 聚合物失效模式与频率 — Naga和El-Sayed 2024|Fatigue Failure in Polymeric Materials: Insights from Experimental Testing]] — [DOI](https://doi.org/10.1007/s11668-024-01874-1)
 - [[文献精读/19 自发热与疲劳寿命原始实验 — Katunin 2018|Fatigue of polymeric composites during stationary and non-stationary self-heating]]
-- [[文献笔记/Fatigue resistance and failure behavior of reaction compatibilized PC - ABS blends under tensil|Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading]] — [DOI](https://doi.org/10.1007/s10965-022-03137-9)
+- [[文献精读/26 PC-ABS相容剂与循环拉伸疲劳 — Ma等 2022|Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading]] — [DOI](https://doi.org/10.1007/s10965-022-03137-9)
 - [[文献笔记/Highly enhanced the toughness and fatigue resistance of PC - ABS blends by constructing a doubl|Highly enhanced the toughness and fatigue resistance of PC/ABS blends by constructing a double-comb compatibilizer]] — [DOI](https://doi.org/10.1016/j.polymer.2025.128170)
 - [[文献精读/21 PC-ABS加载频率与热软化 — Lee等 2026摘要核查|Interaction between strain-rate strengthening and thermal softening in fatigue behavior of PC/ABS blends]] — [DOI](https://doi.org/10.1016/j.ijfatigue.2026.109678)
 - [[文献精读/01 PC-ABS温度疲劳实验 — Mura 2018|Investigation of Fatigue Behavior of ABS and PC-ABS Polymers at Different Temperatures]] — [DOI](https://doi.org/10.3390/ma11101818)
