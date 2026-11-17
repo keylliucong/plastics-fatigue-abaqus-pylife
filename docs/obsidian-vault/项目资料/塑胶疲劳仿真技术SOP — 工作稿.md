@@ -132,7 +132,7 @@ flowchart TD
 
 **输入**：固定材料点经验证的标量历程，或先行确定并验证的多轴指标；对应材料S–N数据。
 
-**操作**：明确$S_a$或$\Delta S$、N或2N、$R$和材料曲线定义。多轴历程不能默认直接对非负Mises做雨流并保留全部拉压反转/相位信息。根据实际残余半循环和谱块重复方式选择计数规则；分块数据保留检测器状态。[pyLife 2.3.1雨流](https://pylife.readthedocs.io/en/2.3.1/stress/rainflow.html)
+**操作**：明确$S_a$或$\Delta S$、N或2N、$R$和材料曲线定义。多轴历程不能默认直接对非负Mises做雨流并保留全部拉压反转/相位信息。根据实际残余半循环和谱块重复方式选择计数规则；分块数据保留检测器状态。 [[pyLife虚拟数据接口核验#分块处理：跨块状态不能丢失|已运行的分块例子]]展示了每块新建检测器如何漏掉跨块闭合循环。[pyLife 2.3.1雨流](https://pylife.readthedocs.io/en/2.3.1/stress/rainflow.html)
 
 按真实试验记录拟合，断裂与run-out分开；拟合模型、分布、参数、散布和外推范围需记录。[pyLife 2.3.1拟合示例](https://pylife.readthedocs.io/en/2.3.1/demos/woehler_analyzer.html)可演示接口，但其阈值推断断裂状态不能代替原始记录。
 
