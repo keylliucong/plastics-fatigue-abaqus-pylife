@@ -1,6 +1,6 @@
 # 塑胶件疲劳仿真技术路线：Abaqus + pyLife
 
-版本：2026-11-15，技术路线初稿。依据本项目已归档文献、Abaqus与pyLife官方文档、已安装skill及其脚本检查整理。本文是实施设计，不是已完成的仿真结果或已冻结的试验计划。
+版本：2026-11-17，技术路线工作稿。依据本项目已归档文献、Abaqus与pyLife官方文档、已安装skill及其脚本检查整理。本文是实施设计，不是已完成的仿真结果或已冻结的试验计划。
 
 ## 1. 推荐主线与适用边界
 
@@ -21,6 +21,8 @@
 ![塑胶件Abaqus与pyLife疲劳仿真技术路线](assets/technical-route.png)
 
 [查看可编辑SVG矢量版](assets/technical-route.svg)。蓝色部分为输入与机械响应，绿色为S-N疲劳基线，橙色为复杂响应下的扩展路线；虚线表示验证反馈。
+
+**图中第05步的实现边界**：图示中的 OdbClient 是待评估选项，并不表示已支持完整壳截面点。当前对 pyLife 2.3.1 服务端的静态检查发现，字段索引未显式包含截面点，部分网格查询限制实体单元；首版应优先验证 Abaqus 原生 `odbAccess` 导出，并用真实实体和壳 ODB 核对。上述桥接及疲劳流程目前均非已完成的实际零件求解。
 
 <details>
 <summary>Mermaid结构源图</summary>
@@ -315,7 +317,7 @@ Explicit先估算`分析时长/稳定增量`的数量级；稳定增量受最小
 ### 已归档研究资料
 
 - **P1** Mortazavian等，频率与自发热：[10.1002/pen.24124](https://doi.org/10.1002/pen.24124)。当前仅摘要/在线元数据，PDF未获取；不引用未核对的完整参数表。
-- **P2** Santharam等，多方向/R/环境疲劳准则：[10.1016/j.ijfatigue.2020.105574](https://doi.org/10.1016/j.ijfatigue.2020.105574)。当前摘要级；作为验证维度依据，不认定已选定最佳准则。
+- **P2** Santharam等，多方向/R/环境疲劳准则：[10.1016/j.ijfatigue.2020.105574](https://doi.org/10.1016/j.ijfatigue.2020.105574)。已获取并阅读 HAL 作者稿正文，部分图表已核；该研究主要归并已有试验，部分指标取寿命中点，不应当作独立前瞻预测或 PC/ABS 精度证明。
 - **P3** Katunin，自发热综述：[10.3390/polym11010019](https://doi.org/10.3390/polym11010019)。本地PDF与公开文献内容支持机制判断，不把综述当作材料参数。
 - **P4** Volgers、Shojaei，[Fatigue Behavior of Engineering Polymers and Its Numerical Implementation](https://www.3ds.com/assets/invest/2024-01/2218-saoe-fatigue_behavior_of_engineering_polymers_and_its_numerical_implementation.pdf)。已查看本地PDF相关章节；POM案例用于方法参考。
 - **P5** Li等，熵损伤变幅数值研究：[10.3390/polym16202857](https://doi.org/10.3390/polym16202857)。已查看方法相关内容，作为扩展研究路线而非通用设计模型。
