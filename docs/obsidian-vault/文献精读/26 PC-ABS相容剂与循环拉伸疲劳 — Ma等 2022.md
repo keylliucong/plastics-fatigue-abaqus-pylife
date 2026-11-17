@@ -5,7 +5,7 @@ doi: 10.1007/s10965-022-03137-9
 ---
 # PC/ABS 相容剂与循环拉伸疲劳：Ma 等 2022
 
-Ma 等，*Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading*, Journal of Polymer Research (2022)。[DOI](https://doi.org/10.1007/s10965-022-03137-9)。Zotero 条目 `6BLSHSXK`，本机已有 PDF 附件。已读 PDF 第 1–8 页正文文字，图 3–9 页面原图已目视核对；图 1–2、10 和补充材料尚未逐项核对。
+Ma 等，*Fatigue resistance and failure behavior of reaction compatibilized PC/ABS blends under tensile cyclic loading*, Journal of Polymer Research (2022)。[DOI](https://doi.org/10.1007/s10965-022-03137-9)。Zotero 条目 `6BLSHSXK`，本机已有 PDF 附件。已读 PDF 第 1–8 页正文文字，图 3–9 页面原图已目视核对；出版社两份补充材料已获取，表 S1–S3 和图 S1 已核；正文图 1–2、10 尚未逐项核对。
 
 ## 作者要解决什么，采用什么证据链？
 
@@ -45,3 +45,16 @@ Ma 等，*Fatigue resistance and failure behavior of reaction compatibilized PC/
 | 9 | 对 PC/ABS/SMA-2 给出 0、500、1000、2000、4071 次循环对应断口图，作者按形貌提出三个阶段 | 可参考不同寿命阶段取样和断口分析，检查循环损伤是否发生模式转变 | 这些是不同循环数条件下的试样断口观察，不能假定是同一位置的原位连续成像；“三个阶段”是作者的机制解释而非通用分界 |
 
 项目中的验证顺序建议是：先用单次加载—卸载和保载/恢复识别材料时间效应，再以未用于标定的循环试样检查峰谷应变、回线形状和温升；最后检查断口与失效模式。若模型只拟合单调拉伸，却无法重现循环累积变形，应把寿命分析视为未充分验证，而不是靠雨流或 Miner 累计消除这一误差。
+
+## 补充材料：配方、DMA 和可识别的限制
+
+出版社提供的[补充材料 1（图文摘要）](https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs10965-022-03137-9/MediaObjects/10965_2022_3137_MOESM1_ESM.docx)和[补充材料 2（表 S1–S3、图 S1）](https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs10965-022-03137-9/MediaObjects/10965_2022_3137_MOESM2_ESM.docx)已保存本地并附到 Zotero `6BLSHSXK`；补充材料 2 的表格文字及嵌入图 S1 已核。
+
+- **配方**：表 S1 以 100 phr PC/ABS 共混物为基础，SMA 分别加入 0、2、4、6、8 phr，抗氧剂 1010+168 为 0.4 phr。正文所述 PC:ABS 为 65:35。`2 phr` 是相对基础材料 100 份的配方表示，不应直接写成最终混合物质量分数 2%。
+- **屈服强度与疲劳比较**：表 S2 给出 PC/ABS 57.9±0.4 MPa、PC/ABS/SMA-2 57.8±0.7 MPa。若仅用表中均值乘 80%，对应约 46.32 和 46.24 MPa；这只是根据均值的计算，**不是逐个疲劳试样实际峰值的记录**。这两个均值接近，但仍无法由此证明疲劳试验完全匹配绝对载荷或建立统计可靠的寿命倍率；纯 PC 的对应屈服值也不能由此表得到。
+- **表格单位疑点**：表 S2 的“断裂伸长”表头写 MPa，而正文图 3b 的伸长轴写 `%`。两者在单位上不一致；按物理含义伸长率应是无量纲量，但未经作者确认不可擅自修改来源或将该表头作为正确单位。表中的 ± 具体是标准差还是其他统计量，补充材料未说明。
+- **冲击数据的小差异**：表 S2 给 SMA-2 的缺口冲击强度为 75.7±7.4 kJ/m²，正文文字称 75.8 kJ/m²。两处相差 0.1 kJ/m²，原因未明；不能擅自确定哪个为原始值。无论取哪一个，它们都不是疲劳数据。
+- **DMA 条件**：补充材料描述三点弯曲模式、1 Hz、升温 3 °C/min、氮气、试样 20 × 3 × 5 mm；图 S1 中 PC/ABS 和 SMA-2 的 tanδ 峰标注及表 S3 列出约 125.3/159.5 °C 和 127.3/159.9 °C。这个 **1 Hz 是 DMA 条件，不是正文循环疲劳试验的已知频率**；转变温度也依测量方法、频率和升温条件变化，不是材料失效或长期使用温度。
+- **DMA 曲线命名**：图 S1 将储能量标为 $G'$，而方法写三点弯曲；在未核设备输出定义和试样几何换算前，不能自动把其曲线当作 Abaqus 所需的纯剪切储能模量或直接反演 Prony 参数。
+
+这两份补充材料没有提供可识别的逐件疲劳寿命表、完整加载波形、疲劳重复数或试样温升历程，原先的疲劳结论边界仍然成立。
