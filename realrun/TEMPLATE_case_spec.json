@@ -1,0 +1,10 @@
+{
+  "material_grade": "REPLACE_WITH_REAL_DATA",
+  "forming_process": "REPLACE_WITH_REAL_DATA",
+  "R_ratio": null,
+  "frequency_Hz": null,
+  "temperature_C": null,
+  "stress_definition": "amplitude or range",
+  "failure_criterion": "REPLACE_WITH_REAL_DATA",
+  "note": "TEMPLATE ONLY - no real data. Product-level validation awaits these inputs."
+}
