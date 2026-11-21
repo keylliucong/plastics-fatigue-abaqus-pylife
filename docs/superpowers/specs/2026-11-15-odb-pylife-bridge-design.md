@@ -2,6 +2,11 @@
 
 版本：v0.1 草案｜日期：2026-11-15｜状态：需求确认稿，尚未授权进入代码实现。
 
+> 实现状态（2026-11-21）：已按本 PRD 实现 `bridge/` 下的数据契约、ODB 提取、
+> 结构校验与 GUI，以及 `fatigue/analyze_real_bundle.py` 分析入口。首版
+> “不计算损伤”的边界已扩展为可选的 ⑥ 计算与出图（需显式曲线、单位确认）。
+> Windows 桌面上的完整点击流程仍待实机验收。
+
 ## 1. 产品目标与已确认事项
 
 帮助工程人员通过桌面界面选择Abaqus ODB，筛选要保留的局部应力历程，设置单位和疲劳曲线参数，导出可由独立Python/pyLife工作流读取、检查和复用的数据包。
@@ -256,6 +261,7 @@ instance_name + element_label + integration_point + section_point_number
 - Abaqus读取层：原生`odbAccess`，只读扫描和分块提取；由目标Abaqus Python运行。
 - 数据契约层：校验主键、时间、坐标、单位、分量及数据包schema。
 - pyLife适配层：在独立环境重读为pandas对象并确认曲线结构；首版不计算损伤。
+  （实现状态：已提供可选损伤计算入口，默认要求显式曲线与单位确认，见 §10 的实现说明。）
 - 首版优先原生文件桥接，不将OdbClient默认输出直接视为完整积分点数据。[S5]
 
 现有`abaqus-odb-extract`可参考环境探测、逐帧访问与日志，但当前字段表仅`instance,label,position,value`，默认末帧；需新增完整材料点导出，不能将现脚本包装GUI后就宣称需求已满足。

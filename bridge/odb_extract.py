@@ -10,7 +10,13 @@
   - 不做节点/积分点/跨截面点平均；缺失分量留空，NaN/失效保留标记；
   - STATUS 存在时保留该标志；原ODB只读，不改原文件。
 
-应力/时间单位由用户在 manifest 的 meta 中显式确认；本脚本不臆断单位。
+应力/时间单位由用户在 manifest 的 meta 中显式确认；本脚本不臆断单位，
+也不改写入库数值：源值原样保存，换算系数写入 units.stress_scale_to_MPa，
+由分析入口统一换算为 MPa。
+
+应力基底（coordinate_system）默认记为 local-unresolved；实体模型可显式声明
+--basis global，壳模型若确认截面应力为全局分量也可声明，否则下游拒绝把
+壳/梁截面点直接用于损伤计算。
 """
 
 from __future__ import annotations
@@ -20,6 +26,7 @@ import json
 from pathlib import Path
 
 from contract import BundleWriter, COMPONENTS
+from units import normalize_units
 
 
 def _connect():
@@ -40,8 +47,16 @@ def _resolve_region(odb, name):
     raise ValueError(f"未找到实例或单元集: {name}")
 
 
+BASIS_TO_SYSTEM = {
+    "unknown": "local-unresolved",
+    "global": "global",
+    "local": "local",
+}
+
+
 def extract(odb_path: str, step_name: str, region_name: str, component: str,
-            frame_start: int, frame_end: int, out_dir: str, meta: dict) -> dict:
+            frame_start: int, frame_end: int, out_dir: str, meta: dict,
+            overwrite: bool = False, basis: str = "unknown") -> dict:
     openOdb = _connect()
     odb = openOdb(path=odb_path, readOnly=True)
     try:
@@ -60,6 +75,10 @@ def extract(odb_path: str, step_name: str, region_name: str, component: str,
         frames = list(range(start, min(end, n - 1) + 1))
 
         selected, all_instances = _resolve_region(odb, region_name)
+        if basis not in BASIS_TO_SYSTEM:
+            raise ValueError(f"--basis 只能是 {sorted(BASIS_TO_SYSTEM)}，实际: {basis}")
+        coordinate_system = BASIS_TO_SYSTEM[basis]
+        units = normalize_units(meta)
 
         writer = BundleWriter(
             Path(out_dir),
@@ -71,12 +90,19 @@ def extract(odb_path: str, step_name: str, region_name: str, component: str,
                 "component": component,
                 "frame_range": [frames[0], frames[-1]],
                 "n_frames": len(frames),
-                "units": meta.get("units", {"stress_standard": "UNCONFIRMED",
-                                            "time_meaning": "UNCONFIRMED"}),
+                "units": units,
+                "basis": {
+                    "coordinate_system": coordinate_system,
+                    "declared": basis,
+                    "resolved": basis != "unknown",
+                },
                 "selection": {"region": region_name or "<all instances>"},
                 # 元数据用 ASCII，避免 Windows/Mac 跨平台编码差异破坏 JSON 读取。
-                "note": "Read-only extraction via abaqus python; units confirmed by user, not assumed.",
+                "note": ("Read-only extraction via abaqus python; stress values keep "
+                         "source unit (units.stress_source), convert with "
+                         "units.stress_scale_to_MPa; user confirms units, not assumed."),
             },
+            overwrite=overwrite,
         )
         pid_by_key = {}
 
@@ -123,7 +149,7 @@ def extract(odb_path: str, step_name: str, region_name: str, component: str,
 
                 writer.add_field(
                     pid, fr, frame.frameValue, str(getattr(v, "position", "")),
-                    "local-unresolved",  # 基底/坐标信息未解析，禁止标为可直接用标量
+                    coordinate_system,  # 未声明基底时记 local-unresolved，下游据此拦截
                     components, valid, status_val,
                 )
 
@@ -191,11 +217,15 @@ def main(argv=None) -> int:
     ap.add_argument("--frames", default="0:-1", help="start:end，-1 表示末帧")
     ap.add_argument("--out", default="bridge_bundle")
     ap.add_argument("--meta", default="", help="JSON 文件：单位/时间含义等用户确认信息")
+    ap.add_argument("--basis", default="unknown", choices=sorted(BASIS_TO_SYSTEM),
+                    help="应力基底声明；unknown 时下游拒绝直接使用壳截面点")
+    ap.add_argument("--overwrite", action="store_true",
+                    help="覆盖输出目录中已有的桥接包（默认拒绝，防止追加脏数据）")
     args = ap.parse_args(argv)
     fs, fe = (int(x) for x in args.frames.split(":"))
     meta = json.loads(Path(args.meta).read_text(encoding="utf-8")) if args.meta else {}
     manifest = extract(args.odb, args.step, args.region, args.component, fs, fe,
-                       args.out, meta)
+                       args.out, meta, overwrite=args.overwrite, basis=args.basis)
     print(f"提取完成: {args.out}; 点数={manifest['n_points']}, 行数={manifest['n_field_rows']}")
     return 0
 

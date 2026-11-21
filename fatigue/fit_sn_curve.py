@@ -1,6 +1,8 @@
 """真实恒幅 S–N 数据拟合 Wöhler 曲线（pyLife 2.3.1）。
 
-输入 CSV 列：load(应力幅,MPa), cycles(循环数), fracture(bool，run-out=False)。
+输入 CSV 列：load_amplitude_MPa 或 load（应力幅，MPa）、cycles（循环数）、
+fracture（True=断裂；False=run-out/删失）。列名兼容产品交接模板；fracture
+严格解析，混入 unknown/空白等无法识别的标记时直接报错，不静默转 bool。
 pyLife 的 FatigueData/MaxLikeFull 处理断裂与 run-out，输出 k_1, ND, SD, TN, TS。
 
 运行：
@@ -23,23 +25,56 @@ import numpy as np
 import pandas as pd
 from pylife.materialdata.woehler import FatigueData, MaxLikeFull, Elementary
 
-REQUIRED = {"load", "cycles", "fracture"}
+LOAD_COLUMNS = ("load_amplitude_MPa", "load")
+REQUIRED = {"cycles", "fracture"}
+_TRUE_TOKENS = {"true", "1", "1.0", "yes", "y", "t"}
+_FALSE_TOKENS = {"false", "0", "0.0", "no", "n", "f",
+                 "run-out", "runout", "run_out", "censored"}
+
+
+def parse_fracture(series: pd.Series) -> pd.Series:
+    """严格解析 fracture 列；未知标记直接报错。"""
+    parsed: list[bool] = []
+    bad: list[tuple[int, object]] = []
+    for idx, v in series.items():
+        if isinstance(v, (bool, np.bool_)):
+            parsed.append(bool(v))
+            continue
+        token = str(v).strip().lower()
+        if token in _TRUE_TOKENS:
+            parsed.append(True)
+        elif token in _FALSE_TOKENS:
+            parsed.append(False)
+        else:
+            bad.append((int(idx), v))
+            parsed.append(False)
+    if bad:
+        raise ValueError(
+            "fracture 列存在无法解析的值（应为 True/False 或 1/0）: "
+            + ", ".join(f"行{i}={v!r}" for i, v in bad[:5]))
+    return pd.Series(parsed, index=series.index, dtype=bool)
 
 
 def load_data(csv_path: str) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
+    load_col = next((c for c in LOAD_COLUMNS if c in df.columns), None)
+    if load_col is None:
+        raise ValueError(f"缺少应力幅列，需为 {list(LOAD_COLUMNS)} 之一；"
+                         f"实际列: {list(df.columns)}")
     missing = REQUIRED - set(df.columns)
     if missing:
         raise ValueError(f"缺少必需列: {sorted(missing)}")
-    df = df[["load", "cycles", "fracture"]].dropna()
-    df["load"] = pd.to_numeric(df["load"])
-    df["cycles"] = pd.to_numeric(df["cycles"])
-    df["fracture"] = df["fracture"].astype(bool)
-    if (df["load"] <= 0).any() or (df["cycles"] <= 0).any():
+    work = df[[load_col, "cycles", "fracture"]].rename(
+        columns={load_col: "load"}).dropna()
+    work["load"] = pd.to_numeric(work["load"], errors="coerce")
+    work["cycles"] = pd.to_numeric(work["cycles"], errors="coerce")
+    work = work.dropna(subset=["load", "cycles"])
+    work["fracture"] = parse_fracture(work["fracture"])
+    if (work["load"] <= 0).any() or (work["cycles"] <= 0).any():
         raise ValueError("load 与 cycles 必须为正")
-    if len(df) < 3:
+    if len(work) < 3:
         raise ValueError("至少 3 条数据点才能拟合")
-    return df
+    return work.reset_index(drop=True)
 
 
 def fit(df: pd.DataFrame, method: str = "maxlike") -> dict:

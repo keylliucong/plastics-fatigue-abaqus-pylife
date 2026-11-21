@@ -26,55 +26,24 @@ sys.path.insert(0, str(HERE))
 
 
 def verify_bundle(bundle_dir: Path) -> dict:
-    """独立重读核对（纯 Python，可在与 Abaqus 隔离的环境运行）。"""
-    import hashlib
-    import csv
+    """独立重读核对（纯 Python，可在与 Abaqus 隔离的环境运行）。
 
-    mpath = bundle_dir / "manifest.json"
-    if not mpath.exists():
-        raise FileNotFoundError(f"缺少 manifest.json: {bundle_dir}")
-    m = json.loads(mpath.read_text(encoding="utf-8"))
+    具体规则在 bundle_validation.validate_bundle 中统一实现，避免 GUI、
+    驱动脚本和分析入口各有一套互相矛盾的校验。
+    """
+    from bundle_validation import validate_bundle
 
-    checks: dict[str, object] = {}
-    # 文件哈希（兼容 Windows 反斜杠清单在本机以 / 分隔的情况）。
-    def _norm(rel: str) -> Path:
-        return bundle_dir / rel.replace("\\", "/")
-    ok = True
-    for rel, spec in m.get("files", {}).items():
-        p = _norm(rel)
-        if not p.exists():
-            ok = False
-            break
-        data = p.read_bytes()
-        if len(data) != spec["bytes"] or hashlib.sha256(data).hexdigest() != spec["sha256"]:
-            ok = False
-            break
-    checks["file_hashes_match"] = ok
-
-    pts = list(csv.DictReader(open(bundle_dir / "points.csv")))
-    ids = [p["point_id"] for p in pts]
-    checks["point_id_unique"] = len(ids) == len(set(ids))
-    checks["n_points_match"] = len(ids) == m.get("n_points")
-
-    field_files = sorted((bundle_dir / "fields").glob("*.csv"))
-    rows = [r for f in field_files for r in csv.DictReader(open(f))]
-    checks["row_count_match"] = len(rows) == m.get("n_field_rows")
-    checks["all_points_present"] = set(ids) == set(r["point_id"] for r in rows)
-    # 截面点检查仅在存在壳/梁截面点时适用；纯实体模型无截面点，视为不适用(通过)。
-    shell_pts = [p for p in pts if p["section_point_number"] not in ("", "None", "nan")]
-    checks["shell_present"] = bool(shell_pts)
-    if shell_pts:
-        keys = {(p["instance"], p["element_label"], p["section_point_number"])
-                for p in shell_pts}
-        max_sp = max(int(p["section_point_number"]) for p in shell_pts
-                     if str(p["section_point_number"]).isdigit())
-        checks["shell_sections_separate"] = len(keys) == len(shell_pts) and max_sp >= 2
-    else:
-        checks["shell_sections_separate"] = True  # 无壳截面点，无合并风险
-    checks["passed"] = all(v is True for k, v in checks.items()
-                           if k not in ("passed", "shell_present"))
+    report = validate_bundle(Path(bundle_dir))
+    checks: dict[str, object] = dict(report["checks"])
+    checks["passed"] = bool(report["passed"])
     checks["failed"] = [k for k, v in checks.items()
-                        if v is not True and k not in ("passed", "shell_present")]
+                        if isinstance(v, bool) and v is not True
+                        and k not in ("passed", "shell_present")]
+    checks["errors"] = report["errors"]
+    checks["warnings"] = report["warnings"]
+    checks["units"] = report["units"]
+    checks["basis"] = report["basis"]
+    checks["stats"] = report["stats"]
     return checks
 
 

@@ -22,8 +22,8 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -31,6 +31,12 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")  # 无界面后端，远程/批处理可运行
 import matplotlib.pyplot as plt
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(HERE.parent / "bridge"))
+from fit_sn_curve import LOAD_COLUMNS, parse_fracture  # noqa: E402
+from units import units_from_manifest  # noqa: E402
 
 # 中文字体：优先 Windows 微软雅黑/黑体，避免图上中文显示为方块。
 from matplotlib import font_manager
@@ -50,10 +56,13 @@ def save_data(df: pd.DataFrame, out: Path, name: str):
 def plot_sn(curve_path: str, data_path: str, out: Path):
     curve = json.loads(Path(curve_path).read_text(encoding="utf-8"))
     df = pd.read_csv(data_path)
-    amp_col = "load_amplitude_MPa" if "load_amplitude_MPa" in df.columns else "load"
+    amp_col = next((c for c in LOAD_COLUMNS if c in df.columns), None)
+    if amp_col is None:
+        raise ValueError(f"S-N 数据缺少应力幅列，需为 {list(LOAD_COLUMNS)} 之一")
     amp = df[amp_col].astype(float).to_numpy()
     cyc = df["cycles"].astype(float).to_numpy()
-    frac = df["fracture"].astype(bool).to_numpy()
+    # 严格解析 fracture，避免字符串 "False" 被 astype(bool) 当成 True。
+    frac = parse_fracture(df["fracture"]).to_numpy()
 
     k1 = float(curve["k_1"])
     ND = float(curve["ND"])
@@ -105,21 +114,35 @@ def load_history(history_dir: Path) -> pd.DataFrame:
                      ignore_index=True)
 
 
+def bundle_stress_scale(history_dir: Path):
+    """按 manifest.units 把源应力换算到 MPa；单位未确认时拒绝出图。"""
+    mpath = Path(history_dir) / "manifest.json"
+    if not mpath.exists():
+        raise SystemExit(f"缺少 manifest.json，无法确认应力单位: {history_dir}")
+    units = units_from_manifest(json.loads(mpath.read_text(encoding="utf-8")))
+    if units["stress_scale_to_MPa"] is None:
+        raise SystemExit(f"源应力单位未确认，拒绝出图: {units.get('problem')}")
+    return units
+
+
 def plot_history(history_dir: Path, out: Path, point_id: str | None = None):
+    units = bundle_stress_scale(history_dir)
+    scale = units["stress_scale_to_MPa"]
     df = load_history(history_dir)
     df["frame_id"] = pd.to_numeric(df["frame_id"], errors="coerce")
     comp_col = "S11" if "S11" in df.columns else "S11_MPa"
     pid = point_id or df["point_id"].iloc[0]
     g = df[df["point_id"] == pid].sort_values("frame_id")
     t = g["step_time"].astype(float).to_numpy()
-    s = pd.to_numeric(g[comp_col], errors="coerce").to_numpy()
+    s = pd.to_numeric(g[comp_col], errors="coerce").to_numpy(dtype=float) * scale
 
     fig, ax = plt.subplots(figsize=(8, 4.4))
     ax.plot(t, s, "-o", color="#1f77b4", ms=4, lw=1.5)
     ax.axhline(0, color="gray", lw=0.8)
     ax.set_xlabel("步时间 (用户确认单位)")
     ax.set_ylabel("应力 S11 (MPa)")
-    ax.set_title(f"材料点应力历程: {pid}\n(真实 ODB 提取; 单位由用户确认)")
+    ax.set_title(f"材料点应力历程: {pid}\n"
+                 f"(真实 ODB 提取; 源单位 {units['stress_source']} → MPa)")
     ax.grid(True, ls=":", alpha=0.5)
     fig.tight_layout()
     fig.savefig(out / "stress_history.png", dpi=160)
@@ -130,12 +153,15 @@ def plot_history(history_dir: Path, out: Path, point_id: str | None = None):
 def plot_rainflow(history_dir: Path, out: Path):
     """雨流闭合环幅值分布（对每个材料点跑一遍）。"""
     import pylife.stress.rainflow as rainflow
+    units = bundle_stress_scale(history_dir)
+    scale = units["stress_scale_to_MPa"]
     df = load_history(history_dir)
     df["frame_id"] = pd.to_numeric(df["frame_id"], errors="coerce")
     comp_col = "S11" if "S11" in df.columns else "S11_MPa"
     amps = []
     for pid, g in df.groupby("point_id"):
-        s = pd.to_numeric(g.sort_values("frame_id")[comp_col], errors="coerce").to_numpy()
+        s = (pd.to_numeric(g.sort_values("frame_id")[comp_col],
+                           errors="coerce").to_numpy(dtype=float) * scale)
         if not np.isfinite(s).all():
             continue
         det = rainflow.ThreePointDetector(rainflow.FullRecorder())
