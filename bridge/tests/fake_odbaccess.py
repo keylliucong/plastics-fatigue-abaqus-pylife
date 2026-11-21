@@ -8,6 +8,8 @@
 import sys
 import types
 
+import numpy as np  # 真实 ODB 的 v.data 是 numpy 数组，mock 也用 numpy 以覆盖该路径
+
 POS_INTEGRATION = "INTEGRATION_POINT"
 
 
@@ -98,6 +100,7 @@ class _Odb:
                     sp_obj = pts[sp - 1]
                 if i == 3 and iname == "SHELL-1" and sp == 2:
                     data = [float("nan"), 0.0, 0.0, 0.0, 0.0, 0.0]  # NaN 保留
+                data = np.array(data, dtype=np.float32)  # 与真实 Abaqus 一致
                 S_values.append(_Value(inst, elem, ip, sp_obj, data,
                                        etype="C3D8R" if iname == "PART-1" else "S4R"))
             status_values = [

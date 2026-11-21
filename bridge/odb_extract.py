@@ -71,10 +71,11 @@ def extract(odb_path: str, step_name: str, region_name: str, component: str,
                 "component": component,
                 "frame_range": [frames[0], frames[-1]],
                 "n_frames": len(frames),
-                "units": meta.get("units", {"stress_standard": "未确认",
-                                            "time_meaning": "未确认"}),
+                "units": meta.get("units", {"stress_standard": "UNCONFIRMED",
+                                            "time_meaning": "UNCONFIRMED"}),
                 "selection": {"region": region_name or "<all instances>"},
-                "note": "由 abaqus python 只读提取；单位由用户确认，未臆断。",
+                # 元数据用 ASCII，避免 Windows/Mac 跨平台编码差异破坏 JSON 读取。
+                "note": "Read-only extraction via abaqus python; units confirmed by user, not assumed.",
             },
         )
         pid_by_key = {}
@@ -136,18 +137,25 @@ def pid_key(instance, element, ip, sp):
 
 
 def _component_value(data, idx):
+    """提取单个应力分量。
+
+    真实 Abaqus 的 v.data 是 numpy.ndarray（float32/float64），元素为 numpy
+    标量，不能只靠 isinstance(val,(int,float)) 判断——那会把真实值误判为空。
+    统一用 float() 转换，失败才视为缺失。
+    """
     try:
         val = data[idx]
-    except Exception:
+        return float(val)
+    except (Exception,):
         return ""
-    return val if isinstance(val, (int, float)) else ""
 
 
 def _finite(v):
     if v is None or v == "":
         return False
     try:
-        return v == v and abs(float(v)) != float("inf")
+        f = float(v)
+        return f == f and f not in (float("inf"), float("-inf"))
     except (TypeError, ValueError):
         return False
 

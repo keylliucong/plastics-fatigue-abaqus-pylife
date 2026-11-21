@@ -1,0 +1,34 @@
+{
+  "schema": "bridge-bundle-v1",
+  "source": "abaqus\\odb\\bridge_cantilever.odb",
+  "step": "Step-1",
+  "step_domain": "TIME",
+  "component": "S11",
+  "frame_range": [
+    0,
+    1
+  ],
+  "n_frames": 2,
+  "units": {
+    "stress_source": "MPa",
+    "stress_standard": "MPa",
+    "time_source": "s",
+    "time_meaning": "physical"
+  },
+  "selection": {
+    "region": "<all instances>"
+  },
+  "note": "Read-only extraction via abaqus python; units confirmed by user, not assumed.",
+  "n_points": 256,
+  "n_field_rows": 512,
+  "files": {
+    "points.csv": {
+      "bytes": 13807,
+      "sha256": "08550ec5a46818f7ac5aecc99edd675c19e979754ef84b47828817b79ce5f51c"
+    },
+    "fields\\part-000001.csv": {
+      "bytes": 75452,
+      "sha256": "78003dcd302d70317a300db36f2027cf174cafbc011093e4ab9efeb33c5e3ff6"
+    }
+  }
+}

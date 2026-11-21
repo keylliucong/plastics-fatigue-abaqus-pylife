@@ -36,10 +36,12 @@ def verify_bundle(bundle_dir: Path) -> dict:
     m = json.loads(mpath.read_text(encoding="utf-8"))
 
     checks: dict[str, object] = {}
-    # 文件哈希
+    # 文件哈希（兼容 Windows 反斜杠清单在本机以 / 分隔的情况）。
+    def _norm(rel: str) -> Path:
+        return bundle_dir / rel.replace("\\", "/")
     ok = True
     for rel, spec in m.get("files", {}).items():
-        p = bundle_dir / rel
+        p = _norm(rel)
         if not p.exists():
             ok = False
             break
@@ -58,11 +60,21 @@ def verify_bundle(bundle_dir: Path) -> dict:
     rows = [r for f in field_files for r in csv.DictReader(open(f))]
     checks["row_count_match"] = len(rows) == m.get("n_field_rows")
     checks["all_points_present"] = set(ids) == set(r["point_id"] for r in rows)
-    checks["shell_sections_separate"] = (
-        len([p for p in pts if p["section_point_number"] not in ("", "None")]) >= 2
-    )
-    checks["passed"] = all(v is True for k, v in checks.items() if k != "passed")
-    checks["failed"] = [k for k, v in checks.items() if v is not True]
+    # 截面点检查仅在存在壳/梁截面点时适用；纯实体模型无截面点，视为不适用(通过)。
+    shell_pts = [p for p in pts if p["section_point_number"] not in ("", "None", "nan")]
+    checks["shell_present"] = bool(shell_pts)
+    if shell_pts:
+        keys = {(p["instance"], p["element_label"], p["section_point_number"])
+                for p in shell_pts}
+        max_sp = max(int(p["section_point_number"]) for p in shell_pts
+                     if str(p["section_point_number"]).isdigit())
+        checks["shell_sections_separate"] = len(keys) == len(shell_pts) and max_sp >= 2
+    else:
+        checks["shell_sections_separate"] = True  # 无壳截面点，无合并风险
+    checks["passed"] = all(v is True for k, v in checks.items()
+                           if k not in ("passed", "shell_present"))
+    checks["failed"] = [k for k, v in checks.items()
+                        if v is not True and k not in ("passed", "shell_present")]
     return checks
 
 
