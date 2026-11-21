@@ -1,0 +1,33 @@
+{
+  "contract": {
+    "point_id_unique": true,
+    "row_count_matches": true,
+    "all_stress_finite": true,
+    "frames_ordered_and_complete": true,
+    "at_least_two_instants": true,
+    "units_confirmed": true,
+    "shell_section_points_preserved": true,
+    "passed": true,
+    "failed": []
+  },
+  "self_test": {
+    "two_closed_loops_per_point": true,
+    "Nf_10MPa_is_1e6": true,
+    "damage_per_point_2e-6": true,
+    "blocks_to_failure_2p5e5": true,
+    "passed": true
+  },
+  "summary": {
+    "disclaimer": "SYNTHETIC DEMONSTRATION ONLY — 合成应力历程与虚构 Wöhler 参数，未读取真实 ODB、未拟合真实材料、未做均值/温度/频率修正，不构成任何零件的真实寿命预测或验证结果。",
+    "curve_params": {
+      "k_1": 5.0,
+      "ND": 1000000.0,
+      "SD": 10.0,
+      "k_2": 5.0
+    },
+    "closed_loops_total": 6,
+    "critical_point": "P-1::3::1::",
+    "residuals_excluded": true,
+    "note": "残余循环未闭合、未计入损伤；无真实材料/零件寿命含义。"
+  }
+}
