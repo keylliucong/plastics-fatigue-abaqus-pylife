@@ -1,16 +1,25 @@
 # 真实 ODB 桥接产物（来自远程 Windows / Abaqus 2024）
 
-本目录的 `real_bundle/` 由远程项目 `C:\Users\Public\plastic-fatigue-bridge` 在
-**真实 Abaqus 2024 ODB** 上提取并回传，用于留证与跨平台核对。
+远程项目位于 `E:\plastic-fatigue-bridge`（已从 C 盘迁出）。以下均由**真实 Abaqus 2024 ODB** 提取回传。
 
-- 来源 ODB：`bridge_cantilever.odb`（教学悬臂梁，本机远程实机求解生成，原生 2024）。
-- 提取方式：`abaqus python bridge/odb_extract.py`（只读，不改原 ODB）。
-- 内容：256 材料点 × 2 帧 = 512 行，分量 S11；单位为手动确认（MPa / s）。
-- 核对：`python bridge/run_bridge_flow.py --verify-only realrun/real_bundle` 全项通过
-  （文件哈希一致、点键唯一、行数一致、时间有序、无 NaN 丢失）。
-- 元数据为 ASCII，避免 Windows/Mac 编码差异。
+## 真实材料数据全链路（消除虚构参数）
 
-**范围限制**：这是静力加载步，只有 2 帧，不足以形成雨流闭合环；此处只验证桥接数据保真，
-不计算疲劳寿命。真实 S–N 拟合需匹配牌号的恒幅疲劳试验数据（尚未取得）。
+- `data/raw/sn_rodrigues2026_pcabs.csv`（远程）：Rodrigues 等 2026, Polymers 18(18):302 表 8，
+  真实 PC-ABS FFF 疲劳试验 10 点（9 断裂 + 1 run-out），从出版商 PDF 逐点提取。
+  应力幅 2.52–13.39 MPa，R≈0.05，10 Hz。
+- 拟合：pyLife MaxLikeFull（run-out 作删失）→ k1=4.66, ND=8.9e5, SD=2.43, TN=1.55, TS=1.11。
+- 真实 ODB：循环实体梁，应力幅约 9.7 MPa（落在曲线有效区间，无外推），13 帧。
+- 结果：32/32 点雨流闭合，用真实曲线算损伤，最高点损伤小计 4.05e-4（数千循环量级）。
 
-修复记录：真实 ODB 的 `v.data` 是 numpy 数组，分量需 `float()` 转换；清单路径用 `/` 归一化。
+## 本目录留存
+
+- `real_bundle/`：静力悬臂梁桥接包（256 点 × 2 帧），验证桥接保真；`run_bridge_flow.py --verify-only realrun/real_bundle` 全项通过。
+- `bridge_cyclic/`：循环实体梁桥接包（32 点 × 13 帧 = 416 行）。
+- `cyclic_damage/`：教学虚构曲线链路验算（明确标注非真实材料）。
+- 真实曲线拟合与损伤的权威产物在远程 `E:\plastic-fatigue-bridge\data\derived\curve_real.json` 与 `results\damage_realcurve\`。
+
+## 边界
+材料数据来自 FFF 打印 PC-ABS，用于方法学闭环验证，非目标牌号注塑件寿命承诺。
+真实零件寿命仍需目标件几何/载荷谱/工况定义。
+
+修复记录：numpy 数组分量 float() 转换；manifest ASCII；CSV 的 frame_id 转数值排序（'10'<'2'）；路径反斜杠归一化。
