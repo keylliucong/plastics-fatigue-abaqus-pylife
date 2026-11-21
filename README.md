@@ -40,7 +40,9 @@ results/                后续验证与结果说明
 
 ## 计算状态
 
-已归档与核验文件；没有运行Abaqus求解、没有拟合真实材料S-N曲线，也没有生成可信寿命结果。安装skill不包含Abaqus、许可证、编译器或额外API服务。已在macOS独立环境以pyLife 2.3.1验证虚拟数据的雨流及Wöhler接口；Windows、Abaqus 2024与真实ODB仍未验证。
+已归档与核验文件；没有运行Abaqus求解、没有拟合真实材料S-N曲线，也没有生成可信寿命结果。安装skill不包含Abaqus、许可证、编译器或额外API服务。Windows、Abaqus 2024与真实ODB仍未验证。
+
+**已可运行的合成端到端演练**：`./run_synthetic_flow.sh` 一条命令跑通「合成桥接包（PRD v1 数据契约）→ 数据契约校验 → 逐点雨流 → 虚构 Wöhler/Miner → 寿命/场映射 → 独立进程重读核对」，输出在 `results/synthetic_pipeline/`。pyLife 2.3.1 雨流与 Wöhler 接口在 macOS 独立环境已验证；全部输入为合成应力与虚构参数，**不是**真实 ODB、材料或零件寿命。真实验证仍须在 Windows / Abaqus 2024 / 真实实体与壳 ODB / 匹配牌号疲劳试验上执行，桥接 GUI 需 PRD 批准后再实现。
 
 工程分工为：Abaqus计算局部响应，pyLife进行循环统计、材料曲线与损伤评估。若存在明显滞回、自发热、保载或顺序效应，应验证S-N/Miner基线的适用性，必要时采用自定义损伤方法。
 
