@@ -9,5 +9,5 @@
   "n_points_skipped_nonfinite": 0,
   "n_points_no_closed_loop": 0,
   "total_residual_turning_points": 160,
-  "note": "真实 ODB 应力历程；损伤用真实拟合曲线，残余循环未闭合未计入；此结果仍是教学工况，不是产品零件寿命验证。"
+  "note": "真实 ODB 应力历程，但为教学量级载荷（幅值约 474 MPa）；损伤由教学虚构曲线计算，不是 Rodrigues 2026 真实拟合曲线。仅用于验证单位换算、雨流计数与 Miner 累加的算术链路，不能用于任何寿命结论。"
 }
