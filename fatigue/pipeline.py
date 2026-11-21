@@ -206,6 +206,27 @@ def self_test(per_point: pd.DataFrame) -> dict:
     return checks
 
 
+def write_bridge_bundle(b: dict, bundle_dir: Path) -> dict:
+    """按 PRD v1 契约把合成桥接包写到磁盘，并生成文件 SHA-256 清单。"""
+    import hashlib
+    (bundle_dir / "fields").mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(b["points"]).to_csv(bundle_dir / "points.csv", index=False)
+    pd.DataFrame(b["fields"]).to_csv(
+        bundle_dir / "fields" / "part-000001.csv", index=False)
+    (bundle_dir / "fatigue_parameters.json").write_text(
+        json.dumps(b["fatigue"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    manifest = dict(b["manifest"])
+    files = {}
+    for rel in ("points.csv", "fields/part-000001.csv", "fatigue_parameters.json"):
+        data = (bundle_dir / rel).read_bytes()
+        files[rel] = {"bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
+    manifest["files"] = files
+    (bundle_dir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return manifest
+
+
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     b = build_synthetic_bundle()
@@ -219,6 +240,8 @@ def main() -> int:
         raise RuntimeError(f"手算核对失败: {t}")
 
     # 持久化结果（均为合成演示）。
+    bundle_dir = OUT / "bridge_bundle"
+    write_bridge_bundle(b, bundle_dir)
     per_point.to_csv(OUT / "per_point_damage.csv", index=False)
     (OUT / "validation.json").write_text(
         json.dumps({"contract": v, "self_test": t, "summary": summary},
@@ -238,6 +261,7 @@ def main() -> int:
     print("逐点损伤:")
     print(per_point.to_string(index=False))
     print("关键材料点:", summary["critical_point"])
+    print("桥接包已写入:", bundle_dir)
     print("结果已写入:", OUT)
     return 0
 

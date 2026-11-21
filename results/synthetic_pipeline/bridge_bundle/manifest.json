@@ -1,0 +1,31 @@
+{
+  "schema": "bridge-bundle-v1-synthetic",
+  "source": "synthetic://not-an-odb",
+  "disclaimer": "SYNTHETIC DEMONSTRATION ONLY — 合成应力历程与虚构 Wöhler 参数，未读取真实 ODB、未拟合真实材料、未做均值/温度/频率修正，不构成任何零件的真实寿命预测或验证结果。",
+  "units": {
+    "stress_source": "MPa",
+    "stress_standard": "MPa",
+    "time_source": "s",
+    "time_meaning": "物理时间(合成)"
+  },
+  "step": "Step-1",
+  "step_domain": "TIME",
+  "n_points": 3,
+  "n_frames": 8,
+  "n_field_rows": 24,
+  "stress_component": "S11",
+  "files": {
+    "points.csv": {
+      "bytes": 309,
+      "sha256": "3b8e7e5f76804d72ec9c3879d53a2617a06ce14193fddc76fe83f05a4c375933"
+    },
+    "fields/part-000001.csv": {
+      "bytes": 767,
+      "sha256": "9ab5cbfe0cc2db46a73c0bfa98a75b6a48c497d39cd988e5ad13e927e72946e9"
+    },
+    "fatigue_parameters.json": {
+      "bytes": 269,
+      "sha256": "20dbe0873bfa741f86045903de12eb12bca03164446be22e80e76c4790ddc44d"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "material": "SYNTHETIC-TEACHING",
+  "curve": {
+    "k_1": 5.0,
+    "ND": 1000000.0,
+    "SD": 10.0,
+    "k_2": 5.0
+  },
+  "stress_definition": "幅值",
+  "R_reference": -1.0,
+  "note": "虚构参数，仅验证 k1/低幅段/单位算术，不可用于设计。"
+}
