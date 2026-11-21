@@ -65,6 +65,9 @@ def main(argv=None) -> int:
 
     per_point = []
     det_residuals = 0
+    # frame_id 来自 CSV 是字符串，必须按整数排序（'10' < '2' 会打乱历程）。
+    df = df.copy()
+    df["frame_id"] = pd.to_numeric(df["frame_id"], errors="coerce")
     for pid, g in df.groupby("point_id"):
         series = g.sort_values("frame_id")
         stress = pd.to_numeric(series[comp], errors="coerce").to_numpy()

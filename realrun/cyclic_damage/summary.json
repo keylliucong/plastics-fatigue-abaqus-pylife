@@ -1,0 +1,13 @@
+{
+  "schema": "fatigue-analysis-v1",
+  "source_odb": "C:\\Users\\Public\\plastic-fatigue-bridge\\abaqus\\odb\\bridge_cyclic_solid.odb",
+  "curve_material": "TEACHING-ONLY-NOT-REAL",
+  "curve_source_csv": null,
+  "component": "S11",
+  "n_points_total": 32,
+  "n_points_ok": 32,
+  "n_points_skipped_nonfinite": 0,
+  "n_points_no_closed_loop": 0,
+  "total_residual_turning_points": 160,
+  "note": "真实 ODB 应力历程；损伤用真实拟合曲线，残余循环未闭合未计入；此结果仍是教学工况，不是产品零件寿命验证。"
+}

@@ -47,6 +47,8 @@ def load_bundle(bundle_dir: Path) -> dict:
         raise BundleError("fields/ 下无历程 CSV")
     fields = pd.concat([pd.read_csv(f, dtype={"point_id": str}) for f in field_files],
                        ignore_index=True)
+    # frame_id 从 CSV 读出为字符串，必须转数值，否则按帧排序时 '10' < '2' 会打乱历程。
+    fields["frame_id"] = pd.to_numeric(fields["frame_id"], errors="coerce")
 
     params_p = bundle_dir / "fatigue_parameters.json"
     params = json.loads(params_p.read_text(encoding="utf-8")) if params_p.exists() else None
