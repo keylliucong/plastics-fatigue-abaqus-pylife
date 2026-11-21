@@ -175,8 +175,8 @@ def plot_damage(damage_dir: Path, out: Path):
     ax.bar(idx, d, color="#ff7f0e")
     ax.set_xlabel("材料点序号 (按 point_id 排序)")
     ax.set_ylabel("Miner 损伤小计 D")
-    ax.set_title(f"逐材料点损伤 (共 {len(d)} 点, 最大 D={d.max():.3e}; "
-                 f"虚构曲线仅验算时此值不代表真实寿命)")
+    ax.set_title(f"逐材料点损伤 (共 {len(d)} 点, 最大 D={d.max():.3e})\n"
+                 f"方法学验算，非产品零件寿命")
     ax.grid(True, axis="y", ls=":", alpha=0.5)
     fig.tight_layout()
     fig.savefig(out / "damage_map.png", dpi=160)
